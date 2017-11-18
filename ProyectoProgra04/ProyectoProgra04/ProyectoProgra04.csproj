@@ -47,18 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BL\Class1.cs" />
-    <Compile Include="DAL\CRUD.cs" />
+    <Compile Include="Datos\Class1.cs" />
+    <Compile Include="Logica\CRUD.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\LogIn.cs">
+    <Compile Include="Presentacion\LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GUI\LogIn.Designer.cs">
+    <Compile Include="Presentacion\LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
