@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoProgra04.GUI
+namespace ProyectoProgra04.Presentacion
 {
     public partial class LogIn : Form
     {
@@ -19,7 +19,26 @@ namespace ProyectoProgra04.GUI
 
         private void LogIn_Load(object sender, EventArgs e)
         {
+          
+        }
 
+        private void btnin_Click(object sender, EventArgs e)
+        {
+            Datos.Login log = new Datos.Login();
+            bool res;
+
+            res = log.comprobar(txtuser.Text, txtpass.Text);
+
+            if (res==true)
+            {
+                MessageBox.Show("Bienvenido");
+                //ccargar form
+            }
+            else
+            {
+                MessageBox.Show("usuario o contraseña invalida");
+                txtpass.Text = "";
+            }
         }
     }
 }
