@@ -17,7 +17,7 @@ namespace ProyectoProgra04.Presentacion
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void Credito_Load(object sender, EventArgs e)
         {
 
         }

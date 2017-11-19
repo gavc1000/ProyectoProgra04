@@ -56,6 +56,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Credito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Credito.Designer.cs">
+      <DependentUpon>Credito.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +70,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\Credito.resx">
+      <DependentUpon>Credito.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
