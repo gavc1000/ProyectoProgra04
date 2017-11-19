@@ -47,25 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Datos\Class1.cs" />
-    <Compile Include="Logica\CRUD.cs" />
+    <Compile Include="Datos\CRUD.cs" />
+    <Compile Include="Datos\Login.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\Credito.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\Credito.Designer.cs">
-      <DependentUpon>Credito.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\Empresa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\Empresa.Designer.cs">
-      <DependentUpon>Empresa.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\LogIn.cs">
       <SubType>Form</SubType>
@@ -75,11 +63,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Presentacion\Credito.resx">
-      <DependentUpon>Credito.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Empresa.resx">
-      <DependentUpon>Empresa.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -104,7 +92,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Logica\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

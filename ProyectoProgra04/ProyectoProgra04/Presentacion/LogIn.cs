@@ -16,5 +16,10 @@ namespace ProyectoProgra04.GUI
         {
             InitializeComponent();
         }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
