@@ -7,18 +7,25 @@ using System.Threading.Tasks;
 
 namespace ProyectoProgra04.Datos
 {
-    class Login
+    public class Login
     {
         Datos.CRUD datos = new CRUD();
 
-        public string comprobar(string user, string password)
+        public bool comprobar(string user, string password)
         {
-            string res="";
+            bool res;
             string con;
             DataTable dt;
             con = "select * from cliente where idcliente="+user+"and pass= '"+password+"'";
             dt = datos.consultar(con);
-
+            if (dt.Rows.Count > 0)
+            {
+                res = true;
+            }
+            else
+            {
+                res = false;
+            }
             return res;
         }
     }

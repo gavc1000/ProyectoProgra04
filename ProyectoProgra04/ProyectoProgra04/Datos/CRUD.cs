@@ -11,7 +11,7 @@ namespace ProyectoProgra04.Datos
   
         public class CRUD
         {
-            private SqlConnection oCN = new SqlConnection(@"Data Source=progra04.database.windows.net;Initial Catalog=BancoLosCositos;Persist Security Info=True;User ID=progra4; Password=Progra.4");
+            private SqlConnection oCN = new SqlConnection(@"Data Source=progra04.database.windows.net;Initial Catalog=BancoLosCositos;Persist Security Info=True;User ID=progra4 ;Password=Progra.4");
 
             public bool abrirConexion()
             {
