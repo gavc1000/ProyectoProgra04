@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\CRUD.cs" />
+    <Compile Include="Datos\empleados.cs" />
     <Compile Include="Datos\Login.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
