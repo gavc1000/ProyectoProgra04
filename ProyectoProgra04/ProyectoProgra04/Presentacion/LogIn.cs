@@ -32,7 +32,8 @@ namespace ProyectoProgra04.Presentacion
             if (res==true)
             {
                 MessageBox.Show("Bienvenido");
-                //ccargar form
+                Credito credito = new Credito();
+                credito.Show();
             }
             else
             {

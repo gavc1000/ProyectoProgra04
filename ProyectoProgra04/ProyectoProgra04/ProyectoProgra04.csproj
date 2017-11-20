@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\credito.cs" />
     <Compile Include="Datos\CRUD.cs" />
+    <Compile Include="Datos\datatable.cs" />
     <Compile Include="Datos\empleados.cs" />
     <Compile Include="Datos\Login.cs" />
     <Compile Include="Form1.cs">
@@ -56,6 +58,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica\Credito.cs" />
     <Compile Include="Presentacion\Credito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,9 +105,7 @@
   <ItemGroup>
     <None Include="Resources\Untitled.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Logica\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
