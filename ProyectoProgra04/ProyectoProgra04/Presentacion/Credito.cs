@@ -124,5 +124,24 @@ namespace ProyectoProgra04.Presentacion
                 MessageBox.Show("Error al cargar datos");
             }
         }
+
+        private void btnGenerarCredito_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btngenerarpago_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ExportarExcel(dtgCredito);
+        }
+        public void ExportarExcel( DataGridView tabla)
+        {
+            //Microsoft.
+        }
     }
 }
