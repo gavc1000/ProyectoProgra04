@@ -124,5 +124,10 @@ namespace ProyectoProgra04.Presentacion
                 MessageBox.Show("Error al cargar datos");
             }
         }
+
+        private void btngenerarpago_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

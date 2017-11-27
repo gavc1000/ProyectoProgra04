@@ -101,7 +101,7 @@
             // txtAmortizacion
             // 
             this.txtAmortizacion.Location = new System.Drawing.Point(109, 208);
-            this.txtAmortizacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAmortizacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtAmortizacion.Name = "txtAmortizacion";
             this.txtAmortizacion.Size = new System.Drawing.Size(76, 20);
             this.txtAmortizacion.TabIndex = 5;
@@ -110,7 +110,7 @@
             // 
             this.cmbIdCliente.FormattingEnabled = true;
             this.cmbIdCliente.Location = new System.Drawing.Point(109, 35);
-            this.cmbIdCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbIdCliente.Margin = new System.Windows.Forms.Padding(2);
             this.cmbIdCliente.Name = "cmbIdCliente";
             this.cmbIdCliente.Size = new System.Drawing.Size(76, 21);
             this.cmbIdCliente.TabIndex = 6;
@@ -119,7 +119,7 @@
             // txtIntereses
             // 
             this.txtIntereses.Location = new System.Drawing.Point(109, 184);
-            this.txtIntereses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIntereses.Margin = new System.Windows.Forms.Padding(2);
             this.txtIntereses.Name = "txtIntereses";
             this.txtIntereses.Size = new System.Drawing.Size(76, 20);
             this.txtIntereses.TabIndex = 7;
@@ -129,7 +129,7 @@
             this.dtgCredito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgCredito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgCredito.Location = new System.Drawing.Point(214, 14);
-            this.dtgCredito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgCredito.Margin = new System.Windows.Forms.Padding(2);
             this.dtgCredito.Name = "dtgCredito";
             this.dtgCredito.RowTemplate.Height = 24;
             this.dtgCredito.Size = new System.Drawing.Size(465, 247);
@@ -139,7 +139,7 @@
             // btnGenerarCredito
             // 
             this.btnGenerarCredito.Location = new System.Drawing.Point(10, 257);
-            this.btnGenerarCredito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGenerarCredito.Margin = new System.Windows.Forms.Padding(2);
             this.btnGenerarCredito.Name = "btnGenerarCredito";
             this.btnGenerarCredito.Size = new System.Drawing.Size(109, 27);
             this.btnGenerarCredito.TabIndex = 9;
@@ -159,7 +159,7 @@
             // txtMontoAprobado
             // 
             this.txtMontoAprobado.Location = new System.Drawing.Point(109, 60);
-            this.txtMontoAprobado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMontoAprobado.Margin = new System.Windows.Forms.Padding(2);
             this.txtMontoAprobado.Name = "txtMontoAprobado";
             this.txtMontoAprobado.Size = new System.Drawing.Size(76, 20);
             this.txtMontoAprobado.TabIndex = 11;
@@ -198,7 +198,7 @@
             // txtTasa
             // 
             this.txtTasa.Location = new System.Drawing.Point(109, 84);
-            this.txtTasa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTasa.Margin = new System.Windows.Forms.Padding(2);
             this.txtTasa.Name = "txtTasa";
             this.txtTasa.Size = new System.Drawing.Size(76, 20);
             this.txtTasa.TabIndex = 15;
@@ -206,7 +206,7 @@
             // txtSaldo
             // 
             this.txtSaldo.Location = new System.Drawing.Point(109, 232);
-            this.txtSaldo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSaldo.Margin = new System.Windows.Forms.Padding(2);
             this.txtSaldo.Name = "txtSaldo";
             this.txtSaldo.Size = new System.Drawing.Size(76, 20);
             this.txtSaldo.TabIndex = 16;
@@ -214,7 +214,7 @@
             // txtUltimaProyeccion
             // 
             this.txtUltimaProyeccion.Location = new System.Drawing.Point(109, 134);
-            this.txtUltimaProyeccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUltimaProyeccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtUltimaProyeccion.Name = "txtUltimaProyeccion";
             this.txtUltimaProyeccion.Size = new System.Drawing.Size(76, 20);
             this.txtUltimaProyeccion.TabIndex = 17;
@@ -243,6 +243,7 @@
             this.btngenerarpago.TabIndex = 20;
             this.btngenerarpago.Text = "Generar Pago";
             this.btngenerarpago.UseVisualStyleBackColor = true;
+            this.btngenerarpago.Click += new System.EventHandler(this.btngenerarpago_Click);
             // 
             // btnlimpiar
             // 
@@ -319,7 +320,7 @@
             this.Controls.Add(this.lblAmortizacion);
             this.Controls.Add(this.lblIdCliente);
             this.Controls.Add(this.lblIdCredito);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Credito";
             this.Text = "Credito";
             this.Load += new System.EventHandler(this.Credito_Load);
