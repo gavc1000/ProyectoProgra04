@@ -33,9 +33,10 @@
             // 
             // btncredito
             // 
-            this.btncredito.Location = new System.Drawing.Point(12, 12);
+            this.btncredito.Location = new System.Drawing.Point(16, 15);
+            this.btncredito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btncredito.Name = "btncredito";
-            this.btncredito.Size = new System.Drawing.Size(113, 98);
+            this.btncredito.Size = new System.Drawing.Size(151, 121);
             this.btncredito.TabIndex = 0;
             this.btncredito.Text = "Credito";
             this.btncredito.UseVisualStyleBackColor = true;
@@ -43,11 +44,12 @@
             // 
             // Banco
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.Asuna01_30;
-            this.ClientSize = new System.Drawing.Size(431, 305);
+            this.ClientSize = new System.Drawing.Size(428, 301);
             this.Controls.Add(this.btncredito);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Banco";
             this.Text = "Banco";
             this.ResumeLayout(false);
