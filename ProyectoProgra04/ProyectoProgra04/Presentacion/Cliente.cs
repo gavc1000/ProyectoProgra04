@@ -10,24 +10,19 @@ using System.Windows.Forms;
 
 namespace ProyectoProgra04.Presentacion
 {
-    public partial class Banco : Form
+    public partial class Cliente : Form
     {
-        public Banco()
+       
+        
+        public Cliente()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AgregarClientes agregar = new AgregarClientes();
-            agregar.Show();
-        }
-
-        private void btncredito_Click(object sender, EventArgs e)
-        {
-            Credito credito = new Credito();
-            credito.Show();
-
+            CreditoCliente cred = new CreditoCliente();
+            cred.Show();
         }
 
         private void btnlogout_Click(object sender, EventArgs e)
@@ -37,9 +32,10 @@ namespace ProyectoProgra04.Presentacion
             this.Close();
         }
 
-        private void btnExpo_Click(object sender, EventArgs e)
+        private void btnClientes_Click(object sender, EventArgs e)
         {
-
+            Empleados emp = new Empleados();
+            emp.Show();
         }
     }
 }

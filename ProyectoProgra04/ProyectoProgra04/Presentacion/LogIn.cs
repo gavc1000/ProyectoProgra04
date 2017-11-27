@@ -25,16 +25,33 @@ namespace ProyectoProgra04.Presentacion
         private void btnin_Click(object sender, EventArgs e)
         {
             Datos.Login log = new Datos.Login();
-            bool res;
+            int res;
 
             res = log.comprobar(txtuser.Text, txtpass.Text);
-
-            if (res==true)
+            Banco ban = new Banco();
+            Cliente cli = new Cliente();
+            MASTER mas = new MASTER();
+            if (res>0)
             {
-                MessageBox.Show("Bienvenido");
-                Credito credito = new Credito();
-                credito.Show();
-                this.Hide();
+                if (res == 1)
+                {
+                    MessageBox.Show("Bienvenido");
+                    mas.Show();
+                    this.Hide();
+                }
+                if (res == 2)
+                {
+                    MessageBox.Show("Bienvenido");
+                    ban.Show();
+                    this.Hide();
+                }
+                if (res == 3)
+                {
+                    MessageBox.Show("Bienvenido");
+                    cli.Show();
+                    this.Hide();
+                }
+             
             }
             else
             {

@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace ProyectoProgra04.Presentacion
 {
-    public partial class Banco : Form
+    public partial class MASTER : Form
     {
-        public Banco()
+        public MASTER()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AgregarClientes agregar = new AgregarClientes();
-            agregar.Show();
         }
 
         private void btncredito_Click(object sender, EventArgs e)
@@ -30,16 +24,17 @@ namespace ProyectoProgra04.Presentacion
 
         }
 
+        private void btnagregarclientes_Click(object sender, EventArgs e)
+        {
+            AgregarClientes agregar = new AgregarClientes();
+            agregar.Show();
+        }
+
         private void btnlogout_Click(object sender, EventArgs e)
         {
             LogIn log = new LogIn();
             log.Show();
             this.Close();
-        }
-
-        private void btnExpo_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
