@@ -30,7 +30,7 @@ namespace ProyectoProgra04.Logica
             return datos.consultarcreditocliente(idcliente, idcredito);
         }
 
-        public void gencredit (object obj )
+        public void gencredit (Presentacion.Creditos obj)
         {
             Datos.credito cred = new Datos.credito();
             cred.gencred(obj);
