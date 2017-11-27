@@ -40,9 +40,11 @@ namespace ProyectoProgra04.Datos
             dtcredito = conect.ejecutar("Select Periodo,Pago,Intereses,Amortizacion,Saldo,Cancelado from Credito where IdCliente = '" + idcliente+"' and IdCredito = '" + idcredito + "'");
             return dtcredito;
         }
-        public void gencred(object obj)
+        public void gencred(Presentacion.Creditos c)
         {
-
+            string query = "insert into Credito (idcliente,montoaprovado,tasa,periodo,ultimaproyeccion,pago,intereses,amortizacion,saldo,cancelado) "+
+               " values("+c.IdCliente+","+c.Monto+","+c.tasa+","+c.Periodo+","+c.LastProy+","+c.Pago+","+c.Intereses+","+c.Amort+","+c.Saldo+","+c.Cancelado+")";
+            conect.ejecutarInsert(query);
         }
     }
 }
