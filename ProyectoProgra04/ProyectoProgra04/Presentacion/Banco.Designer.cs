@@ -64,7 +64,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.thumb_1920_750482;
-            this.ClientSize = new System.Drawing.Size(1109, 784);
+            this.ClientSize = new System.Drawing.Size(656, 536);
             this.Controls.Add(this.btnagregarcliente);
             this.Controls.Add(this.btncredito);
             this.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
