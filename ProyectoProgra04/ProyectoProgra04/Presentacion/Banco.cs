@@ -21,6 +21,7 @@ namespace ProyectoProgra04.Presentacion
         {
             Credito credito = new Credito();
             credito.Show();
+
         }
     }
 }
