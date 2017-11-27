@@ -17,7 +17,7 @@ namespace ProyectoProgra04.Datos
         {
             Datos.CRUD conectar = new Datos.CRUD();
             DataTable dttablas;
-            dttablas = conectar.ejecutar("select IdCliente,Nombre,Apellido1,Apellido2, IdInstitucion,pass from Cliente");
+            dttablas = conectar.ejecutar("select IdCliente,Nombre,Apellido1,Apellido2, IdInstitucion,pass from Cliente where TipoUsuario = 3;");
             return dttablas;
         }
         public bool agregarclientes(string idcliente, string Nombre, string Apellido1, string Apellido2, string idinstitucion, string pass)
