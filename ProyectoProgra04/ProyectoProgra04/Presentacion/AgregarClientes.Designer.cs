@@ -40,9 +40,10 @@
             this.txtapellido2 = new System.Windows.Forms.TextBox();
             this.txtidinstitucion = new System.Windows.Forms.TextBox();
             this.txtpass = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnagregarcliente = new System.Windows.Forms.Button();
+            this.dtgclientes = new System.Windows.Forms.DataGridView();
+            this.btnlimpiar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgclientes)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -142,30 +143,43 @@
             this.txtpass.Size = new System.Drawing.Size(100, 20);
             this.txtpass.TabIndex = 11;
             // 
-            // button1
+            // btnagregarcliente
             // 
-            this.button1.Location = new System.Drawing.Point(110, 168);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Agregar Cliente";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnagregarcliente.Location = new System.Drawing.Point(110, 168);
+            this.btnagregarcliente.Name = "btnagregarcliente";
+            this.btnagregarcliente.Size = new System.Drawing.Size(100, 23);
+            this.btnagregarcliente.TabIndex = 12;
+            this.btnagregarcliente.Text = "Agregar Cliente";
+            this.btnagregarcliente.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dtgclientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(216, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 179);
-            this.dataGridView1.TabIndex = 13;
+            this.dtgclientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgclientes.Location = new System.Drawing.Point(216, 12);
+            this.dtgclientes.Name = "dtgclientes";
+            this.dtgclientes.Size = new System.Drawing.Size(572, 179);
+            this.dtgclientes.TabIndex = 13;
+            this.dtgclientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgclientes_CellContentClick);
+            // 
+            // btnlimpiar
+            // 
+            this.btnlimpiar.Location = new System.Drawing.Point(713, 197);
+            this.btnlimpiar.Name = "btnlimpiar";
+            this.btnlimpiar.Size = new System.Drawing.Size(75, 23);
+            this.btnlimpiar.TabIndex = 14;
+            this.btnlimpiar.Text = "Limpiar";
+            this.btnlimpiar.UseVisualStyleBackColor = true;
+            this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
             // 
             // AgregarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 207);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(800, 228);
+            this.Controls.Add(this.btnlimpiar);
+            this.Controls.Add(this.dtgclientes);
+            this.Controls.Add(this.btnagregarcliente);
             this.Controls.Add(this.txtpass);
             this.Controls.Add(this.txtidinstitucion);
             this.Controls.Add(this.txtapellido2);
@@ -181,7 +195,7 @@
             this.Name = "AgregarClientes";
             this.Text = "AgregarClientes";
             this.Load += new System.EventHandler(this.AgregarClientes_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgclientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,7 +215,8 @@
         private System.Windows.Forms.TextBox txtapellido2;
         private System.Windows.Forms.TextBox txtidinstitucion;
         private System.Windows.Forms.TextBox txtpass;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnagregarcliente;
+        private System.Windows.Forms.DataGridView dtgclientes;
+        private System.Windows.Forms.Button btnlimpiar;
     }
 }

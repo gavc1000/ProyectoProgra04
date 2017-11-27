@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\Agregarclientes.cs" />
     <Compile Include="Datos\credito.cs" />
     <Compile Include="Datos\CRUD.cs" />
     <Compile Include="Datos\datatable.cs" />
