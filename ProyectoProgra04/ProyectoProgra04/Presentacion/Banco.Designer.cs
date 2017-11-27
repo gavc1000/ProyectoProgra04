@@ -54,7 +54,7 @@
             this.btnagregarcliente.BackColor = System.Drawing.Color.Transparent;
             this.btnagregarcliente.BackgroundImage = global::ProyectoProgra04.Properties.Resources.blue_button_md;
             this.btnagregarcliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnagregarcliente.Location = new System.Drawing.Point(202, 20);
+            this.btnagregarcliente.Location = new System.Drawing.Point(227, 20);
             this.btnagregarcliente.Name = "btnagregarcliente";
             this.btnagregarcliente.Size = new System.Drawing.Size(171, 166);
             this.btnagregarcliente.TabIndex = 1;
@@ -83,7 +83,7 @@
             this.btnExpo.BackgroundImage = global::ProyectoProgra04.Properties.Resources.blue_button_md;
             this.btnExpo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnExpo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExpo.Location = new System.Drawing.Point(263, 328);
+            this.btnExpo.Location = new System.Drawing.Point(227, 328);
             this.btnExpo.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnExpo.Name = "btnExpo";
             this.btnExpo.Size = new System.Drawing.Size(171, 166);
@@ -98,7 +98,7 @@
             this.btnimp.BackgroundImage = global::ProyectoProgra04.Properties.Resources.blue_button_md;
             this.btnimp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnimp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnimp.Location = new System.Drawing.Point(49, 328);
+            this.btnimp.Location = new System.Drawing.Point(22, 328);
             this.btnimp.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnimp.Name = "btnimp";
             this.btnimp.Size = new System.Drawing.Size(171, 166);
@@ -109,7 +109,7 @@
             // 
             // Banco
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.thumb_1920_750482;
             this.ClientSize = new System.Drawing.Size(656, 536);

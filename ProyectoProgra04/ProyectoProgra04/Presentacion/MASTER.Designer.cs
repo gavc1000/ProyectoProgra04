@@ -90,7 +90,7 @@
             this.btnimp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnimp.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnimp.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnimp.Location = new System.Drawing.Point(12, 240);
+            this.btnimp.Location = new System.Drawing.Point(12, 191);
             this.btnimp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnimp.Name = "btnimp";
             this.btnimp.Size = new System.Drawing.Size(173, 172);
@@ -106,7 +106,7 @@
             this.btnExpo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExpo.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExpo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExpo.Location = new System.Drawing.Point(191, 240);
+            this.btnExpo.Location = new System.Drawing.Point(534, 264);
             this.btnExpo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExpo.Name = "btnExpo";
             this.btnExpo.Size = new System.Drawing.Size(173, 172);

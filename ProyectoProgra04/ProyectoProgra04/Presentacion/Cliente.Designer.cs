@@ -44,9 +44,10 @@
             this.btnCred.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCred.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCred.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCred.Location = new System.Drawing.Point(56, 36);
+            this.btnCred.Location = new System.Drawing.Point(42, 29);
+            this.btnCred.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCred.Name = "btnCred";
-            this.btnCred.Size = new System.Drawing.Size(229, 194);
+            this.btnCred.Size = new System.Drawing.Size(172, 158);
             this.btnCred.TabIndex = 0;
             this.btnCred.Text = "Gestion de Creditos";
             this.btnCred.UseVisualStyleBackColor = false;
@@ -60,9 +61,10 @@
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClientes.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientes.ForeColor = System.Drawing.Color.White;
-            this.btnClientes.Location = new System.Drawing.Point(310, 36);
+            this.btnClientes.Location = new System.Drawing.Point(232, 29);
+            this.btnClientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(227, 194);
+            this.btnClientes.Size = new System.Drawing.Size(170, 158);
             this.btnClientes.TabIndex = 1;
             this.btnClientes.Text = "Gestion de Empleados";
             this.btnClientes.UseVisualStyleBackColor = false;
@@ -74,9 +76,10 @@
             this.btnlogout.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.btnlogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnlogout.Location = new System.Drawing.Point(656, 502);
+            this.btnlogout.Location = new System.Drawing.Point(492, 408);
+            this.btnlogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnlogout.Name = "btnlogout";
-            this.btnlogout.Size = new System.Drawing.Size(104, 39);
+            this.btnlogout.Size = new System.Drawing.Size(78, 32);
             this.btnlogout.TabIndex = 2;
             this.btnlogout.Text = "Log Out";
             this.btnlogout.UseVisualStyleBackColor = false;
@@ -87,10 +90,12 @@
             this.btnExpo.BackColor = System.Drawing.Color.Transparent;
             this.btnExpo.BackgroundImage = global::ProyectoProgra04.Properties.Resources.blue_button_md;
             this.btnExpo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExpo.Location = new System.Drawing.Point(279, 357);
-            this.btnExpo.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnExpo.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExpo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnExpo.Location = new System.Drawing.Point(232, 250);
+            this.btnExpo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExpo.Name = "btnExpo";
-            this.btnExpo.Size = new System.Drawing.Size(171, 166);
+            this.btnExpo.Size = new System.Drawing.Size(170, 158);
             this.btnExpo.TabIndex = 5;
             this.btnExpo.Text = "Exportar Datos";
             this.btnExpo.UseVisualStyleBackColor = false;
@@ -101,10 +106,12 @@
             this.btnimp.BackColor = System.Drawing.Color.Transparent;
             this.btnimp.BackgroundImage = global::ProyectoProgra04.Properties.Resources.blue_button_md;
             this.btnimp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnimp.Location = new System.Drawing.Point(65, 357);
-            this.btnimp.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnimp.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnimp.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnimp.Location = new System.Drawing.Point(42, 250);
+            this.btnimp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnimp.Name = "btnimp";
-            this.btnimp.Size = new System.Drawing.Size(171, 166);
+            this.btnimp.Size = new System.Drawing.Size(172, 158);
             this.btnimp.TabIndex = 6;
             this.btnimp.Text = "Importar Datos";
             this.btnimp.UseVisualStyleBackColor = false;
@@ -112,15 +119,16 @@
             // 
             // Cliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(808, 573);
+            this.ClientSize = new System.Drawing.Size(606, 466);
             this.Controls.Add(this.btnimp);
             this.Controls.Add(this.btnExpo);
             this.Controls.Add(this.btnlogout);
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.btnCred);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Cliente";
             this.Text = "Banco los Cositos";
             this.ResumeLayout(false);
