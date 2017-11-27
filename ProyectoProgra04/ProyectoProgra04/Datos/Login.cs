@@ -13,13 +13,19 @@ namespace ProyectoProgra04.Datos
 
         public int comprobar(string user, string password)
         {
-            int res;
+            int res=0;
             string con;
             DataTable dt;
             con = "select * from cliente where idcliente="+user+"and pass= '"+password+"'";
             dt = datos.consultar(con);
             if (dt.Rows.Count > 0)
-            
+            {
+                res = Convert.ToInt32(dt.Rows[0][6].ToString());
+            }else
+            {
+                res = 0;
+            }
+
             return res;
         }
     }

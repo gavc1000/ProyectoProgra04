@@ -28,12 +28,23 @@ namespace ProyectoProgra04.Presentacion
             int res;
 
             res = log.comprobar(txtuser.Text, txtpass.Text);
-
-            if (res==true)
+            Banco ban = new Banco();
+            Cliente cli = new Cliente();
+            if (res>0)
             {
-                MessageBox.Show("Bienvenido");
-               if 
-                this.Hide();
+                if (res == 2)
+                {
+                    MessageBox.Show("Bienvenido");
+                    ban.Show();
+                    this.Hide();
+                }
+                if (res == 3)
+                {
+                    MessageBox.Show("Bienvenido");
+                    cli.Show();
+                    this.Hide();
+                }
+             
             }
             else
             {
