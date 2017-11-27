@@ -29,5 +29,12 @@ namespace ProyectoProgra04.Presentacion
             AgregarClientes agregar = new AgregarClientes();
             agregar.Show();
         }
+
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+            LogIn log = new LogIn();
+            log.Show();
+            this.Close();
+        }
     }
 }

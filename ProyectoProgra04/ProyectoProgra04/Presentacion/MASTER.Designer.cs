@@ -30,6 +30,7 @@
         {
             this.btncredito = new System.Windows.Forms.Button();
             this.btnagregarclientes = new System.Windows.Forms.Button();
+            this.btnlogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btncredito
@@ -40,9 +41,10 @@
             this.btncredito.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btncredito.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncredito.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btncredito.Location = new System.Drawing.Point(12, 12);
+            this.btncredito.Location = new System.Drawing.Point(16, 15);
+            this.btncredito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btncredito.Name = "btncredito";
-            this.btncredito.Size = new System.Drawing.Size(173, 172);
+            this.btncredito.Size = new System.Drawing.Size(231, 212);
             this.btncredito.TabIndex = 0;
             this.btncredito.Text = "Credito";
             this.btncredito.UseVisualStyleBackColor = false;
@@ -55,22 +57,39 @@
             this.btnagregarclientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnagregarclientes.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnagregarclientes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnagregarclientes.Location = new System.Drawing.Point(191, 13);
+            this.btnagregarclientes.Location = new System.Drawing.Point(255, 16);
+            this.btnagregarclientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnagregarclientes.Name = "btnagregarclientes";
-            this.btnagregarclientes.Size = new System.Drawing.Size(173, 172);
+            this.btnagregarclientes.Size = new System.Drawing.Size(231, 212);
             this.btnagregarclientes.TabIndex = 1;
             this.btnagregarclientes.Text = "Agregar Clientes";
             this.btnagregarclientes.UseVisualStyleBackColor = false;
             this.btnagregarclientes.Click += new System.EventHandler(this.btnagregarclientes_Click);
             // 
+            // btnlogout
+            // 
+            this.btnlogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnlogout.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
+            this.btnlogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnlogout.Location = new System.Drawing.Point(839, 566);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Size = new System.Drawing.Size(104, 39);
+            this.btnlogout.TabIndex = 3;
+            this.btnlogout.Text = "Log Out";
+            this.btnlogout.UseVisualStyleBackColor = false;
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
+            // 
             // MASTER
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.Asuna01_50;
-            this.ClientSize = new System.Drawing.Size(716, 501);
+            this.ClientSize = new System.Drawing.Size(955, 617);
+            this.Controls.Add(this.btnlogout);
             this.Controls.Add(this.btnagregarclientes);
             this.Controls.Add(this.btncredito);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MASTER";
             this.Text = "Master";
             this.ResumeLayout(false);
@@ -81,5 +100,6 @@
 
         private System.Windows.Forms.Button btncredito;
         private System.Windows.Forms.Button btnagregarclientes;
+        private System.Windows.Forms.Button btnlogout;
     }
 }
