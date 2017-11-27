@@ -37,7 +37,7 @@ namespace ProyectoProgra04.Presentacion
             {
                 MessageBox.Show("Error de Sintaxis, favor revisar");
             }
-            
+
         }
         private void limpiar()
         {
@@ -69,47 +69,65 @@ namespace ProyectoProgra04.Presentacion
 
         public void agregarclientes()
         {
+            Logica.Credito agregar = new Logica.Credito();
             try
             {
-                if(txtidcliente.Text == "")
+                if (txtidcliente.Text == "")
                 {
                     MessageBox.Show("Favor agregar ID de cliente");
-                }else
+                }
+                else
                 {
-                    if(txtnombre.Text == "")
+                    if (txtnombre.Text == "")
                     {
                         MessageBox.Show("Favor agregar Nombre de cliente");
-                    }else
+                    }
+                    else
                     {
-                        if(txtapellido1.Text == "")
+                        if (txtapellido1.Text == "")
                         {
                             MessageBox.Show("Favor agregar Primer Apellido");
-                        }else
+                        }
+                        else
                         {
-                            if(txtapellido2.Text == "")
+                            if (txtapellido2.Text == "")
                             {
                                 MessageBox.Show("Favor agregar Segundo Apellido");
-                            }else
+                            }
+                            else
                             {
-                                if(txtidinstitucion.Text == "")
+                                if (txtidinstitucion.Text == "")
                                 {
                                     MessageBox.Show("Favor agregar ID de Institución");
-                                }else
+                                }
+                                else
                                 {
-
+                                    if (txtpass.Text == "")
+                                    {
+                                        MessageBox.Show("Favor agregar una Contraseña");
+                                    }
+                                    else
+                                    {
+                                        agregar.agregarclientes(txtidcliente.Text, txtnombre.Text, txtapellido1.Text, txtapellido2.Text, txtidinstitucion.Text, txtpass.Text);
+                                        MessageBox.Show("Cliente Agregado Correctamente");
+                                        limpiar();
+                                    }
                                 }
                             }
                         }
                     }
                 }
-                MessageBox.Show("Cliente Agregado Correctamente");
-                limpiar();
             }
             catch
             {
                 MessageBox.Show("Error de Sintaxis, favor revisar");
             }
             consultarclientes();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

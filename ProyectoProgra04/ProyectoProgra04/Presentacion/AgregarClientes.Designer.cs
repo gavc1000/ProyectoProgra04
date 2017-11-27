@@ -49,25 +49,29 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Image = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.label1.Location = new System.Drawing.Point(12, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 13);
+            this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "IdCliente";
+            this.label1.Text = "ID Cliente";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Image = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.label2.Location = new System.Drawing.Point(12, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Image = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.label3.Location = new System.Drawing.Point(12, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 13);
@@ -77,6 +81,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Image = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.label4.Location = new System.Drawing.Point(12, 93);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 13);
@@ -86,15 +91,17 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Image = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.label5.Location = new System.Drawing.Point(12, 119);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 13);
+            this.label5.Size = new System.Drawing.Size(69, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "IdInstitución";
+            this.label5.Text = "ID Institución";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Image = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.label6.Location = new System.Drawing.Point(12, 145);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 13);
@@ -145,17 +152,21 @@
             // 
             // btnagregarcliente
             // 
+            this.btnagregarcliente.BackColor = System.Drawing.Color.Transparent;
+            this.btnagregarcliente.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
+            this.btnagregarcliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnagregarcliente.Location = new System.Drawing.Point(110, 168);
             this.btnagregarcliente.Name = "btnagregarcliente";
             this.btnagregarcliente.Size = new System.Drawing.Size(100, 23);
             this.btnagregarcliente.TabIndex = 12;
             this.btnagregarcliente.Text = "Agregar Cliente";
-            this.btnagregarcliente.UseVisualStyleBackColor = true;
+            this.btnagregarcliente.UseVisualStyleBackColor = false;
             this.btnagregarcliente.Click += new System.EventHandler(this.btnagregarcliente_Click);
             // 
             // dtgclientes
             // 
             this.dtgclientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgclientes.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dtgclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgclientes.Location = new System.Drawing.Point(216, 12);
             this.dtgclientes.Name = "dtgclientes";
@@ -165,18 +176,23 @@
             // 
             // btnlimpiar
             // 
+            this.btnlimpiar.BackColor = System.Drawing.Color.Transparent;
+            this.btnlimpiar.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
+            this.btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnlimpiar.Location = new System.Drawing.Point(713, 197);
             this.btnlimpiar.Name = "btnlimpiar";
+            this.btnlimpiar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnlimpiar.Size = new System.Drawing.Size(75, 23);
             this.btnlimpiar.TabIndex = 14;
             this.btnlimpiar.Text = "Limpiar";
-            this.btnlimpiar.UseVisualStyleBackColor = true;
+            this.btnlimpiar.UseVisualStyleBackColor = false;
             this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
             // 
             // AgregarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.thumb_1920_750482;
             this.ClientSize = new System.Drawing.Size(800, 228);
             this.Controls.Add(this.btnlimpiar);
             this.Controls.Add(this.dtgclientes);
@@ -194,7 +210,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AgregarClientes";
-            this.Text = "AgregarClientes";
+            this.Text = "Agregar Clientes";
             this.Load += new System.EventHandler(this.AgregarClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgclientes)).EndInit();
             this.ResumeLayout(false);
