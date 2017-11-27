@@ -47,10 +47,12 @@ namespace ProyectoProgra04.Datos
             conect.ejecutarInsert(query);
         }
 
-        public void genpago(string idcliente)
+        public void genpago(Presentacion.Creditos c)
         {
             CRUD conectar= new CRUD();
-            conect.ejecutar("");
+            string query = "Update  Credito  set MontoAprovado="+c.Monto+",Tasa="+c.tasa+",Periodo="+c.Periodo+",UltimaProyeccion="+c.LastProy+",Intereses="+c.Intereses+",Amortizacion="+c.Amort+",Saldo="+c.Saldo+",Cancelado="+c.Cancelado+" where IdCliente= "+c.IdCliente+"";
+            string query2 = "Update  ContrCreditos  set MontoCredito=" + c.Monto + " where IdCliente= " + c.IdCliente + "";
+            conect.ejecutar(query);
 
         }
     }

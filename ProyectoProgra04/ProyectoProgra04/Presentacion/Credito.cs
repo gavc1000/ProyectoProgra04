@@ -68,7 +68,24 @@ namespace ProyectoProgra04.Presentacion
         {
             try
             {
+                Logica.Credito datos = new Logica.Credito();
+              
+                list = new List<Creditos>();
 
+                Creditos obj = new Creditos();
+                obj.IdCliente = Convert.ToInt32(cmbIdCliente.Text);
+                obj.IdCredito = Convert.ToInt32(cmbidcredito.Text);
+                obj.Monto = Convert.ToDecimal(txtMontoAprobado.Text);
+                obj.tasa = Convert.ToDecimal(txtTasa.Text);
+                obj.Periodo = Convert.ToInt32(txtperiodo.Text);
+                obj.LastProy = Convert.ToDecimal(txtUltimaProyeccion.Text);
+                obj.Pago = Convert.ToDecimal(txtpago.Text);
+                obj.Intereses = Convert.ToDecimal(txtIntereses.Text);
+                obj.Amort = Convert.ToDecimal(txtAmortizacion.Text);
+                obj.Saldo = Convert.ToDecimal(txtSaldo.Text);
+
+                list.Add(obj);
+                datos.genpago(obj);
 
 
 
@@ -77,7 +94,7 @@ namespace ProyectoProgra04.Presentacion
             catch (Exception e)
             {
 
-                MessageBox.Show("Error al actualizar datos");
+                MessageBox.Show("Error al actualizar datos" +e);
             }
 
         }
@@ -167,6 +184,11 @@ namespace ProyectoProgra04.Presentacion
             list.Add(obj);
 
 
+        }
+
+        private void btngenerarpago_Click(object sender, EventArgs e)
+        {
+            GenerarPago();
         }
     }
 }

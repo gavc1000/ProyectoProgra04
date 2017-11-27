@@ -36,11 +36,20 @@ namespace ProyectoProgra04.Logica
             cred.gencred(obj);
 
         }
+
+        public void genpago(Presentacion.Creditos obj)
+        {
+            Datos.credito cred = new Datos.credito();
+            cred.genpago(obj);
+
+        }
         public DataTable consultarclientes()
         {
-            Datos.Agregarclientes datos = new Datos.Agregarclientes();
+            Datos.Agregarclientes datos =  new Datos.Agregarclientes();
+
             return datos.ConsultarClientes();
         }
+
         
         
         
