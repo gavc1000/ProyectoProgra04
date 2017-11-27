@@ -62,6 +62,7 @@
             this.btnClientes.TabIndex = 1;
             this.btnClientes.Text = "Gestion de Empleados";
             this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnlogout
             // 
