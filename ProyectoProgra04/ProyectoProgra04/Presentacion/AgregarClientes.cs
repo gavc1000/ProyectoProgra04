@@ -10,23 +10,20 @@ using System.Windows.Forms;
 
 namespace ProyectoProgra04.Presentacion
 {
-    public partial class Banco : Form
+    public partial class AgregarClientes : Form
     {
-        public Banco()
+        public AgregarClientes()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
-            AgregarClientes agregar = new AgregarClientes();
-            agregar.Show();
+
         }
 
-        private void btncredito_Click(object sender, EventArgs e)
+        private void AgregarClientes_Load(object sender, EventArgs e)
         {
-            Credito credito = new Credito();
-            credito.Show();
 
         }
     }

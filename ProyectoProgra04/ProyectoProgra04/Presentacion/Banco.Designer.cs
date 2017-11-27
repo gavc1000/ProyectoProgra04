@@ -28,11 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.btncredito = new System.Windows.Forms.Button();
+            this.btnagregarcliente = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btncredito
+            // 
+            this.btncredito.BackColor = System.Drawing.Color.Transparent;
+            this.btncredito.BackgroundImage = global::ProyectoProgra04.Properties.Resources.blue_button_md;
+            this.btncredito.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btncredito.Location = new System.Drawing.Point(22, 20);
+            this.btncredito.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btncredito.Name = "btncredito";
+            this.btncredito.Size = new System.Drawing.Size(171, 166);
+            this.btncredito.TabIndex = 0;
+            this.btncredito.Text = "Credito";
+            this.btncredito.UseVisualStyleBackColor = false;
+            this.btncredito.Click += new System.EventHandler(this.btncredito_Click);
+            // 
+            // btnagregarcliente
+            // 
+            this.btnagregarcliente.BackColor = System.Drawing.Color.Transparent;
+            this.btnagregarcliente.BackgroundImage = global::ProyectoProgra04.Properties.Resources.blue_button_md;
+            this.btnagregarcliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnagregarcliente.Location = new System.Drawing.Point(202, 20);
+            this.btnagregarcliente.Name = "btnagregarcliente";
+            this.btnagregarcliente.Size = new System.Drawing.Size(171, 166);
+            this.btnagregarcliente.TabIndex = 1;
+            this.btnagregarcliente.Text = "Agregar Cliente";
+            this.btnagregarcliente.UseVisualStyleBackColor = false;
+            this.btnagregarcliente.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Banco
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Banco";
+            this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.thumb_1920_750482;
+            this.ClientSize = new System.Drawing.Size(656, 536);
+            this.Controls.Add(this.btnagregarcliente);
+            this.Controls.Add(this.btncredito);
+            this.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.Name = "Banco";
+            this.Text = "Banco Los Cositos";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btncredito;
+        private System.Windows.Forms.Button btnagregarcliente;
     }
 }
