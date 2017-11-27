@@ -94,5 +94,11 @@ namespace ProyectoProgra04.Presentacion
                 childForm.Close();
             }
         }
+
+        private void creditosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Credito credito = new Credito();
+            credito.Show();
+        }
     }
 }

@@ -34,6 +34,7 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.crearUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.creditosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +58,8 @@
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearUsuarioToolStripMenuItem});
+            this.crearUsuarioToolStripMenuItem,
+            this.creditosToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(632, 24);
@@ -69,6 +71,13 @@
             this.crearUsuarioToolStripMenuItem.Name = "crearUsuarioToolStripMenuItem";
             this.crearUsuarioToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
             this.crearUsuarioToolStripMenuItem.Text = "Crear Usuario";
+            // 
+            // creditosToolStripMenuItem
+            // 
+            this.creditosToolStripMenuItem.Name = "creditosToolStripMenuItem";
+            this.creditosToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.creditosToolStripMenuItem.Text = "Creditos";
+            this.creditosToolStripMenuItem.Click += new System.EventHandler(this.creditosToolStripMenuItem_Click);
             // 
             // Banco
             // 
@@ -96,6 +105,7 @@
         private System.Windows.Forms.ToolTip toolTip;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem crearUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem creditosToolStripMenuItem;
     }
 }
 
