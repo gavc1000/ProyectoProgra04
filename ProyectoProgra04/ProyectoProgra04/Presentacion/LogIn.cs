@@ -30,8 +30,15 @@ namespace ProyectoProgra04.Presentacion
             res = log.comprobar(txtuser.Text, txtpass.Text);
             Banco ban = new Banco();
             Cliente cli = new Cliente();
+            MASTER mas = new MASTER();
             if (res>0)
             {
+                if (res == 1)
+                {
+                    MessageBox.Show("Bienvenido");
+                    mas.Show();
+                    this.Hide();
+                }
                 if (res == 2)
                 {
                     MessageBox.Show("Bienvenido");
