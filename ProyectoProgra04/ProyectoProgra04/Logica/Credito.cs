@@ -36,6 +36,13 @@ namespace ProyectoProgra04.Logica
             cred.gencred(obj);
 
         }
+
+        public DataTable genpago(String idcliente){
+         Datos.credito datos = new Datos.credito();
+            return datos.genpago(idcliente);
+        
+        
+        }
     }
 }
    

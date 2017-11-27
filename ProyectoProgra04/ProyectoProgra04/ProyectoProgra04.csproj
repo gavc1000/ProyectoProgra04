@@ -71,10 +71,6 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Logica\Credito.cs" />
-    <Compile Include="NetKits\LinqToExcel\Attribute\MapFromAttribute.cs" />
-    <Compile Include="NetKits\LinqToExcel\Attribute\NecessaryColumnAttribute.cs" />
-    <Compile Include="NetKits\LinqToExcel\Model\ConvertExcelMdl.cs" />
-    <Compile Include="NetKits\LinqToExcel\ReadExcelExtend.cs" />
     <Compile Include="Presentacion\Credito.cs">
       <SubType>Form</SubType>
     </Compile>

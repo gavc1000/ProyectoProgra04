@@ -63,6 +63,24 @@ namespace ProyectoProgra04.Presentacion
                 MessageBox.Show("Error al cargar datos");
             }
         }
+
+        public void GenerarPago()
+        {
+            try
+            {
+
+
+
+
+
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Error al actualizar datos");
+            }
+
+        }
         public void llenarcomboidcredito()
         {
             try

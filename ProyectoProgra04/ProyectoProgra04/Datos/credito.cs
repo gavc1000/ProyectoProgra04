@@ -42,6 +42,16 @@ namespace ProyectoProgra04.Datos
         }
         public void gencred(object obj)
         {
+            
+
+        }
+
+        public DataTable genpago( string idcliente)
+        {
+            CRUD conectar = new CRUD();
+            DataTable dtcredito;
+            dtcredito = conect.ejecutar("Update Cancelado from Credito where IdCliente = '" + idcliente + "");
+            return dtcredito;
 
         }
     }
