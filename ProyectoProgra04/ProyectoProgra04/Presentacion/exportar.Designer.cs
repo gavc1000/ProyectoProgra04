@@ -38,12 +38,14 @@
             // 
             this.Excel.AutoSize = true;
             this.Excel.BackColor = System.Drawing.Color.Transparent;
-            this.Excel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Excel.Checked = true;
+            this.Excel.FlatAppearance.BorderSize = 0;
+            this.Excel.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.Excel.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Excel.ForeColor = System.Drawing.Color.White;
             this.Excel.Location = new System.Drawing.Point(81, 59);
             this.Excel.Name = "Excel";
-            this.Excel.Size = new System.Drawing.Size(192, 31);
+            this.Excel.Size = new System.Drawing.Size(193, 31);
             this.Excel.TabIndex = 0;
             this.Excel.TabStop = true;
             this.Excel.Text = "Exportar a Excel";
@@ -53,14 +55,12 @@
             // 
             this.aXml.AutoSize = true;
             this.aXml.BackColor = System.Drawing.Color.Transparent;
-            this.aXml.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.aXml.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aXml.ForeColor = System.Drawing.Color.White;
             this.aXml.Location = new System.Drawing.Point(81, 135);
             this.aXml.Name = "aXml";
-            this.aXml.Size = new System.Drawing.Size(188, 32);
+            this.aXml.Size = new System.Drawing.Size(189, 32);
             this.aXml.TabIndex = 1;
-            this.aXml.TabStop = true;
             this.aXml.Text = "Exportar a XML";
             this.aXml.UseVisualStyleBackColor = false;
             // 
@@ -68,14 +68,12 @@
             // 
             this.txt.AutoSize = true;
             this.txt.BackColor = System.Drawing.Color.Transparent;
-            this.txt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.txt.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt.ForeColor = System.Drawing.Color.White;
             this.txt.Location = new System.Drawing.Point(81, 201);
             this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(257, 31);
+            this.txt.Size = new System.Drawing.Size(258, 31);
             this.txt.TabIndex = 2;
-            this.txt.TabStop = true;
             this.txt.Text = "Exportar a Texto Plano";
             this.txt.UseVisualStyleBackColor = false;
             // 

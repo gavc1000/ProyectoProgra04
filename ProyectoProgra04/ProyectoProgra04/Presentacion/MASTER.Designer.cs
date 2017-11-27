@@ -87,11 +87,12 @@
             // 
             this.btnimp.BackColor = System.Drawing.Color.Transparent;
             this.btnimp.BackgroundImage = global::ProyectoProgra04.Properties.Resources.blue_button_md;
+            this.btnimp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnimp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnimp.Location = new System.Drawing.Point(59, 375);
+            this.btnimp.Location = new System.Drawing.Point(16, 296);
             this.btnimp.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnimp.Name = "btnimp";
-            this.btnimp.Size = new System.Drawing.Size(171, 166);
+            this.btnimp.Size = new System.Drawing.Size(231, 212);
             this.btnimp.TabIndex = 8;
             this.btnimp.Text = "Importar Datos";
             this.btnimp.UseVisualStyleBackColor = false;
@@ -100,11 +101,12 @@
             // 
             this.btnExpo.BackColor = System.Drawing.Color.Transparent;
             this.btnExpo.BackgroundImage = global::ProyectoProgra04.Properties.Resources.blue_button_md;
+            this.btnExpo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnExpo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExpo.Location = new System.Drawing.Point(273, 375);
+            this.btnExpo.Location = new System.Drawing.Point(255, 296);
             this.btnExpo.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnExpo.Name = "btnExpo";
-            this.btnExpo.Size = new System.Drawing.Size(171, 166);
+            this.btnExpo.Size = new System.Drawing.Size(231, 212);
             this.btnExpo.TabIndex = 7;
             this.btnExpo.Text = "Exportar Datos";
             this.btnExpo.UseVisualStyleBackColor = false;
