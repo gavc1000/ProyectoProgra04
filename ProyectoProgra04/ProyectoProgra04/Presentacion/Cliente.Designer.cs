@@ -40,6 +40,7 @@
             // 
             this.btnCred.BackColor = System.Drawing.Color.Transparent;
             this.btnCred.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCred.BackgroundImage")));
+            this.btnCred.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnCred.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCred.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCred.ForeColor = System.Drawing.Color.Transparent;
@@ -55,6 +56,7 @@
             // 
             this.btnClientes.BackColor = System.Drawing.Color.Transparent;
             this.btnClientes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClientes.BackgroundImage")));
+            this.btnClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClientes.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientes.ForeColor = System.Drawing.Color.White;

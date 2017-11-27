@@ -16,10 +16,10 @@ namespace ProyectoProgra04.Presentacion
         {
             InitializeComponent();
         }
-
+        
         private void LogIn_Load(object sender, EventArgs e)
         {
-          
+            this.AcceptButton = btnin;
         }
 
         private void btnin_Click(object sender, EventArgs e)
