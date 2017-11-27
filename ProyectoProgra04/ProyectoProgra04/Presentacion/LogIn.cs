@@ -34,6 +34,7 @@ namespace ProyectoProgra04.Presentacion
                 MessageBox.Show("Bienvenido");
                 Credito credito = new Credito();
                 credito.Show();
+                this.Hide();
             }
             else
             {

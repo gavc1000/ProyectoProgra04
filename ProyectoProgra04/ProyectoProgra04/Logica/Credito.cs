@@ -36,6 +36,11 @@ namespace ProyectoProgra04.Logica
             cred.gencred(obj);
 
         }
+
+        
+        
+        
+        }
     }
-}
+
    
