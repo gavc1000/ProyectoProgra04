@@ -61,5 +61,24 @@ namespace ProyectoProgra04.Presentacion
         {
 
         }
+
+        private void btnagregarcliente_Click(object sender, EventArgs e)
+        {
+            agregarclientes();
+        }
+
+        public void agregarclientes()
+        {
+            try
+            {
+                MessageBox.Show("Cliente Agregado Correctamente");
+                limpiar();
+            }
+            catch
+            {
+                MessageBox.Show("Error de Sintaxis, favor revisar");
+            }
+            consultarclientes();
+        }
     }
 }
