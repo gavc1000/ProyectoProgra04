@@ -151,6 +151,7 @@
             this.btnagregarcliente.TabIndex = 12;
             this.btnagregarcliente.Text = "Agregar Cliente";
             this.btnagregarcliente.UseVisualStyleBackColor = true;
+            this.btnagregarcliente.Click += new System.EventHandler(this.btnagregarcliente_Click);
             // 
             // dtgclientes
             // 
