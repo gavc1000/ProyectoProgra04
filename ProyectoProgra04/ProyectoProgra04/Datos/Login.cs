@@ -11,21 +11,15 @@ namespace ProyectoProgra04.Datos
     {
         Datos.CRUD datos = new CRUD();
 
-        public bool comprobar(string user, string password)
+        public int comprobar(string user, string password)
         {
-            bool res;
+            int res;
             string con;
             DataTable dt;
             con = "select * from cliente where idcliente="+user+"and pass= '"+password+"'";
             dt = datos.consultar(con);
             if (dt.Rows.Count > 0)
-            {
-                res = true;
-            }
-            else
-            {
-                res = false;
-            }
+            
             return res;
         }
     }

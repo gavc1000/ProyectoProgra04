@@ -25,15 +25,14 @@ namespace ProyectoProgra04.Presentacion
         private void btnin_Click(object sender, EventArgs e)
         {
             Datos.Login log = new Datos.Login();
-            bool res;
+            int res;
 
             res = log.comprobar(txtuser.Text, txtpass.Text);
 
             if (res==true)
             {
                 MessageBox.Show("Bienvenido");
-                Credito credito = new Credito();
-                credito.Show();
+               if 
                 this.Hide();
             }
             else
