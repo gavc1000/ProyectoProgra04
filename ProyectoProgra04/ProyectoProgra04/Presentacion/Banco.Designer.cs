@@ -33,12 +33,14 @@
             // 
             // btncredito
             // 
+            this.btncredito.BackColor = System.Drawing.Color.Transparent;
+            this.btncredito.BackgroundImage = global::ProyectoProgra04.Properties.Resources.blue_button_md;
             this.btncredito.Location = new System.Drawing.Point(12, 12);
             this.btncredito.Name = "btncredito";
-            this.btncredito.Size = new System.Drawing.Size(113, 98);
+            this.btncredito.Size = new System.Drawing.Size(171, 165);
             this.btncredito.TabIndex = 0;
             this.btncredito.Text = "Credito";
-            this.btncredito.UseVisualStyleBackColor = true;
+            this.btncredito.UseVisualStyleBackColor = false;
             this.btncredito.Click += new System.EventHandler(this.btncredito_Click);
             // 
             // Banco
