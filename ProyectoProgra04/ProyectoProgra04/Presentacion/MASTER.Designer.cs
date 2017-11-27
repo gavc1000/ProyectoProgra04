@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btncredito = new System.Windows.Forms.Button();
+            this.btnagregarclientes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btncredito
@@ -47,12 +48,28 @@
             this.btncredito.UseVisualStyleBackColor = false;
             this.btncredito.Click += new System.EventHandler(this.btncredito_Click);
             // 
+            // btnagregarclientes
+            // 
+            this.btnagregarclientes.BackColor = System.Drawing.Color.Transparent;
+            this.btnagregarclientes.BackgroundImage = global::ProyectoProgra04.Properties.Resources.blue_button_md;
+            this.btnagregarclientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnagregarclientes.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnagregarclientes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnagregarclientes.Location = new System.Drawing.Point(191, 13);
+            this.btnagregarclientes.Name = "btnagregarclientes";
+            this.btnagregarclientes.Size = new System.Drawing.Size(173, 172);
+            this.btnagregarclientes.TabIndex = 1;
+            this.btnagregarclientes.Text = "Agregar Clientes";
+            this.btnagregarclientes.UseVisualStyleBackColor = false;
+            this.btnagregarclientes.Click += new System.EventHandler(this.btnagregarclientes_Click);
+            // 
             // MASTER
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.Asuna01_50;
             this.ClientSize = new System.Drawing.Size(716, 501);
+            this.Controls.Add(this.btnagregarclientes);
             this.Controls.Add(this.btncredito);
             this.Name = "MASTER";
             this.Text = "Master";
@@ -63,5 +80,6 @@
         #endregion
 
         private System.Windows.Forms.Button btncredito;
+        private System.Windows.Forms.Button btnagregarclientes;
     }
 }

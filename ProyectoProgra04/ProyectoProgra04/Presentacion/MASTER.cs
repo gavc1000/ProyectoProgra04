@@ -23,5 +23,11 @@ namespace ProyectoProgra04.Presentacion
             credito.Show();
 
         }
+
+        private void btnagregarclientes_Click(object sender, EventArgs e)
+        {
+            AgregarClientes agregar = new AgregarClientes();
+            agregar.Show();
+        }
     }
 }
