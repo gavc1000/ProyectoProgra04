@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCred = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnCred
+            // button1
             // 
-            this.btnCred.BackColor = System.Drawing.Color.Transparent;
-            this.btnCred.BackgroundImage = global::ProyectoProgra04.Properties.Resources.blue_button_md;
-            this.btnCred.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCred.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCred.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCred.ForeColor = System.Drawing.Color.Turquoise;
-            this.btnCred.Location = new System.Drawing.Point(65, 39);
-            this.btnCred.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCred.Name = "btnCred";
-            this.btnCred.Size = new System.Drawing.Size(172, 167);
-            this.btnCred.TabIndex = 0;
-            this.btnCred.Text = "Gestion de Creditos";
-            this.btnCred.UseVisualStyleBackColor = false;
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Turquoise;
+            this.button1.Location = new System.Drawing.Point(56, 36);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(170, 166);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Gestion de Creditos";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.thumb_1920_750482;
-            this.ClientSize = new System.Drawing.Size(742, 568);
-            this.Controls.Add(this.btnCred);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(808, 573);
+            this.Controls.Add(this.button1);
             this.Name = "Cliente";
             this.Text = "Banco los Cositos";
             this.ResumeLayout(false);
@@ -62,6 +62,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnCred;
+        private System.Windows.Forms.Button button1;
     }
 }

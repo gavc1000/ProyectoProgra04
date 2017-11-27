@@ -112,19 +112,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -167,22 +167,16 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\blue-button-md.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asuna01 30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\thumb-1920-750482.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\6034630.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\7e0903c56b63d7f9ac4611bd21396f4a.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\purple-button-th.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\purple-button-md.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\blue-button-md.png" />
+    <None Include="Resources\button.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
