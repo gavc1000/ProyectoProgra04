@@ -37,6 +37,13 @@ namespace ProyectoProgra04.Logica
 
         }
 
+        public void genpago(Presentacion.Creditos obj)
+        {
+            Datos.credito cred = new Datos.credito();
+            cred.genpago(obj);
+
+        }
+
         
         
         
