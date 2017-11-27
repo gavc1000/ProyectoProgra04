@@ -46,6 +46,13 @@ namespace ProyectoProgra04.Datos
                " values("+c.IdCliente+","+c.Monto+","+c.tasa+","+c.Periodo+","+c.LastProy+","+c.Pago+","+c.Intereses+","+c.Amort+","+c.Saldo+","+c.Cancelado+")";
             conect.ejecutarInsert(query);
         }
+
+        public void genpago(string idcliente)
+        {
+            CRUD conectar= new CRUD();
+            conect.ejecutar("");
+
+        }
     }
 }
 
