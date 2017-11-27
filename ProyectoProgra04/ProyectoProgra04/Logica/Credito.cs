@@ -29,6 +29,13 @@ namespace ProyectoProgra04.Logica
             Datos.credito datos = new Datos.credito();
             return datos.consultarcreditocliente(idcliente, idcredito);
         }
+
+        public void gencredit (object obj )
+        {
+            Datos.credito cred = new Datos.credito();
+            cred.gencred(obj);
+
+        }
     }
 }
    
