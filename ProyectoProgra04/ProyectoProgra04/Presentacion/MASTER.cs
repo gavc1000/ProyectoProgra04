@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace ProyectoProgra04.Presentacion
 {
-    public partial class Banco : Form
+    public partial class MASTER : Form
     {
-        public Banco()
+        public MASTER()
         {
             InitializeComponent();
+        }
+
+        private void btncredito_Click(object sender, EventArgs e)
+        {
+            Credito credito = new Credito();
+            credito.Show();
+
         }
     }
 }
