@@ -77,6 +77,12 @@
     <Compile Include="Presentacion\Banco.Designer.cs">
       <DependentUpon>Banco.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Cliente.Designer.cs">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Credito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentacion\Banco.resx">
       <DependentUpon>Banco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Cliente.resx">
+      <DependentUpon>Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Credito.resx">
       <DependentUpon>Credito.cs</DependentUpon>
@@ -156,6 +165,24 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thumb-1920-750482.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6034630.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7e0903c56b63d7f9ac4611bd21396f4a.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple-button-th.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple-button-md.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-button-md.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
