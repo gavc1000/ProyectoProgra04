@@ -39,6 +39,12 @@ namespace ProyectoProgra04.Presentacion
 
         private void btnExpo_Click(object sender, EventArgs e)
         {
+            exportar ex = new exportar();
+            ex.Show();
+        }
+
+        private void btnimp_Click(object sender, EventArgs e)
+        {
 
         }
     }

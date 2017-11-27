@@ -32,6 +32,7 @@
             this.btnagregarcliente = new System.Windows.Forms.Button();
             this.btnlogout = new System.Windows.Forms.Button();
             this.btnExpo = new System.Windows.Forms.Button();
+            this.btnimp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btncredito
@@ -81,7 +82,7 @@
             this.btnExpo.BackColor = System.Drawing.Color.Transparent;
             this.btnExpo.BackgroundImage = global::ProyectoProgra04.Properties.Resources.blue_button_md;
             this.btnExpo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExpo.Location = new System.Drawing.Point(22, 291);
+            this.btnExpo.Location = new System.Drawing.Point(232, 320);
             this.btnExpo.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.btnExpo.Name = "btnExpo";
             this.btnExpo.Size = new System.Drawing.Size(171, 166);
@@ -90,12 +91,27 @@
             this.btnExpo.UseVisualStyleBackColor = false;
             this.btnExpo.Click += new System.EventHandler(this.btnExpo_Click);
             // 
+            // btnimp
+            // 
+            this.btnimp.BackColor = System.Drawing.Color.Transparent;
+            this.btnimp.BackgroundImage = global::ProyectoProgra04.Properties.Resources.blue_button_md;
+            this.btnimp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnimp.Location = new System.Drawing.Point(37, 320);
+            this.btnimp.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnimp.Name = "btnimp";
+            this.btnimp.Size = new System.Drawing.Size(171, 166);
+            this.btnimp.TabIndex = 7;
+            this.btnimp.Text = "Importar Datos";
+            this.btnimp.UseVisualStyleBackColor = false;
+            this.btnimp.Click += new System.EventHandler(this.btnimp_Click);
+            // 
             // Banco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.thumb_1920_750482;
             this.ClientSize = new System.Drawing.Size(656, 536);
+            this.Controls.Add(this.btnimp);
             this.Controls.Add(this.btnExpo);
             this.Controls.Add(this.btnlogout);
             this.Controls.Add(this.btnagregarcliente);
@@ -115,5 +131,6 @@
         private System.Windows.Forms.Button btnagregarcliente;
         private System.Windows.Forms.Button btnlogout;
         private System.Windows.Forms.Button btnExpo;
+        private System.Windows.Forms.Button btnimp;
     }
 }
