@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
             this.btnCred = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCred
@@ -59,8 +60,17 @@
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(227, 194);
             this.btnClientes.TabIndex = 1;
-            this.btnClientes.Text = "Gestion de Clientes";
+            this.btnClientes.Text = "Gestion de Empleados";
             this.btnClientes.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(639, 484);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Cliente
             // 
@@ -68,6 +78,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(808, 573);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.btnCred);
             this.Name = "Cliente";
@@ -80,5 +91,6 @@
 
         private System.Windows.Forms.Button btnCred;
         private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.Button button1;
     }
 }
