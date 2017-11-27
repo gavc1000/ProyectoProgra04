@@ -12,6 +12,8 @@ namespace ProyectoProgra04.Presentacion
 {
     public partial class Cliente : Form
     {
+       
+        
         public Cliente()
         {
             InitializeComponent();
@@ -19,7 +21,21 @@ namespace ProyectoProgra04.Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            CreditoCliente cred = new CreditoCliente();
+            cred.Show();
+        }
+
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+            LogIn log = new LogIn();
+            log.Show();
+            this.Close();
+        }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            Empleados emp = new Empleados();
+            emp.Show();
         }
     }
 }

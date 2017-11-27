@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
             this.btnCred = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
+            this.btnlogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCred
@@ -59,8 +60,23 @@
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(227, 194);
             this.btnClientes.TabIndex = 1;
-            this.btnClientes.Text = "Gestion de Clientes";
+            this.btnClientes.Text = "Gestion de Empleados";
             this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            // 
+            // btnlogout
+            // 
+            this.btnlogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnlogout.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
+            this.btnlogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnlogout.Location = new System.Drawing.Point(656, 502);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Size = new System.Drawing.Size(104, 39);
+            this.btnlogout.TabIndex = 2;
+            this.btnlogout.Text = "Log Out";
+            this.btnlogout.UseVisualStyleBackColor = false;
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
             // Cliente
             // 
@@ -68,6 +84,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(808, 573);
+            this.Controls.Add(this.btnlogout);
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.btnCred);
             this.Name = "Cliente";
@@ -80,5 +97,6 @@
 
         private System.Windows.Forms.Button btnCred;
         private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.Button btnlogout;
     }
 }

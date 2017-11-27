@@ -30,6 +30,7 @@
         {
             this.btncredito = new System.Windows.Forms.Button();
             this.btnagregarcliente = new System.Windows.Forms.Button();
+            this.btnlogout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btncredito
@@ -59,12 +60,28 @@
             this.btnagregarcliente.UseVisualStyleBackColor = false;
             this.btnagregarcliente.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnlogout
+            // 
+            this.btnlogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnlogout.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
+            this.btnlogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnlogout.Font = new System.Drawing.Font("Californian FB", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnlogout.Location = new System.Drawing.Point(527, 469);
+            this.btnlogout.Name = "btnlogout";
+            this.btnlogout.Size = new System.Drawing.Size(104, 39);
+            this.btnlogout.TabIndex = 3;
+            this.btnlogout.Text = "Log Out";
+            this.btnlogout.UseVisualStyleBackColor = false;
+            this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
+            // 
             // Banco
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.thumb_1920_750482;
             this.ClientSize = new System.Drawing.Size(656, 536);
+            this.Controls.Add(this.btnlogout);
             this.Controls.Add(this.btnagregarcliente);
             this.Controls.Add(this.btncredito);
             this.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -80,5 +97,6 @@
 
         private System.Windows.Forms.Button btncredito;
         private System.Windows.Forms.Button btnagregarcliente;
+        private System.Windows.Forms.Button btnlogout;
     }
 }
