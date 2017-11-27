@@ -81,6 +81,7 @@
     <Compile Include="Presentacion\Credito.Designer.cs">
       <DependentUpon>Credito.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Creditos.cs" />
     <Compile Include="Presentacion\LogIn.cs">
       <SubType>Form</SubType>
     </Compile>

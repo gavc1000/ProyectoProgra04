@@ -125,8 +125,29 @@ namespace ProyectoProgra04.Presentacion
             }
         }
 
-        private void btngenerarpago_Click(object sender, EventArgs e)
+        private void cmbIdCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+        List<Creditos> list;
+        private void btnGenerarCredito_Click(object sender, EventArgs e)
+        {
+            list = new List<Creditos>();
+
+            Creditos obj = new Creditos();
+            obj.IdCliente = Convert.ToInt32(cmbIdCliente.Text);
+            obj.IdCredito = Convert.ToInt32(cmbidcredito.Text);
+            obj.Monto = Convert.ToDecimal(txtMontoAprobado.Text);
+            obj.tasa = Convert.ToDecimal(txtTasa.Text);
+            obj.Periodo = Convert.ToInt32(txtperiodo.Text);
+            obj.LastProy = Convert.ToDecimal(txtUltimaProyeccion.Text);
+            obj.Pago = Convert.ToDecimal(txtpago.Text);
+            obj.Intereses = Convert.ToDecimal(txtIntereses.Text);
+            obj.Amort = Convert.ToDecimal(txtAmortizacion);
+            obj.Saldo = Convert.ToDecimal(txtSaldo.Text);
+
+            list.Add(obj);
+
 
         }
     }
