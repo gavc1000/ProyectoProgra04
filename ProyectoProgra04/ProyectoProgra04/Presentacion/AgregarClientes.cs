@@ -71,6 +71,37 @@ namespace ProyectoProgra04.Presentacion
         {
             try
             {
+                if(txtidcliente.Text == "")
+                {
+                    MessageBox.Show("Favor agregar ID de cliente");
+                }else
+                {
+                    if(txtnombre.Text == "")
+                    {
+                        MessageBox.Show("Favor agregar Nombre de cliente");
+                    }else
+                    {
+                        if(txtapellido1.Text == "")
+                        {
+                            MessageBox.Show("Favor agregar Primer Apellido");
+                        }else
+                        {
+                            if(txtapellido2.Text == "")
+                            {
+                                MessageBox.Show("Favor agregar Segundo Apellido");
+                            }else
+                            {
+                                if(txtidinstitucion.Text == "")
+                                {
+                                    MessageBox.Show("Favor agregar ID de Institución");
+                                }else
+                                {
+
+                                }
+                            }
+                        }
+                    }
+                }
                 MessageBox.Show("Cliente Agregado Correctamente");
                 limpiar();
             }

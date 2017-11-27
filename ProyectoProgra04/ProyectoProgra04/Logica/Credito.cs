@@ -30,7 +30,7 @@ namespace ProyectoProgra04.Logica
             return datos.consultarcreditocliente(idcliente, idcredito);
         }
 
-        public void gencredit (Presentacion.Creditos obj)
+        public void gencredit(Presentacion.Creditos obj)
         {
             Datos.credito cred = new Datos.credito();
             cred.gencred(obj);
@@ -45,15 +45,15 @@ namespace ProyectoProgra04.Logica
         }
         public DataTable consultarclientes()
         {
-            Datos.Agregarclientes datos =  new Datos.Agregarclientes();
+            Datos.Agregarclientes datos = new Datos.Agregarclientes();
 
             return datos.ConsultarClientes();
         }
 
-        
-        
-        
+        public bool agregarclientes(string idcliente, string Nombre, string Apellido1, string Apellido2, string idinstitucion, string pass)
+        {
+            return new Datos.Agregarclientes().agregarclientes(idcliente, Nombre, Apellido1, Apellido2, idinstitucion, pass);
         }
     }
+}
 
-   
