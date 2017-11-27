@@ -31,6 +31,7 @@
             this.btncredito = new System.Windows.Forms.Button();
             this.btnagregarcliente = new System.Windows.Forms.Button();
             this.btnlogout = new System.Windows.Forms.Button();
+            this.btnExpo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btncredito
@@ -75,12 +76,27 @@
             this.btnlogout.UseVisualStyleBackColor = false;
             this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
+            // btnExpo
+            // 
+            this.btnExpo.BackColor = System.Drawing.Color.Transparent;
+            this.btnExpo.BackgroundImage = global::ProyectoProgra04.Properties.Resources.blue_button_md;
+            this.btnExpo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExpo.Location = new System.Drawing.Point(22, 291);
+            this.btnExpo.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnExpo.Name = "btnExpo";
+            this.btnExpo.Size = new System.Drawing.Size(171, 166);
+            this.btnExpo.TabIndex = 4;
+            this.btnExpo.Text = "Exportar Datos";
+            this.btnExpo.UseVisualStyleBackColor = false;
+            this.btnExpo.Click += new System.EventHandler(this.btnExpo_Click);
+            // 
             // Banco
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.thumb_1920_750482;
             this.ClientSize = new System.Drawing.Size(656, 536);
+            this.Controls.Add(this.btnExpo);
             this.Controls.Add(this.btnlogout);
             this.Controls.Add(this.btnagregarcliente);
             this.Controls.Add(this.btncredito);
@@ -98,5 +114,6 @@
         private System.Windows.Forms.Button btncredito;
         private System.Windows.Forms.Button btnagregarcliente;
         private System.Windows.Forms.Button btnlogout;
+        private System.Windows.Forms.Button btnExpo;
     }
 }
