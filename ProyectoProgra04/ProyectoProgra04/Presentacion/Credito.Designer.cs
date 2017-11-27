@@ -53,6 +53,7 @@
             this.txtperiodo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbidcredito = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCredito)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,7 +136,7 @@
             // 
             // btnGenerarCredito
             // 
-            this.btnGenerarCredito.Location = new System.Drawing.Point(13, 316);
+            this.btnGenerarCredito.Location = new System.Drawing.Point(12, 338);
             this.btnGenerarCredito.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerarCredito.Name = "btnGenerarCredito";
             this.btnGenerarCredito.Size = new System.Drawing.Size(145, 33);
@@ -233,7 +234,7 @@
             // 
             // btngenerarpago
             // 
-            this.btngenerarpago.Location = new System.Drawing.Point(165, 316);
+            this.btngenerarpago.Location = new System.Drawing.Point(164, 338);
             this.btngenerarpago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btngenerarpago.Name = "btngenerarpago";
             this.btngenerarpago.Size = new System.Drawing.Size(112, 33);
@@ -291,11 +292,21 @@
             this.cmbidcredito.SelectedIndexChanged += new System.EventHandler(this.cmbidcredito_SelectedIndexChanged);
             this.cmbidcredito.Click += new System.EventHandler(this.cmbidcredito_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 319);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 17);
+            this.label2.TabIndex = 26;
+            this.label2.Text = "Saldo";
+            // 
             // Credito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 423);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbidcredito);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtperiodo);
@@ -358,5 +369,6 @@
         private System.Windows.Forms.TextBox txtperiodo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbidcredito;
+        private System.Windows.Forms.Label label2;
     }
 }
