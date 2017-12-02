@@ -263,6 +263,7 @@ namespace ProyectoProgra04.Presentacion
         private void cmbid_SelectedIndexChanged(object sender, EventArgs e)
         {
             banderaid = true;
+            banderacred = false;
             consultartablacontrolcredito();
         }
 
@@ -274,11 +275,21 @@ namespace ProyectoProgra04.Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            consultarcreditoid(cmbid.Text);
+           
             if (banderaid==true)
             {
                 MessageBox.Show("hi");
+                consultarcreditoid(cmbid.Text);
+
             }
+
+            if (banderacred==true)
+            {
+                MessageBox.Show("adios");
+                consultarporcredito(cmbconsultacreditos.Text);
+            }
+            
+            
         }
 
         private void cmbconsultacreditos_Click(object sender, EventArgs e)
@@ -289,6 +300,7 @@ namespace ProyectoProgra04.Presentacion
         private void cmbconsultacreditos_SelectedIndexChanged(object sender, EventArgs e)
         {
             banderacred = true;
+            banderaid = false;
         }
     }
 }

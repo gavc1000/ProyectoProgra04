@@ -84,9 +84,9 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.dgvconsulta = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnrefrescarconsult = new System.Windows.Forms.Button();
+            this.btn_limpiar = new System.Windows.Forms.Button();
+            this.btn_consultar = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.dtgCredito)).BeginInit();
@@ -616,9 +616,9 @@
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.dgvconsulta);
-            this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.button2);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.btnrefrescarconsult);
+            this.tabPage1.Controls.Add(this.btn_limpiar);
+            this.tabPage1.Controls.Add(this.btn_consultar);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Size = new System.Drawing.Size(830, 544);
@@ -629,7 +629,7 @@
             // cmbconsultacreditos
             // 
             this.cmbconsultacreditos.FormattingEnabled = true;
-            this.cmbconsultacreditos.Location = new System.Drawing.Point(104, 101);
+            this.cmbconsultacreditos.Location = new System.Drawing.Point(11, 129);
             this.cmbconsultacreditos.Name = "cmbconsultacreditos";
             this.cmbconsultacreditos.Size = new System.Drawing.Size(121, 21);
             this.cmbconsultacreditos.TabIndex = 9;
@@ -639,7 +639,7 @@
             // cmbid
             // 
             this.cmbid.FormattingEnabled = true;
-            this.cmbid.Location = new System.Drawing.Point(104, 57);
+            this.cmbid.Location = new System.Drawing.Point(8, 49);
             this.cmbid.Name = "cmbid";
             this.cmbid.Size = new System.Drawing.Size(121, 21);
             this.cmbid.TabIndex = 8;
@@ -649,56 +649,56 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(28, 101);
+            this.label13.Location = new System.Drawing.Point(8, 93);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(41, 13);
+            this.label13.Size = new System.Drawing.Size(157, 13);
             this.label13.TabIndex = 7;
-            this.label13.Text = "label13";
+            this.label13.Text = "Consultar Creditos por IDCredito";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(28, 57);
+            this.label12.Location = new System.Drawing.Point(8, 23);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 13);
+            this.label12.Size = new System.Drawing.Size(122, 13);
             this.label12.TabIndex = 4;
-            this.label12.Text = "label12";
+            this.label12.Text = "Consultar Creditos por Id";
             // 
             // dgvconsulta
             // 
             this.dgvconsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvconsulta.Location = new System.Drawing.Point(152, 172);
+            this.dgvconsulta.Location = new System.Drawing.Point(11, 172);
             this.dgvconsulta.Name = "dgvconsulta";
-            this.dgvconsulta.Size = new System.Drawing.Size(491, 182);
+            this.dgvconsulta.Size = new System.Drawing.Size(797, 226);
             this.dgvconsulta.TabIndex = 3;
             // 
-            // button3
+            // btnrefrescarconsult
             // 
-            this.button3.Location = new System.Drawing.Point(397, 360);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnrefrescarconsult.Location = new System.Drawing.Point(295, 422);
+            this.btnrefrescarconsult.Name = "btnrefrescarconsult";
+            this.btnrefrescarconsult.Size = new System.Drawing.Size(75, 23);
+            this.btnrefrescarconsult.TabIndex = 2;
+            this.btnrefrescarconsult.Text = "Refrescar";
+            this.btnrefrescarconsult.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_limpiar
             // 
-            this.button2.Location = new System.Drawing.Point(316, 360);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_limpiar.Location = new System.Drawing.Point(186, 422);
+            this.btn_limpiar.Name = "btn_limpiar";
+            this.btn_limpiar.Size = new System.Drawing.Size(75, 23);
+            this.btn_limpiar.TabIndex = 1;
+            this.btn_limpiar.Text = "Limpiar";
+            this.btn_limpiar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_consultar
             // 
-            this.button1.Location = new System.Drawing.Point(226, 360);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_consultar.Location = new System.Drawing.Point(90, 422);
+            this.btn_consultar.Name = "btn_consultar";
+            this.btn_consultar.Size = new System.Drawing.Size(75, 23);
+            this.btn_consultar.TabIndex = 0;
+            this.btn_consultar.Text = "Consultar";
+            this.btn_consultar.UseVisualStyleBackColor = true;
+            this.btn_consultar.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabPage3
             // 
@@ -752,7 +752,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.thumb_1920_750482;
-            this.ClientSize = new System.Drawing.Size(838, 420);
+            this.ClientSize = new System.Drawing.Size(838, 493);
             this.Controls.Add(this.tabControl2);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Credito";
@@ -830,9 +830,9 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridView dgvconsulta;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnrefrescarconsult;
+        private System.Windows.Forms.Button btn_limpiar;
+        private System.Windows.Forms.Button btn_consultar;
         private System.Windows.Forms.ComboBox cmbid;
         private System.Windows.Forms.ComboBox cmbconsultacreditos;
 

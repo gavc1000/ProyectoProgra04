@@ -41,11 +41,11 @@ namespace ProyectoProgra04.Datos
             return dtcredito;
         }
 
-        public DataTable consultarcreditocreditocliente(string idcredito)
+        public DataTable consultarcreditoporid(string idcredito)
         {
             CRUD conectar = new CRUD();
             DataTable dtcredito;
-            dtcredito = conect.ejecutar("Select IdCliente,IdCredito, Periodo,Pago,Intereses,Amortizacion,Saldo,Cancelado from Credito where IdCliente = " + idcredito + "");
+            dtcredito = conect.ejecutar("Select IdCliente,IdCredito, Periodo,Pago,Intereses,Amortizacion,Saldo,Cancelado from Credito where IdCliente = 4");
             return dtcredito;
         }
         public void gencred(Presentacion.Creditos c)

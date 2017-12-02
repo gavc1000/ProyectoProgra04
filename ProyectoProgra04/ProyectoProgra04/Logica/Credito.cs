@@ -33,7 +33,7 @@ namespace ProyectoProgra04.Logica
         public DataTable consultarcreditocliente(string creditocliente)
         {
             Datos.credito datos = new Datos.credito();
-            return datos.consultarcreditoidcliente(creditocliente);
+            return datos.consultarcreditoporid(creditocliente);
         }
 
         public void gencredit(Presentacion.Creditos obj)
