@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIn));
             this.txtuser = new System.Windows.Forms.TextBox();
             this.txtpass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -128,6 +129,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtpass);
             this.Controls.Add(this.txtuser);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LogIn";
             this.Text = "Banco Los Cositos";
             this.Load += new System.EventHandler(this.LogIn_Load);

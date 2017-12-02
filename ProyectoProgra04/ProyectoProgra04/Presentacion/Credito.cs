@@ -290,5 +290,10 @@ namespace ProyectoProgra04.Presentacion
         {
             banderacred = true;
         }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

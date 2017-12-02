@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(exportar));
             this.Excel = new System.Windows.Forms.RadioButton();
             this.aXml = new System.Windows.Forms.RadioButton();
             this.txt = new System.Windows.Forms.RadioButton();
@@ -99,6 +100,7 @@
             this.Controls.Add(this.txt);
             this.Controls.Add(this.aXml);
             this.Controls.Add(this.Excel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "exportar";
             this.Text = "Exportar Datos";
             this.ResumeLayout(false);

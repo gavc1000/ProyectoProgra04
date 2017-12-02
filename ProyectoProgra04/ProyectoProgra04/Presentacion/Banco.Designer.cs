@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Banco));
             this.btncredito = new System.Windows.Forms.Button();
             this.btnagregarcliente = new System.Windows.Forms.Button();
             this.btnlogout = new System.Windows.Forms.Button();
@@ -109,7 +110,7 @@
             // 
             // Banco
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.thumb_1920_750482;
             this.ClientSize = new System.Drawing.Size(656, 536);
@@ -120,6 +121,7 @@
             this.Controls.Add(this.btncredito);
             this.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "Banco";
             this.Text = "Banco Los Cositos";
