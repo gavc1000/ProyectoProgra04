@@ -45,7 +45,7 @@ namespace ProyectoProgra04.Datos
         {
             CRUD conectar = new CRUD();
             DataTable dtcredito;
-            dtcredito = conect.ejecutar("Select IdCliente,IdCredito, Periodo,Pago,Intereses,Amortizacion,Saldo,Cancelado from Credito where IdCliente = 4");
+            dtcredito = conect.ejecutar("Select IdCliente,IdCredito, Periodo,Pago,Intereses,Amortizacion,Saldo,Cancelado from Credito where IdCredito =");
             return dtcredito;
         }
         public void gencred(Presentacion.Creditos c)
