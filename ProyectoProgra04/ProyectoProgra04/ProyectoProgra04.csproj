@@ -135,6 +135,12 @@
     <EmbeddedResource Include="Presentacion\Banco.resx">
       <DependentUpon>Banco.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\CreditoCliente.resx">
+      <DependentUpon>CreditoCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Empleados.resx">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\exportar.resx">
       <DependentUpon>exportar.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +229,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\quote-bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chrome-trex-dinosaur.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

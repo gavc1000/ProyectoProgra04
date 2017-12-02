@@ -302,5 +302,10 @@ namespace ProyectoProgra04.Presentacion
             banderacred = true;
             banderaid = false;
         }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

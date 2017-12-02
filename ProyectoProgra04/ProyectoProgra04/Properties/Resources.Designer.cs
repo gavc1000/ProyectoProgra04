@@ -103,6 +103,16 @@ namespace ProyectoProgra04.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chrome_trex_dinosaur {
+            get {
+                object obj = ResourceManager.GetObject("chrome_trex_dinosaur", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap quote_bg {
             get {
                 object obj = ResourceManager.GetObject("quote_bg", resourceCulture);
