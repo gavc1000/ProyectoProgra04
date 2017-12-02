@@ -24,10 +24,16 @@ namespace ProyectoProgra04.Logica
             Datos.credito datos = new Datos.credito();
             return datos.ConsultarTablaControl();
         }
-        public DataTable consultarcreditocliente(string idcliente, string idcredito)
+        public DataTable consultarcreditoidcliente(string idcliente)
         {
             Datos.credito datos = new Datos.credito();
-            return datos.consultarcreditocliente(idcliente, idcredito);
+            return datos.consultarcreditoidcliente(idcliente);
+        }
+
+        public DataTable consultarcreditocliente(string creditocliente)
+        {
+            Datos.credito datos = new Datos.credito();
+            return datos.consultarcreditoidcliente(creditocliente);
         }
 
         public void gencredit(Presentacion.Creditos obj)
@@ -37,10 +43,12 @@ namespace ProyectoProgra04.Logica
 
         }
 
+       
+
         public void genpago(Presentacion.Creditos obj)
         {
             Datos.credito cred = new Datos.credito();
-            cred.genpago(obj);
+            cred.genpago( obj);
 
         }
         public DataTable consultarclientes()
