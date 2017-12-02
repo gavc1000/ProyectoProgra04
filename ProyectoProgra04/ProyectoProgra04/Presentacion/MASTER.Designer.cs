@@ -45,7 +45,7 @@
             this.btncredito.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncredito.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btncredito.Location = new System.Drawing.Point(16, 15);
-            this.btncredito.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btncredito.Margin = new System.Windows.Forms.Padding(4);
             this.btncredito.Name = "btncredito";
             this.btncredito.Size = new System.Drawing.Size(231, 212);
             this.btncredito.TabIndex = 0;
@@ -62,7 +62,7 @@
             this.btnagregarclientes.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnagregarclientes.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnagregarclientes.Location = new System.Drawing.Point(255, 16);
-            this.btnagregarclientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnagregarclientes.Margin = new System.Windows.Forms.Padding(4);
             this.btnagregarclientes.Name = "btnagregarclientes";
             this.btnagregarclientes.Size = new System.Drawing.Size(231, 212);
             this.btnagregarclientes.TabIndex = 1;
@@ -94,7 +94,7 @@
             this.btnimp.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnimp.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnimp.Location = new System.Drawing.Point(16, 235);
-            this.btnimp.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnimp.Margin = new System.Windows.Forms.Padding(5);
             this.btnimp.Name = "btnimp";
             this.btnimp.Size = new System.Drawing.Size(231, 212);
             this.btnimp.TabIndex = 8;
@@ -110,7 +110,7 @@
             this.btnExpo.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExpo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnExpo.Location = new System.Drawing.Point(712, 325);
-            this.btnExpo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnExpo.Margin = new System.Windows.Forms.Padding(5);
             this.btnExpo.Name = "btnExpo";
             this.btnExpo.Size = new System.Drawing.Size(231, 212);
             this.btnExpo.TabIndex = 7;
@@ -123,6 +123,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.Asuna01_50;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(955, 617);
             this.Controls.Add(this.btnimp);
             this.Controls.Add(this.btnExpo);
@@ -130,7 +131,7 @@
             this.Controls.Add(this.btnagregarclientes);
             this.Controls.Add(this.btncredito);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MASTER";
             this.Text = "Master";
             this.ResumeLayout(false);
