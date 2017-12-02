@@ -34,6 +34,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LinqToExcel">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\LinqToExcel.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Data.Linq">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Data.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Interfaces">
+      <HintPath>..\packages\LinqToExcel.1.11.0\lib\Remotion.Interfaces.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\Agregarclientes.cs" />
     <Compile Include="Datos\credito.cs" />
     <Compile Include="Datos\CRUD.cs" />
     <Compile Include="Datos\datatable.cs" />
@@ -59,6 +72,48 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Logica\Credito.cs" />
+    <Compile Include="Presentacion\AgregarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\AgregarClientes.Designer.cs">
+      <DependentUpon>AgregarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Banco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Banco.Designer.cs">
+      <DependentUpon>Banco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\CreditoCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\CreditoCliente.Designer.cs">
+      <DependentUpon>CreditoCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Empleados.Designer.cs">
+      <DependentUpon>Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\exportar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\exportar.Designer.cs">
+      <DependentUpon>exportar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\MASTER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\MASTER.Designer.cs">
+      <DependentUpon>MASTER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Cliente.Designer.cs">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Credito.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +129,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\AgregarClientes.resx">
+      <DependentUpon>AgregarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Banco.resx">
+      <DependentUpon>Banco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\exportar.resx">
+      <DependentUpon>exportar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\MASTER.resx">
+      <DependentUpon>MASTER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Cliente.resx">
+      <DependentUpon>Cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Credito.resx">
       <DependentUpon>Credito.cs</DependentUpon>
     </EmbeddedResource>
@@ -82,18 +152,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -119,7 +190,7 @@
     <COMReference Include="Microsoft.Office.Interop.Excel">
       <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
       <VersionMajor>1</VersionMajor>
-      <VersionMinor>9</VersionMinor>
+      <VersionMinor>8</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
@@ -134,6 +205,24 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue-button-md.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asuna01 30.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thumb-1920-750482.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asuna01 50.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quote-bg.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

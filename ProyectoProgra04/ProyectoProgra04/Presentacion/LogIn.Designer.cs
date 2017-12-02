@@ -102,8 +102,10 @@
             // 
             // btnin
             // 
-            this.btnin.BackColor = System.Drawing.Color.White;
+            this.btnin.BackColor = System.Drawing.Color.Transparent;
+            this.btnin.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.btnin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnin.Font = new System.Drawing.Font("Californian FB", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnin.Location = new System.Drawing.Point(368, 367);
             this.btnin.Name = "btnin";
