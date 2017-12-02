@@ -33,6 +33,8 @@
             this.aXml = new System.Windows.Forms.RadioButton();
             this.txt = new System.Windows.Forms.RadioButton();
             this.btnexport = new System.Windows.Forms.Button();
+            this.cbolote = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Excel
@@ -90,12 +92,35 @@
             this.btnexport.Text = "Exportar";
             this.btnexport.UseVisualStyleBackColor = false;
             // 
+            // cbolote
+            // 
+            this.cbolote.FormattingEnabled = true;
+            this.cbolote.Location = new System.Drawing.Point(119, 297);
+            this.cbolote.Name = "cbolote";
+            this.cbolote.Size = new System.Drawing.Size(220, 24);
+            this.cbolote.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(42, 292);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 27);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Lote";
+            // 
             // exportar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.Untitled;
             this.ClientSize = new System.Drawing.Size(505, 471);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbolote);
             this.Controls.Add(this.btnexport);
             this.Controls.Add(this.txt);
             this.Controls.Add(this.aXml);
@@ -114,5 +139,7 @@
         private System.Windows.Forms.RadioButton aXml;
         private System.Windows.Forms.RadioButton txt;
         private System.Windows.Forms.Button btnexport;
+        private System.Windows.Forms.ComboBox cbolote;
+        private System.Windows.Forms.Label label1;
     }
 }
