@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace ProyectoProgra04.Presentacion
 {
@@ -28,12 +29,14 @@ namespace ProyectoProgra04.Presentacion
         }
         public void fromXML()
         {
-            DataTable dt = new DataTable();
+            
             try
             {
-                dt.ReadXml(@"C:\BancoLosCositos\Deducciones.xml");
-                MessageBox.Show(dt.Rows[0][1].ToString());
-                dgvDeducciones.DataSource = dt;
+                XmlReader xmlFile = XmlReader.Create(@"C:\BancoLosCositos\Deducciones.xml", new XmlReaderSettings());
+                DataTable dt = new DataTable();             
+                dt.ReadXml(xmlFile);             
+               dgvDeducciones.DataSource = dt;              
+                xmlFile.Close();
             }
             catch { MessageBox.Show("Se despicho tere"); }
         }
