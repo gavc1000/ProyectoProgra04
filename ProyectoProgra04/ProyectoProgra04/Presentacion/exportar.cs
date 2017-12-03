@@ -145,14 +145,14 @@ namespace ProyectoProgra04.Presentacion
                 TextWriter sw = new StreamWriter(@"C:\BancoLosCositos\Deducciones.txt");
                 int rowcount = dgvlote.Rows.Count;
                 Console.WriteLine(rowcount.ToString());
-                sw.WriteLine(dgvlote.Columns[0].Name.ToString() + "\t"
-                             + dgvlote.Columns[1].Name.ToString() + "\t"
-                             + dgvlote.Columns[2].Name.ToString() + "\t");
+                sw.WriteLine(dgvlote.Columns[0].Name.ToString() + "/"
+                             + dgvlote.Columns[1].Name.ToString() + "/"
+                             + dgvlote.Columns[2].Name.ToString());
                 for (int i = 0; i <= rowcount - 1; i = i + 1)
                 {
-                    sw.WriteLine(dgvlote.Rows[i].Cells[0].Value.ToString() + "\t"
-                                 + dgvlote.Rows[i].Cells[1].Value.ToString() + "\t"
-                                  + dgvlote.Rows[i].Cells[2].Value.ToString() + "\t");
+                    sw.WriteLine(dgvlote.Rows[i].Cells[0].Value.ToString() + "/"
+                                 + dgvlote.Rows[i].Cells[1].Value.ToString() + "/"
+                                  + dgvlote.Rows[i].Cells[2].Value.ToString());
                 }
                 sw.Close();
                 MessageBox.Show("Datos Exportados correctamente");
