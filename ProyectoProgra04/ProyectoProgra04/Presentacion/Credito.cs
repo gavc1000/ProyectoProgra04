@@ -14,6 +14,8 @@ namespace ProyectoProgra04.Presentacion
     {
         bool banderaid=false;
         bool banderacred=false;
+        string cancelado;
+        string nocancelado;
         public Credito()
         {
             InitializeComponent();
@@ -22,6 +24,7 @@ namespace ProyectoProgra04.Presentacion
         private void Credito_Load(object sender, EventArgs e)
         {
             consultartablacontrolcredito();
+            
         }
 
         private void lblIdCliente_Click(object sender, EventArgs e)
@@ -36,7 +39,7 @@ namespace ProyectoProgra04.Presentacion
 
         private void dtgCredito_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            llenarcamposact();
         }
 
         private void lblAmortizacion_Click(object sender, EventArgs e)
@@ -47,6 +50,7 @@ namespace ProyectoProgra04.Presentacion
         private void cmbIdCliente_Click(object sender, EventArgs e)
         {
             llenarcomboid();
+            
         }
 
         public void llenarcomboid()
@@ -84,11 +88,16 @@ namespace ProyectoProgra04.Presentacion
                 obj.Monto = Convert.ToDecimal(txtMontoAprobado.Text);
                 obj.tasa = Convert.ToDecimal(txtTasa.Text);
                 obj.Periodo = Convert.ToInt32(txtperiodo.Text);
-                obj.LastProy = Convert.ToDecimal(txtUltimaProyeccion.Text);
+                obj.LastProy = Convert.ToDecimal(txtidlote.Text);
                 obj.Pago = Convert.ToDecimal(txtpago.Text);
                 obj.Intereses = Convert.ToDecimal(txtIntereses.Text);
                 obj.Amort = Convert.ToDecimal(txtAmortizacion.Text);
                 obj.Saldo = Convert.ToDecimal(txtSaldo.Text);
+               
+                    //obj.Cancelado = Convert.ToInt32(cancelado);
+
+              
+                
 
                 list.Add(obj);
                 datos.genpago(obj);
@@ -103,6 +112,39 @@ namespace ProyectoProgra04.Presentacion
                 MessageBox.Show("Error al actualizar datos" +e);
             }
 
+        }
+
+        public void llenarcamposact()
+        {
+            try
+            {
+                MessageBox.Show("He aqui");
+               cmbIdCliente.Text=dgvCredito.CurrentRow.Cells[0].Value.ToString();
+                cmbidcredito.Text= dgvCredito.CurrentRow.Cells[1].Value.ToString();
+                txtidlote.Text= dgvCredito.CurrentRow.Cells[2].Value.ToString();
+                txtMontoAprobado.Text= dgvCredito.CurrentRow.Cells[3].Value.ToString();
+                txtTasa.Text= dgvCredito.CurrentRow.Cells[4].Value.ToString();
+                txtperiodo.Text= dgvCredito.CurrentRow.Cells[5].Value.ToString();
+                txtpago.Text= dgvCredito.CurrentRow.Cells[6].Value.ToString(); 
+                txtIntereses.Text= dgvCredito.CurrentRow.Cells[7].Value.ToString(); 
+                txtAmortizacion.Text= dgvCredito.CurrentRow.Cells[8].Value.ToString();
+                txtSaldo.Text= dgvCredito.CurrentRow.Cells[9].Value.ToString();
+                string cancelado= dgvCredito.CurrentRow.Cells[10].Value.ToString();
+
+                if (cancelado=="False")
+                {
+                    txtcancelado.Text = "No Cancelado";
+                }
+
+
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Error al cargar los campos"+""+ e);
+            }
+
+            
         }
 
         public void generarcredito()
@@ -147,8 +189,22 @@ namespace ProyectoProgra04.Presentacion
             txtperiodo.Text = "";
             txtSaldo.Text = "";
             txtTasa.Text = "";
-            txtUltimaProyeccion.Text = "";
+            txtidlote.Text = "";
             txt_insertamort.Text = "";
+            txt_insertidcliente.Text = "";
+            txt_insertidcred.Text = "";
+            txt_insertintere.Text = "";
+            txt_insertmontoapr.Text = "";
+            txt_insertpago.Text = "";
+            txt_insertperi.Text = "";
+            txt_insertsaldo.Text = "";
+            txt_inserttasa.Text = "";
+            txt_insertultp.Text = "";
+            cmbconsultacreditos.Text = "";
+            cmbid.Text = "";
+            cmbidcredito.Text = "";
+            cmbconsultacreditos.Text = "";
+
 
         }
         public void llenarcomboidcredito()
@@ -184,7 +240,7 @@ namespace ProyectoProgra04.Presentacion
                 DataTable dtcontrol = new DataTable();
 
                 dtcontrol = datos.ConsultarTablaControl();
-                dtgCredito.DataSource = dtcontrol;
+                dgvCredito.DataSource = dtcontrol;
                 dgv_insertar.DataSource = dtcontrol;
                 dgvconsulta.DataSource = dtcontrol;
             }
@@ -328,6 +384,35 @@ namespace ProyectoProgra04.Presentacion
 
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
+            limpiar();
+        }
+
+        private void Limpiar_Click(object sender, EventArgs e)
+        {
+            limpiar();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dgvCredito_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            llenarcamposact();
+        }
+
+       
+
+        private void rb_cancelado_CheckedChanged(object sender, EventArgs e)
+        {
+             cancelado = "1";
+            
+        }
+
+        private void rbnocancelado_CheckedChanged(object sender, EventArgs e)
+        {
+             cancelado = "0";
             
         }
     }

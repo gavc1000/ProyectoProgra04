@@ -40,6 +40,7 @@ namespace ProyectoProgra04.Presentacion
                 DataTable dt;
                 dt = ex.cargardatos(cbolote.Text);
                 dgvlote.DataSource = dt;
+               
             }
             catch
             {
@@ -77,10 +78,8 @@ namespace ProyectoProgra04.Presentacion
                     {
                         if (aXml.Checked)
                         {
-
+                            toXML();
                         }
-
-
                         else
                         {
 
@@ -122,6 +121,12 @@ namespace ProyectoProgra04.Presentacion
 
         private void toXML()
         {
+            DataTable dt = new DataTable();
+            DataSet ds = new DataSet();
+            dt = ex.cargardatos(cbolote.Text);
+            ds.Tables.Add(dt);
+            dt.WriteXml(@"C:\BancoLosCositos\Deducciones.xml");
+            
 
         }
         private void toText()

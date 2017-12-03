@@ -45,7 +45,7 @@ namespace ProyectoProgra04.Datos
         {
             CRUD conectar = new CRUD();
             DataTable dtcredito;
-            dtcredito = conect.ejecutar("Select IdCliente,IdCredito, Periodo,Pago,Intereses,Amortizacion,Saldo,Cancelado from Credito where IdCredito =");
+            dtcredito = conect.ejecutar("Select IdCliente,IdCredito, Periodo,Pago,Intereses,Amortizacion,Saldo,Cancelado from Credito where IdCredito ="+idcredito+"");
             return dtcredito;
         }
         public void gencred(Presentacion.Creditos c)
@@ -65,13 +65,17 @@ namespace ProyectoProgra04.Datos
 
         }
 
-        public void consultarcreditosporcedula( Presentacion.Creditos c)
+        public void consultarcreditosporcedula( String idcedula)
         {
             CRUD conectar = new CRUD();
-            string query = "select MontoAprovado,Tasa=,Periodo,UltimaProyeccion,Intereses,Amortizacion,Saldo,Cancelado from Credito where IdCliente= " + c.IdCliente + "";
+            string query = "select MontoAprovado,Tasa=,Periodo,UltimaProyeccion,Intereses,Amortizacion,Saldo,Cancelado from Credito where IdCliente= " + idcedula + "";
             conect.ejecutar(query);
 
         }
+
+       
+
+
     }
 }
 

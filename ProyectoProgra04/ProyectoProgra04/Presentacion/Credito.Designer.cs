@@ -36,15 +36,13 @@
             this.txtAmortizacion = new System.Windows.Forms.TextBox();
             this.cmbIdCliente = new System.Windows.Forms.ComboBox();
             this.txtIntereses = new System.Windows.Forms.TextBox();
-            this.dtgCredito = new System.Windows.Forms.DataGridView();
+            this.dgvCredito = new System.Windows.Forms.DataGridView();
             this.lblMontoAprobado = new System.Windows.Forms.Label();
             this.txtMontoAprobado = new System.Windows.Forms.TextBox();
             this.lblTasa = new System.Windows.Forms.Label();
             this.lblSaldo = new System.Windows.Forms.Label();
-            this.lblUltimaProyeccion = new System.Windows.Forms.Label();
             this.txtTasa = new System.Windows.Forms.TextBox();
             this.txtSaldo = new System.Windows.Forms.TextBox();
-            this.txtUltimaProyeccion = new System.Windows.Forms.TextBox();
             this.Pago = new System.Windows.Forms.Label();
             this.txtpago = new System.Windows.Forms.TextBox();
             this.btngenerarpago = new System.Windows.Forms.Button();
@@ -89,7 +87,14 @@
             this.btnconsultar = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgCredito)).BeginInit();
+            this.txtidlote = new System.Windows.Forms.TextBox();
+            this.lblote = new System.Windows.Forms.Label();
+            this.lbcancelado = new System.Windows.Forms.Label();
+            this.rb_cancelado = new System.Windows.Forms.RadioButton();
+            this.rbnocancelado = new System.Windows.Forms.RadioButton();
+            this.lbactcan = new System.Windows.Forms.Label();
+            this.txtcancelado = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCredito)).BeginInit();
             this.tabControl2.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_insertar)).BeginInit();
@@ -147,7 +152,7 @@
             // txtAmortizacion
             // 
             this.txtAmortizacion.Location = new System.Drawing.Point(102, 271);
-            this.txtAmortizacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAmortizacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtAmortizacion.Name = "txtAmortizacion";
             this.txtAmortizacion.Size = new System.Drawing.Size(76, 20);
             this.txtAmortizacion.TabIndex = 5;
@@ -156,7 +161,7 @@
             // 
             this.cmbIdCliente.FormattingEnabled = true;
             this.cmbIdCliente.Location = new System.Drawing.Point(102, 58);
-            this.cmbIdCliente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbIdCliente.Margin = new System.Windows.Forms.Padding(2);
             this.cmbIdCliente.Name = "cmbIdCliente";
             this.cmbIdCliente.Size = new System.Drawing.Size(76, 21);
             this.cmbIdCliente.TabIndex = 6;
@@ -166,23 +171,23 @@
             // txtIntereses
             // 
             this.txtIntereses.Location = new System.Drawing.Point(102, 241);
-            this.txtIntereses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIntereses.Margin = new System.Windows.Forms.Padding(2);
             this.txtIntereses.Name = "txtIntereses";
             this.txtIntereses.Size = new System.Drawing.Size(76, 20);
             this.txtIntereses.TabIndex = 7;
             // 
-            // dtgCredito
+            // dgvCredito
             // 
-            this.dtgCredito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgCredito.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dtgCredito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgCredito.Location = new System.Drawing.Point(214, 18);
-            this.dtgCredito.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dtgCredito.Name = "dtgCredito";
-            this.dtgCredito.RowTemplate.Height = 24;
-            this.dtgCredito.Size = new System.Drawing.Size(729, 255);
-            this.dtgCredito.TabIndex = 8;
-            this.dtgCredito.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgCredito_CellContentClick);
+            this.dgvCredito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCredito.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvCredito.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCredito.Location = new System.Drawing.Point(214, 18);
+            this.dgvCredito.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvCredito.Name = "dgvCredito";
+            this.dgvCredito.RowTemplate.Height = 24;
+            this.dgvCredito.Size = new System.Drawing.Size(729, 255);
+            this.dgvCredito.TabIndex = 8;
+            this.dgvCredito.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCredito_CellMouseClick);
             // 
             // lblMontoAprobado
             // 
@@ -198,7 +203,7 @@
             // txtMontoAprobado
             // 
             this.txtMontoAprobado.Location = new System.Drawing.Point(102, 88);
-            this.txtMontoAprobado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMontoAprobado.Margin = new System.Windows.Forms.Padding(2);
             this.txtMontoAprobado.Name = "txtMontoAprobado";
             this.txtMontoAprobado.Size = new System.Drawing.Size(76, 20);
             this.txtMontoAprobado.TabIndex = 11;
@@ -226,21 +231,10 @@
             this.lblSaldo.TabIndex = 13;
             this.lblSaldo.Text = "Saldo";
             // 
-            // lblUltimaProyeccion
-            // 
-            this.lblUltimaProyeccion.AutoSize = true;
-            this.lblUltimaProyeccion.Image = global::ProyectoProgra04.Properties.Resources.quote_bg;
-            this.lblUltimaProyeccion.Location = new System.Drawing.Point(2, 181);
-            this.lblUltimaProyeccion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblUltimaProyeccion.Name = "lblUltimaProyeccion";
-            this.lblUltimaProyeccion.Size = new System.Drawing.Size(92, 13);
-            this.lblUltimaProyeccion.TabIndex = 14;
-            this.lblUltimaProyeccion.Text = "Ultima Proyeccion";
-            // 
             // txtTasa
             // 
             this.txtTasa.Location = new System.Drawing.Point(102, 121);
-            this.txtTasa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTasa.Margin = new System.Windows.Forms.Padding(2);
             this.txtTasa.Name = "txtTasa";
             this.txtTasa.Size = new System.Drawing.Size(76, 20);
             this.txtTasa.TabIndex = 15;
@@ -248,18 +242,10 @@
             // txtSaldo
             // 
             this.txtSaldo.Location = new System.Drawing.Point(102, 301);
-            this.txtSaldo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSaldo.Margin = new System.Windows.Forms.Padding(2);
             this.txtSaldo.Name = "txtSaldo";
             this.txtSaldo.Size = new System.Drawing.Size(76, 20);
             this.txtSaldo.TabIndex = 16;
-            // 
-            // txtUltimaProyeccion
-            // 
-            this.txtUltimaProyeccion.Location = new System.Drawing.Point(102, 178);
-            this.txtUltimaProyeccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtUltimaProyeccion.Name = "txtUltimaProyeccion";
-            this.txtUltimaProyeccion.Size = new System.Drawing.Size(76, 20);
-            this.txtUltimaProyeccion.TabIndex = 17;
             // 
             // Pago
             // 
@@ -283,7 +269,7 @@
             this.btngenerarpago.BackColor = System.Drawing.Color.Transparent;
             this.btngenerarpago.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.btngenerarpago.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btngenerarpago.Location = new System.Drawing.Point(243, 314);
+            this.btngenerarpago.Location = new System.Drawing.Point(444, 287);
             this.btngenerarpago.Name = "btngenerarpago";
             this.btngenerarpago.Size = new System.Drawing.Size(84, 27);
             this.btngenerarpago.TabIndex = 20;
@@ -296,7 +282,7 @@
             this.btnlimpiar.BackColor = System.Drawing.Color.Transparent;
             this.btnlimpiar.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnlimpiar.Location = new System.Drawing.Point(603, 314);
+            this.btnlimpiar.Location = new System.Drawing.Point(687, 294);
             this.btnlimpiar.Name = "btnlimpiar";
             this.btnlimpiar.Size = new System.Drawing.Size(75, 27);
             this.btnlimpiar.TabIndex = 21;
@@ -309,7 +295,7 @@
             this.btnrefrescar.BackColor = System.Drawing.Color.Transparent;
             this.btnrefrescar.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.btnrefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnrefrescar.Location = new System.Drawing.Point(413, 314);
+            this.btnrefrescar.Location = new System.Drawing.Point(560, 287);
             this.btnrefrescar.Name = "btnrefrescar";
             this.btnrefrescar.Size = new System.Drawing.Size(75, 27);
             this.btnrefrescar.TabIndex = 22;
@@ -387,8 +373,8 @@
             this.tabPage4.Controls.Add(this.label2);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage4.Size = new System.Drawing.Size(830, 544);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(981, 544);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Insertar";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -670,6 +656,7 @@
             this.Limpiar.TabIndex = 2;
             this.Limpiar.Text = "Limpiar";
             this.Limpiar.UseVisualStyleBackColor = true;
+            this.Limpiar.Click += new System.EventHandler(this.Limpiar_Click);
             // 
             // btnconsultarefrescar
             // 
@@ -694,6 +681,11 @@
             // tabPage3
             // 
             this.tabPage3.BackgroundImage = global::ProyectoProgra04.Properties.Resources.Untitled;
+            this.tabPage3.Controls.Add(this.txtcancelado);
+            this.tabPage3.Controls.Add(this.lbactcan);
+            this.tabPage3.Controls.Add(this.rbnocancelado);
+            this.tabPage3.Controls.Add(this.rb_cancelado);
+            this.tabPage3.Controls.Add(this.lbcancelado);
             this.tabPage3.Controls.Add(this.cmbidcredito);
             this.tabPage3.Controls.Add(this.btnrefrescar);
             this.tabPage3.Controls.Add(this.txtperiodo);
@@ -702,10 +694,10 @@
             this.tabPage3.Controls.Add(this.btngenerarpago);
             this.tabPage3.Controls.Add(this.lblIdCredito);
             this.tabPage3.Controls.Add(this.txtSaldo);
-            this.tabPage3.Controls.Add(this.dtgCredito);
+            this.tabPage3.Controls.Add(this.dgvCredito);
             this.tabPage3.Controls.Add(this.txtpago);
             this.tabPage3.Controls.Add(this.lblIdCliente);
-            this.tabPage3.Controls.Add(this.txtUltimaProyeccion);
+            this.tabPage3.Controls.Add(this.txtidlote);
             this.tabPage3.Controls.Add(this.txtAmortizacion);
             this.tabPage3.Controls.Add(this.txtIntereses);
             this.tabPage3.Controls.Add(this.cmbIdCliente);
@@ -713,14 +705,14 @@
             this.tabPage3.Controls.Add(this.Pago);
             this.tabPage3.Controls.Add(this.lblTasa);
             this.tabPage3.Controls.Add(this.txtTasa);
-            this.tabPage3.Controls.Add(this.lblUltimaProyeccion);
+            this.tabPage3.Controls.Add(this.lblote);
             this.tabPage3.Controls.Add(this.txtMontoAprobado);
             this.tabPage3.Controls.Add(this.lblSaldo);
             this.tabPage3.Controls.Add(this.lblIntereses);
             this.tabPage3.Controls.Add(this.lblAmortizacion);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(981, 544);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Actulizar";
@@ -732,24 +724,95 @@
             this.tabPage2.BackgroundImage = global::ProyectoProgra04.Properties.Resources.Untitled;
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(830, 544);
+            this.tabPage2.Size = new System.Drawing.Size(981, 544);
             this.tabPage2.TabIndex = 3;
             this.tabPage2.Text = "Eliminar";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // txtidlote
+            // 
+            this.txtidlote.Location = new System.Drawing.Point(102, 178);
+            this.txtidlote.Margin = new System.Windows.Forms.Padding(2);
+            this.txtidlote.Name = "txtidlote";
+            this.txtidlote.Size = new System.Drawing.Size(76, 20);
+            this.txtidlote.TabIndex = 17;
+            // 
+            // lblote
+            // 
+            this.lblote.AutoSize = true;
+            this.lblote.Image = global::ProyectoProgra04.Properties.Resources.quote_bg;
+            this.lblote.Location = new System.Drawing.Point(2, 181);
+            this.lblote.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblote.Name = "lblote";
+            this.lblote.Size = new System.Drawing.Size(92, 13);
+            this.lblote.TabIndex = 14;
+            this.lblote.Text = "Ultima Proyeccion";
+            // 
+            // lbcancelado
+            // 
+            this.lbcancelado.AutoSize = true;
+            this.lbcancelado.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.lbcancelado.Location = new System.Drawing.Point(3, 345);
+            this.lbcancelado.Name = "lbcancelado";
+            this.lbcancelado.Size = new System.Drawing.Size(0, 13);
+            this.lbcancelado.TabIndex = 26;
+            // 
+            // rb_cancelado
+            // 
+            this.rb_cancelado.AutoSize = true;
+            this.rb_cancelado.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.rb_cancelado.Location = new System.Drawing.Point(12, 374);
+            this.rb_cancelado.Name = "rb_cancelado";
+            this.rb_cancelado.Size = new System.Drawing.Size(76, 17);
+            this.rb_cancelado.TabIndex = 27;
+            this.rb_cancelado.TabStop = true;
+            this.rb_cancelado.Text = "Cancelado";
+            this.rb_cancelado.UseVisualStyleBackColor = false;
+            this.rb_cancelado.CheckedChanged += new System.EventHandler(this.rb_cancelado_CheckedChanged);
+            // 
+            // rbnocancelado
+            // 
+            this.rbnocancelado.AutoSize = true;
+            this.rbnocancelado.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.rbnocancelado.Location = new System.Drawing.Point(128, 374);
+            this.rbnocancelado.Name = "rbnocancelado";
+            this.rbnocancelado.Size = new System.Drawing.Size(93, 17);
+            this.rbnocancelado.TabIndex = 28;
+            this.rbnocancelado.TabStop = true;
+            this.rbnocancelado.Text = "No Cancelado";
+            this.rbnocancelado.UseVisualStyleBackColor = false;
+            this.rbnocancelado.CheckedChanged += new System.EventHandler(this.rbnocancelado_CheckedChanged);
+            // 
+            // lbactcan
+            // 
+            this.lbactcan.AutoSize = true;
+            this.lbactcan.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.lbactcan.Location = new System.Drawing.Point(4, 344);
+            this.lbactcan.Name = "lbactcan";
+            this.lbactcan.Size = new System.Drawing.Size(58, 13);
+            this.lbactcan.TabIndex = 29;
+            this.lbactcan.Text = "Cancelado";
+            // 
+            // txtcancelado
+            // 
+            this.txtcancelado.Location = new System.Drawing.Point(102, 336);
+            this.txtcancelado.Name = "txtcancelado";
+            this.txtcancelado.Size = new System.Drawing.Size(76, 20);
+            this.txtcancelado.TabIndex = 30;
             // 
             // Credito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.thumb_1920_750482;
-            this.ClientSize = new System.Drawing.Size(989, 546);
+            this.ClientSize = new System.Drawing.Size(989, 586);
             this.Controls.Add(this.tabControl2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Credito";
             this.Text = "Credito";
             this.Load += new System.EventHandler(this.Credito_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgCredito)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCredito)).EndInit();
             this.tabControl2.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
@@ -772,15 +835,13 @@
         private System.Windows.Forms.TextBox txtAmortizacion;
         private System.Windows.Forms.ComboBox cmbIdCliente;
         private System.Windows.Forms.TextBox txtIntereses;
-        private System.Windows.Forms.DataGridView dtgCredito;
+        private System.Windows.Forms.DataGridView dgvCredito;
         private System.Windows.Forms.Label lblMontoAprobado;
         private System.Windows.Forms.TextBox txtMontoAprobado;
         private System.Windows.Forms.Label lblTasa;
         private System.Windows.Forms.Label lblSaldo;
-        private System.Windows.Forms.Label lblUltimaProyeccion;
         private System.Windows.Forms.TextBox txtTasa;
         private System.Windows.Forms.TextBox txtSaldo;
-        private System.Windows.Forms.TextBox txtUltimaProyeccion;
         private System.Windows.Forms.Label Pago;
         private System.Windows.Forms.TextBox txtpago;
         private System.Windows.Forms.Button btngenerarpago;
@@ -825,6 +886,12 @@
         private System.Windows.Forms.Button btnconsultar;
         private System.Windows.Forms.ComboBox cmbid;
         private System.Windows.Forms.ComboBox cmbconsultacreditos;
-
+        private System.Windows.Forms.TextBox txtidlote;
+        private System.Windows.Forms.Label lblote;
+        private System.Windows.Forms.Label lbcancelado;
+        private System.Windows.Forms.RadioButton rbnocancelado;
+        private System.Windows.Forms.RadioButton rb_cancelado;
+        private System.Windows.Forms.TextBox txtcancelado;
+        private System.Windows.Forms.Label lbactcan;
     }
 }

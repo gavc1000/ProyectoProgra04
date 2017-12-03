@@ -18,7 +18,7 @@ namespace ProyectoProgra04.Presentacion
         public decimal Intereses { get; set; }
         public decimal Amort { get; set; }
         public decimal Saldo { get; set; }
-        public bool Cancelado { get; set; }
+        public int Cancelado { get; set; }
 
     }
 }
