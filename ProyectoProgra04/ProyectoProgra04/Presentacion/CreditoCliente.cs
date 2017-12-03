@@ -103,18 +103,64 @@ namespace ProyectoProgra04.Presentacion
         }
         public void fromText()
         {
-
-        }
-
-        public void fromtxt()
-        {
             try
             {
+                this.openfiledialog1.ShowDialog();
+                if (!string.IsNullOrEmpty(this.openfiledialog1.FileName))
+                {
+                    archivo = this.openfiledialog1.FileName;
+                    lecturaarchivo(dgvCred, '/', archivo);
+                }
+
 
             }
             catch
             {
+                MessageBox.Show("Error al cargar archivo");
+            }
+        }
 
+
+        public void lecturaarchivo(DataGridView tabla, char carcater, string ruta)
+        {
+            StreamReader objreader = new StreamReader(ruta);
+            string sLine = "";
+            int fila = 0;
+            tabla.Rows.Clear();
+            tabla.AllowUserToAddRows = false;
+
+            do
+            {
+                sLine = objreader.ReadLine();
+                if ((sLine != null))
+                {
+                    if (fila == 0)
+                    {
+                        tabla.ColumnCount = sLine.Split(carcater).Length;
+                        nombrarTitulo(tabla, sLine.Split(carcater));
+                        fila = 1;
+                    }
+                    else
+                    {
+                        agregarFilaDatagridview(tabla, sLine, carcater);
+                        fila = fila + 1;
+                    }
+                }
+            }
+            while (!(sLine == null));
+            objreader.Close();
+        }
+        public static void agregarFilaDatagridview(DataGridView tabla, string linea, char caracter)
+        {
+            string[] arreglo = linea.Split(caracter);
+            tabla.Rows.Add(arreglo);
+        }
+        public static void nombrarTitulo(DataGridView tabla, string[] titulos)
+        {
+
+            for (int x = 0; x <= tabla.ColumnCount - 1; x++)
+            {
+                tabla.Columns[x].HeaderText = titulos[x];
             }
         }
         private void Excel_CheckedChanged(object sender, EventArgs e)
