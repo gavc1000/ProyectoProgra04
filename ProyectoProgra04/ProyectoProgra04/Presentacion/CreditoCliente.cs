@@ -116,18 +116,78 @@ namespace ProyectoProgra04.Presentacion
                     {
                         if (tXML.Checked)
                         {
-                            fromXML();
-                        }
-                        else
-                        {
 
-                            MessageBox.Show("Seleccione un metodo");
                         }
                     }
-
                 }
             }
             catch { }
+            }
+                
+            
+        
+
+        public void toExcel()
+        {
+
         }
+        public void toXML()
+        {
+
+            if (!Directory.Exists(@"C:\BancoLosCositos"))
+            {
+                Directory.CreateDirectory(@"C:\BancoLosCositos");
+            }
+            #region from dgv to dt
+            DataTable dt = new DataTable();
+            DataColumn[] dcs = new DataColumn[] { };
+
+            foreach (DataGridViewColumn c in dgvCred.Columns)
+            {
+                DataColumn dc = new DataColumn();
+                dc.ColumnName = c.Name;
+                dc.DataType = c.ValueType;
+                dt.Columns.Add(dc);
+
+            }
+
+            foreach (DataGridViewRow r in dgvCred.Rows)
+            {
+                DataRow drow = dt.NewRow();
+
+                foreach (DataGridViewCell cell in r.Cells)
+                {
+                    drow[cell.OwningColumn.Name] = cell.Value;
+                }
+
+                dt.Rows.Add(drow);
+                #endregion
+                try
+                {
+                    DataSet ds = new DataSet();
+
+                    ds.Tables.Add(dt);
+
+                    dt.WriteXml(@"C:\BancoLosCositos\DeduccionesAplicadas");
+                    MessageBox.Show("Se genero exitosamente el archivo");
+                }
+                catch
+                {
+                    MessageBox.Show("No se pudo generar el archivo");
+                }
+
+
+
+
+
+            }
+        }
+
+        
+        public void toText()
+        {
+
+        }
+
     }
 }
