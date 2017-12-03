@@ -121,6 +121,10 @@ namespace ProyectoProgra04.Presentacion
 
         private void toXML()
         {
+            if (!Directory.Exists(@"C:\BancoLosCositos"))
+            {
+                Directory.CreateDirectory(@"C:\BancoLosCositos");
+            }
             DataTable dt = new DataTable();
             DataSet ds = new DataSet();
             dt = ex.cargardatos(cbolote.Text);

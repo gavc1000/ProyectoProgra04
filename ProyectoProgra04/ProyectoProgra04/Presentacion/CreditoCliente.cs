@@ -16,5 +16,31 @@ namespace ProyectoProgra04.Presentacion
         {
             InitializeComponent();
         }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            fromXML();
+        }
+
+        public void fromExcel()
+        {
+
+        }
+        public void fromXML()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                dt.ReadXml(@"C:\BancoLosCositos\Deducciones.xml");
+                MessageBox.Show(dt.Rows[0][1].ToString());
+                dgvDeducciones.DataSource = dt;
+            }
+            catch { MessageBox.Show("Se despicho tere"); }
+        }
+        public void fromText()
+        {
+
+        }
+
     }
 }
