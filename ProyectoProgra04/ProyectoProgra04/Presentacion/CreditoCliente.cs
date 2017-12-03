@@ -11,6 +11,7 @@ using System.Xml;
 using System.IO;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Data.Odbc;
 
 namespace ProyectoProgra04.Presentacion
 {
@@ -29,7 +30,7 @@ namespace ProyectoProgra04.Presentacion
             {
                 if (fExcel.Checked)
                 {
-                    new CreditoCliente().fromExcel();
+                  
                     fromExcel();
                 }
                 else
@@ -63,7 +64,7 @@ namespace ProyectoProgra04.Presentacion
             OleDbDataAdapter MySataAdapter;  //almacena la info y se la manda al datatable y este llena el datagridview 
             DataTable dt;//se llena con la info del oledbdataadapter
 
-
+       
             String ruta = "";
             try
             {
@@ -77,7 +78,8 @@ namespace ProyectoProgra04.Presentacion
                         ruta = openfile1.FileName;
                     }
                 }
-                conn = new OleDbConnection("data source=" + ruta);
+                conn = new OleDbConnection("Provider=Microsoft.Jet.OLEBD.4.0;Data Source" + ruta + ";Extended Properties='Excel 8.0; HDR=Yes'");
+                //conn =new OleDbConnection("Provider=Microsoft.ACE.OLEBD.12.0;Data Source" + ruta + ";Extended Properties='Excel 12.0 Xml; HDR=Yes'");
                 MySataAdapter = new OleDbDataAdapter("Select * from [Sheet1$]", conn);
                 dt = new DataTable();
                 MySataAdapter.Fill(dt);
@@ -87,7 +89,8 @@ namespace ProyectoProgra04.Presentacion
             {
                 MessageBox.Show(ex.ToString());
             }
-        }
+        
+    }
         public void fromXML()
         {
 
@@ -210,7 +213,7 @@ namespace ProyectoProgra04.Presentacion
 
         public void toExcel()
         {
-
+          
         }
 
         public void toXML()
@@ -220,9 +223,9 @@ namespace ProyectoProgra04.Presentacion
             {
                 Directory.CreateDirectory(@"C:\BancoLosCositos");
             }
-
+           
             DataTable dt = new DataTable();
-            #region from dgv to dt
+ #region from dgv to dt
             DataColumn[] dcs = new DataColumn[] { };
 
             foreach (DataGridViewColumn c in dgvCred.Columns)
@@ -245,57 +248,32 @@ namespace ProyectoProgra04.Presentacion
 
                 dt.Rows.Add(drow);
             }
-            #endregion
-            try
-            {
-                DataSet ds = new DataSet();
+                #endregion
+                try
+                {
+                    DataSet ds = new DataSet();
 
-                ds.Tables.Add(dt);
+                    ds.Tables.Add(dt);
 
-                dt.WriteXml(@"C:\BancoLosCositos\DeduccionesAplicadas");
-                MessageBox.Show("Se genero exitosamente el archivo");
+                    dt.WriteXml(@"C:\BancoLosCositos\DeduccionesAplicadas");
+                    MessageBox.Show("Se genero exitosamente el archivo");
+                }
+                catch
+                {
+                    MessageBox.Show("No se pudo generar el archivo");
+                }
+
+
+
+
+
             }
-            catch
-            {
-                MessageBox.Show("No se pudo generar el archivo");
-            }
-
-
-
-
-
-        }
-
+        
 
 
         public void toText()
         {
-            try
-            {
-                if (!Directory.Exists(@"C:\BancoLosCositos"))
-                {
-                    Directory.CreateDirectory(@"C:\BancoLosCositos");
-                }
 
-                TextWriter sw = new StreamWriter(@"C:\BancoLosCositos\Deducciones.txt");
-                int rowcount = dgvCred.Rows.Count;
-                Console.WriteLine(rowcount.ToString());
-                sw.WriteLine(dgvCred.Columns[0].Name.ToString() + "/"
-                             + dgvCred.Columns[1].Name.ToString() + "/"
-                             + dgvCred.Columns[2].Name.ToString());
-                for (int i = 0; i <= rowcount - 1; i = i + 1)
-                {
-                    sw.WriteLine(dgvCred.Rows[i].Cells[0].Value.ToString() + "/"
-                                 + dgvCred.Rows[i].Cells[1].Value.ToString() + "/"
-                                  + dgvCred.Rows[i].Cells[2].Value.ToString());
-                }
-                sw.Close();
-                MessageBox.Show("Datos Exportados correctamente");
-            }
-            catch
-            {
-                MessageBox.Show("Error al exportar datos");
-            }
         }
 
     }
