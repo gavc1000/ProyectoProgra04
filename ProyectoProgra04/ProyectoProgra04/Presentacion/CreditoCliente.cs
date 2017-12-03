@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace ProyectoProgra04.Presentacion
 {
@@ -16,5 +17,33 @@ namespace ProyectoProgra04.Presentacion
         {
             InitializeComponent();
         }
+
+        private void btnCargar_Click(object sender, EventArgs e)
+        {
+            fromXML();
+        }
+
+        public void fromExcel()
+        {
+
+        }
+        public void fromXML()
+        {
+            
+            try
+            {
+                XmlReader xmlFile = XmlReader.Create(@"C:\BancoLosCositos\Deducciones.xml", new XmlReaderSettings());
+                DataTable dt = new DataTable();             
+                dt.ReadXml(xmlFile);             
+               dgvDeducciones.DataSource = dt;              
+                xmlFile.Close();
+            }
+            catch { MessageBox.Show("Se despicho tere"); }
+        }
+        public void fromText()
+        {
+
+        }
+
     }
 }
