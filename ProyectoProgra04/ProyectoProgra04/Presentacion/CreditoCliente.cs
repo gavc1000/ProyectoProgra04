@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
+using System.IO;
+using System.Windows.Forms;
 
 namespace ProyectoProgra04.Presentacion
 {
@@ -75,6 +77,17 @@ namespace ProyectoProgra04.Presentacion
 
         }
 
+        public void fromtxt()
+        {
+            try
+            {
+
+            }
+            catch
+            {
+
+            }
+        }
         private void Excel_CheckedChanged(object sender, EventArgs e)
         {
 
