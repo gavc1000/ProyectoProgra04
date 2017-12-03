@@ -123,7 +123,8 @@ namespace ProyectoProgra04.Presentacion
             DataSet ds = new DataSet();
             dt = ex.cargardatos(cbolote.Text);
             ds.Tables.Add(dt);
-            dt.WriteXml(@"C:\BancoLosCositos\Creditos.xml");
+            dt.WriteXml(@"C:\BancoLosCositos\Deducciones.xml");
+            
 
         }
         private void toText()
