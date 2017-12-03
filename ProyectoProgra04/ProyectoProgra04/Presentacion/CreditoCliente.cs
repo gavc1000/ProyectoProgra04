@@ -51,7 +51,7 @@ namespace ProyectoProgra04.Presentacion
             }
             catch { }
         }
-    
+
 
         public void fromExcel()
         {
@@ -64,9 +64,9 @@ namespace ProyectoProgra04.Presentacion
             {
 
                 XmlReader xmlFile = XmlReader.Create(@"C:\BancoLosCositos\Deducciones.xml", new XmlReaderSettings());
-                DataSet dataSet = new DataSet();                
-                dataSet.ReadXml(xmlFile);               
-               dgvCred.DataSource = dataSet.Tables["Table1"];              
+                DataSet dataSet = new DataSet();
+                dataSet.ReadXml(xmlFile);
+                dgvCred.DataSource = dataSet.Tables["Table1"];
                 xmlFile.Close();
 
             }
@@ -104,28 +104,32 @@ namespace ProyectoProgra04.Presentacion
             {
                 if (tExcel.Checked)
                 {
-                    fromExcel();
+                    toExcel();
                 }
                 else
                 {
                     if (tText.Checked)
                     {
-                        fromText();
+                        toText();
                     }
                     else
                     {
                         if (tXML.Checked)
                         {
+                            toXML();
+                        }
+                        else
+                        {
 
+                            MessageBox.Show("Seleccione un metodo");
                         }
                     }
+
                 }
             }
             catch { }
-            }
-                
-            
-        
+        }
+
 
         public void toExcel()
         {
@@ -183,7 +187,7 @@ namespace ProyectoProgra04.Presentacion
             }
         }
 
-        
+
         public void toText()
         {
 
