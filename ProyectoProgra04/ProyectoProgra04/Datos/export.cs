@@ -25,7 +25,7 @@ namespace ProyectoProgra04.Datos
         {
             DataTable dt;
             string query;
-            query = " select distinct idlote from credito";
+            query = " select idcliente as Cedula,Pago as Cuota, saldo as Saldo from Credito where Idlote="+lote+" and periodo=( select min(Periodo) from credito where Cancelado=0)";
             dt = conect.ejecutar(query);
             return dt;
         }
