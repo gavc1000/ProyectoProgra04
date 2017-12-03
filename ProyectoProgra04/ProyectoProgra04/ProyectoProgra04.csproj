@@ -73,6 +73,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Logica\Credito.cs" />
+    <Compile Include="Logica\export.cs" />
     <Compile Include="Presentacion\AgregarClientes.cs">
       <SubType>Form</SubType>
     </Compile>

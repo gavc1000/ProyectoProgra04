@@ -33,8 +33,10 @@
             this.aXml = new System.Windows.Forms.RadioButton();
             this.txt = new System.Windows.Forms.RadioButton();
             this.btnexport = new System.Windows.Forms.Button();
-            this.cbolote = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbolote = new System.Windows.Forms.ComboBox();
+            this.dgvlote = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvlote)).BeginInit();
             this.SuspendLayout();
             // 
             // Excel
@@ -91,14 +93,7 @@
             this.btnexport.TabIndex = 3;
             this.btnexport.Text = "Exportar";
             this.btnexport.UseVisualStyleBackColor = false;
-            // 
-            // cbolote
-            // 
-            this.cbolote.FormattingEnabled = true;
-            this.cbolote.Location = new System.Drawing.Point(119, 297);
-            this.cbolote.Name = "cbolote";
-            this.cbolote.Size = new System.Drawing.Size(220, 24);
-            this.cbolote.TabIndex = 4;
+            this.btnexport.Click += new System.EventHandler(this.btnexport_Click);
             // 
             // label1
             // 
@@ -113,14 +108,44 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Lote";
             // 
+            // cbolote
+            // 
+            this.cbolote.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbolote.FormattingEnabled = true;
+            this.cbolote.Items.AddRange(new object[] {
+            "0"});
+            this.cbolote.Location = new System.Drawing.Point(115, 292);
+            this.cbolote.Name = "cbolote";
+            this.cbolote.Size = new System.Drawing.Size(224, 24);
+            this.cbolote.TabIndex = 6;
+            this.cbolote.SelectedIndexChanged += new System.EventHandler(this.cbolote_SelectedIndexChanged);
+            this.cbolote.Click += new System.EventHandler(this.cbolote_Click);
+            // 
+            // dgvlote
+            // 
+            this.dgvlote.AllowUserToAddRows = false;
+            this.dgvlote.AllowUserToDeleteRows = false;
+            this.dgvlote.AllowUserToResizeColumns = false;
+            this.dgvlote.AllowUserToResizeRows = false;
+            this.dgvlote.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvlote.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dgvlote.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvlote.Enabled = false;
+            this.dgvlote.Location = new System.Drawing.Point(504, 3);
+            this.dgvlote.Name = "dgvlote";
+            this.dgvlote.RowTemplate.Height = 24;
+            this.dgvlote.Size = new System.Drawing.Size(441, 467);
+            this.dgvlote.TabIndex = 7;
+            // 
             // exportar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.Untitled;
-            this.ClientSize = new System.Drawing.Size(505, 471);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(946, 471);
+            this.Controls.Add(this.dgvlote);
             this.Controls.Add(this.cbolote);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnexport);
             this.Controls.Add(this.txt);
             this.Controls.Add(this.aXml);
@@ -129,6 +154,7 @@
             this.Name = "exportar";
             this.Text = "Exportar Datos";
             this.Load += new System.EventHandler(this.exportar_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvlote)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,7 +166,8 @@
         private System.Windows.Forms.RadioButton aXml;
         private System.Windows.Forms.RadioButton txt;
         private System.Windows.Forms.Button btnexport;
-        private System.Windows.Forms.ComboBox cbolote;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbolote;
+        private System.Windows.Forms.DataGridView dgvlote;
     }
 }
