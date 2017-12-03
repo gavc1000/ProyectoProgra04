@@ -62,6 +62,8 @@ namespace ProyectoProgra04.Logica
         {
             return new Datos.Agregarclientes().agregarclientes(idcliente, Nombre, Apellido1, Apellido2, idinstitucion, pass);
         }
+
+      
     }
 }
 
