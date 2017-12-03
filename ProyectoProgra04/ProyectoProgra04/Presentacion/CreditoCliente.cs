@@ -97,5 +97,37 @@ namespace ProyectoProgra04.Presentacion
         {
 
         }
+
+        private void btnExp_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (tExcel.Checked)
+                {
+                    fromExcel();
+                }
+                else
+                {
+                    if (tText.Checked)
+                    {
+                        fromText();
+                    }
+                    else
+                    {
+                        if (tXML.Checked)
+                        {
+                            fromXML();
+                        }
+                        else
+                        {
+
+                            MessageBox.Show("Seleccione un metodo");
+                        }
+                    }
+
+                }
+            }
+            catch { }
+        }
     }
 }

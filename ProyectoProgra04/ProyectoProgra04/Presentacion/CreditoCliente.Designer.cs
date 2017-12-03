@@ -157,6 +157,7 @@
             this.btnExp.TabIndex = 9;
             this.btnExp.Text = "Exportar";
             this.btnExp.UseVisualStyleBackColor = true;
+            this.btnExp.Click += new System.EventHandler(this.btnExp_Click);
             // 
             // CreditoCliente
             // 
