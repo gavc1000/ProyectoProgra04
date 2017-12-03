@@ -19,6 +19,14 @@ namespace ProyectoProgra04.Datos
             dtidclientes = conect.ejecutar("select IdCliente from Credito");
             return dtidclientes;
         }
+
+        public DataTable llenarcomboperiodo(String idcliente)
+        {
+            CRUD conectar = new CRUD();
+            DataTable dtidclientes;
+            dtidclientes = conect.ejecutar("select Periodo from Credito where IdCliente="+ idcliente+"");
+            return dtidclientes;
+        }
         public DataTable llenarcomboidcredito()
         {
             CRUD conectar = new CRUD();
@@ -58,7 +66,7 @@ namespace ProyectoProgra04.Datos
         public void genpago( Presentacion.Creditos c)
         {
             CRUD conectar= new CRUD();
-            string query = "Update  Credito  set MontoAprovado= "+ c.Monto+",Tasa="+c.tasa+",Periodo="+c.Periodo+",UltimaProyeccion="+c.LastProy+",Intereses="+c.Intereses+",Amortizacion="+c.Amort+",Saldo="+c.Saldo+",Cancelado=0 where IdCliente= "+c.IdCliente+"";
+            string query = "Update  Credito  set Cancelado="+c.Cancelado+" where IdCliente= "+c.IdCliente+" and Periodo="+c.Periodo+"";
            // string query2 = "Update  ContrCreditos  set MontoCredito=" + c.Monto + " where IdCliente= " + c.IdCliente + "";
             conect.ejecutar(query);
             //conect.ejecutar(query2);

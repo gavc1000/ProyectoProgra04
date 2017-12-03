@@ -19,6 +19,12 @@ namespace ProyectoProgra04.Logica
             Datos.credito datos = new Datos.credito();
             return datos.llenarcomboidcredito();
         }
+
+        public DataTable llenarcomboperiodo(String idcliente)
+        {
+            Datos.credito datos = new Datos.credito();
+            return datos.llenarcomboperiodo(idcliente);
+        }
         public DataTable ConsultarTablaControl()
         {
             Datos.credito datos = new Datos.credito();
