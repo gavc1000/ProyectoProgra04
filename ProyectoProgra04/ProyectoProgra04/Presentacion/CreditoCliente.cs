@@ -20,8 +20,36 @@ namespace ProyectoProgra04.Presentacion
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
-            fromXML();
+            try
+            {
+                if (fExcel.Checked)
+                {
+                    fromExcel();
+                }
+                else
+                {
+                    if (ftxt.Checked)
+                    {
+                        fromText();
+                    }
+                    else
+                    {
+                        if (fXml.Checked)
+                        {
+                            fromXML();
+                        }
+                        else
+                        {
+
+                            MessageBox.Show("Seleccione un metodo");
+                        }
+                    }
+
+                }
+            }
+            catch { }
         }
+    
 
         public void fromExcel()
         {
@@ -33,12 +61,14 @@ namespace ProyectoProgra04.Presentacion
             try
             {
 
-                DataSet dt = new DataSet();
-                dt.ReadXml(@"C:\BancoLosCositos\Deducciones.xml");
-                dgvCred.DataSource = dt;
+                XmlReader xmlFile = XmlReader.Create(@"C:\BancoLosCositos\Deducciones.xml", new XmlReaderSettings());
+                DataSet dataSet = new DataSet();                
+                dataSet.ReadXml(xmlFile);               
+               dgvCred.DataSource = dataSet.Tables["Table1"];              
+                xmlFile.Close();
 
             }
-            catch { MessageBox.Show("Se despicho tere"); }
+            catch { MessageBox.Show("Error al cargar"); }
         }
         public void fromText()
         {

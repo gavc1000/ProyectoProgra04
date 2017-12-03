@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreditoCliente));
             this.dgvCred = new System.Windows.Forms.DataGridView();
             this.btnCargar = new System.Windows.Forms.Button();
-            this.txt = new System.Windows.Forms.RadioButton();
-            this.aXml = new System.Windows.Forms.RadioButton();
-            this.Excel = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.ftxt = new System.Windows.Forms.RadioButton();
+            this.fXml = new System.Windows.Forms.RadioButton();
+            this.fExcel = new System.Windows.Forms.RadioButton();
+            this.tText = new System.Windows.Forms.RadioButton();
+            this.tXML = new System.Windows.Forms.RadioButton();
+            this.tExcel = new System.Windows.Forms.RadioButton();
             this.btnExp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCred)).BeginInit();
             this.SuspendLayout();
@@ -62,92 +62,92 @@
             this.btnCargar.UseVisualStyleBackColor = true;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
-            // txt
+            // ftxt
             // 
-            this.txt.AutoSize = true;
-            this.txt.BackColor = System.Drawing.Color.Transparent;
-            this.txt.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt.ForeColor = System.Drawing.Color.White;
-            this.txt.Location = new System.Drawing.Point(9, 118);
-            this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(218, 28);
-            this.txt.TabIndex = 5;
-            this.txt.Text = "Importar a Texto Plano";
-            this.txt.UseVisualStyleBackColor = false;
+            this.ftxt.AutoSize = true;
+            this.ftxt.BackColor = System.Drawing.Color.Transparent;
+            this.ftxt.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ftxt.ForeColor = System.Drawing.Color.White;
+            this.ftxt.Location = new System.Drawing.Point(9, 118);
+            this.ftxt.Name = "ftxt";
+            this.ftxt.Size = new System.Drawing.Size(218, 28);
+            this.ftxt.TabIndex = 5;
+            this.ftxt.Text = "Importar a Texto Plano";
+            this.ftxt.UseVisualStyleBackColor = false;
             // 
-            // aXml
+            // fXml
             // 
-            this.aXml.AutoSize = true;
-            this.aXml.BackColor = System.Drawing.Color.Transparent;
-            this.aXml.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.aXml.ForeColor = System.Drawing.Color.White;
-            this.aXml.Location = new System.Drawing.Point(12, 67);
-            this.aXml.Name = "aXml";
-            this.aXml.Size = new System.Drawing.Size(162, 28);
-            this.aXml.TabIndex = 4;
-            this.aXml.Text = "Importar a XML";
-            this.aXml.UseVisualStyleBackColor = false;
+            this.fXml.AutoSize = true;
+            this.fXml.BackColor = System.Drawing.Color.Transparent;
+            this.fXml.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fXml.ForeColor = System.Drawing.Color.White;
+            this.fXml.Location = new System.Drawing.Point(12, 67);
+            this.fXml.Name = "fXml";
+            this.fXml.Size = new System.Drawing.Size(162, 28);
+            this.fXml.TabIndex = 4;
+            this.fXml.Text = "Importar a XML";
+            this.fXml.UseVisualStyleBackColor = false;
             // 
-            // Excel
+            // fExcel
             // 
-            this.Excel.AutoSize = true;
-            this.Excel.BackColor = System.Drawing.Color.Transparent;
-            this.Excel.Checked = true;
-            this.Excel.FlatAppearance.BorderSize = 0;
-            this.Excel.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
-            this.Excel.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Excel.ForeColor = System.Drawing.Color.White;
-            this.Excel.Location = new System.Drawing.Point(12, 15);
-            this.Excel.Name = "Excel";
-            this.Excel.Size = new System.Drawing.Size(167, 28);
-            this.Excel.TabIndex = 3;
-            this.Excel.TabStop = true;
-            this.Excel.Text = "Importar a Excel";
-            this.Excel.UseVisualStyleBackColor = false;
-            this.Excel.CheckedChanged += new System.EventHandler(this.Excel_CheckedChanged);
+            this.fExcel.AutoSize = true;
+            this.fExcel.BackColor = System.Drawing.Color.Transparent;
+            this.fExcel.Checked = true;
+            this.fExcel.FlatAppearance.BorderSize = 0;
+            this.fExcel.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.fExcel.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fExcel.ForeColor = System.Drawing.Color.White;
+            this.fExcel.Location = new System.Drawing.Point(12, 15);
+            this.fExcel.Name = "fExcel";
+            this.fExcel.Size = new System.Drawing.Size(167, 28);
+            this.fExcel.TabIndex = 3;
+            this.fExcel.TabStop = true;
+            this.fExcel.Text = "Importar a Excel";
+            this.fExcel.UseVisualStyleBackColor = false;
+            this.fExcel.CheckedChanged += new System.EventHandler(this.Excel_CheckedChanged);
             // 
-            // radioButton1
+            // tText
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton1.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.ForeColor = System.Drawing.Color.White;
-            this.radioButton1.Location = new System.Drawing.Point(9, 306);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(219, 28);
-            this.radioButton1.TabIndex = 8;
-            this.radioButton1.Text = "Exportar a Texto Plano";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.tText.AutoSize = true;
+            this.tText.BackColor = System.Drawing.Color.Transparent;
+            this.tText.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tText.ForeColor = System.Drawing.Color.White;
+            this.tText.Location = new System.Drawing.Point(9, 306);
+            this.tText.Name = "tText";
+            this.tText.Size = new System.Drawing.Size(219, 28);
+            this.tText.TabIndex = 8;
+            this.tText.Text = "Exportar a Texto Plano";
+            this.tText.UseVisualStyleBackColor = false;
             // 
-            // radioButton2
+            // tXML
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton2.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.ForeColor = System.Drawing.Color.White;
-            this.radioButton2.Location = new System.Drawing.Point(12, 255);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(163, 28);
-            this.radioButton2.TabIndex = 7;
-            this.radioButton2.Text = "Exportar a XML";
-            this.radioButton2.UseVisualStyleBackColor = false;
+            this.tXML.AutoSize = true;
+            this.tXML.BackColor = System.Drawing.Color.Transparent;
+            this.tXML.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tXML.ForeColor = System.Drawing.Color.White;
+            this.tXML.Location = new System.Drawing.Point(12, 255);
+            this.tXML.Name = "tXML";
+            this.tXML.Size = new System.Drawing.Size(163, 28);
+            this.tXML.TabIndex = 7;
+            this.tXML.Text = "Exportar a XML";
+            this.tXML.UseVisualStyleBackColor = false;
             // 
-            // radioButton3
+            // tExcel
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.BackColor = System.Drawing.Color.Transparent;
-            this.radioButton3.Checked = true;
-            this.radioButton3.FlatAppearance.BorderSize = 0;
-            this.radioButton3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
-            this.radioButton3.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.ForeColor = System.Drawing.Color.White;
-            this.radioButton3.Location = new System.Drawing.Point(12, 203);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(168, 28);
-            this.radioButton3.TabIndex = 6;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Exportar a Excel";
-            this.radioButton3.UseVisualStyleBackColor = false;
+            this.tExcel.AutoSize = true;
+            this.tExcel.BackColor = System.Drawing.Color.Transparent;
+            this.tExcel.Checked = true;
+            this.tExcel.FlatAppearance.BorderSize = 0;
+            this.tExcel.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.tExcel.Font = new System.Drawing.Font("Californian FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tExcel.ForeColor = System.Drawing.Color.White;
+            this.tExcel.Location = new System.Drawing.Point(12, 203);
+            this.tExcel.Name = "tExcel";
+            this.tExcel.Size = new System.Drawing.Size(168, 28);
+            this.tExcel.TabIndex = 6;
+            this.tExcel.TabStop = true;
+            this.tExcel.Text = "Exportar a Excel";
+            this.tExcel.UseVisualStyleBackColor = false;
             // 
             // btnExp
             // 
@@ -166,12 +166,12 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(712, 424);
             this.Controls.Add(this.btnExp);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.txt);
-            this.Controls.Add(this.aXml);
-            this.Controls.Add(this.Excel);
+            this.Controls.Add(this.tText);
+            this.Controls.Add(this.tXML);
+            this.Controls.Add(this.tExcel);
+            this.Controls.Add(this.ftxt);
+            this.Controls.Add(this.fXml);
+            this.Controls.Add(this.fExcel);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.dgvCred);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -188,12 +188,12 @@
 
         private System.Windows.Forms.DataGridView dgvCred;
         private System.Windows.Forms.Button btnCargar;
-        private System.Windows.Forms.RadioButton txt;
-        private System.Windows.Forms.RadioButton aXml;
-        private System.Windows.Forms.RadioButton Excel;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton ftxt;
+        private System.Windows.Forms.RadioButton fXml;
+        private System.Windows.Forms.RadioButton fExcel;
+        private System.Windows.Forms.RadioButton tText;
+        private System.Windows.Forms.RadioButton tXML;
+        private System.Windows.Forms.RadioButton tExcel;
         private System.Windows.Forms.Button btnExp;
     }
 }
