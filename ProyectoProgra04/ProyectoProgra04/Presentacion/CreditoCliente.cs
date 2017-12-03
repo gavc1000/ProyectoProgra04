@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.IO;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace ProyectoProgra04.Presentacion
 {
@@ -26,6 +27,7 @@ namespace ProyectoProgra04.Presentacion
             {
                 if (fExcel.Checked)
                 {
+                    new CreditoCliente().fromExcel();
                     fromExcel();
                 }
                 else
@@ -55,7 +57,34 @@ namespace ProyectoProgra04.Presentacion
 
         public void fromExcel()
         {
+            OleDbConnection conn;  //permite la conexion de excel con c#
+            OleDbDataAdapter MySataAdapter;  //almacena la info y se la manda al datatable y este llena el datagridview 
+            DataTable dt;//se llena con la info del oledbdataadapter
 
+
+            String ruta = "";
+            try
+            {
+                OpenFileDialog openfile1 = new OpenFileDialog();  //ver y busca archivos dentro del ordenador
+                //openfile1.Filter = "Excel files |*,xlsx";  //filtro de archivos que tengan esa extension
+                //openfile1.Title = "Seleccione el archivo de Excel";
+                if (openfile1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    if (openfile1.FileName.Equals("") == false)   //nombre, ruta, comparada con vacio y da false , existe una ruta, no es vacia
+                    {
+                        ruta = openfile1.FileName;
+                    }
+                }
+                conn = new OleDbConnection("data source=" + ruta );
+                MySataAdapter = new OleDbDataAdapter("Select * from [Sheet1$]", conn);
+                dt = new DataTable();
+                MySataAdapter.Fill(dt);
+                dgvCred.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
         public void fromXML()
         {
@@ -104,7 +133,7 @@ namespace ProyectoProgra04.Presentacion
             {
                 if (tExcel.Checked)
                 {
-                    toExcel();
+                    toExcel(); ;
                 }
                 else
                 {
@@ -133,8 +162,9 @@ namespace ProyectoProgra04.Presentacion
 
         public void toExcel()
         {
-
+          
         }
+
         public void toXML()
         {
 
@@ -142,8 +172,9 @@ namespace ProyectoProgra04.Presentacion
             {
                 Directory.CreateDirectory(@"C:\BancoLosCositos");
             }
-            #region from dgv to dt
+           
             DataTable dt = new DataTable();
+ #region from dgv to dt
             DataColumn[] dcs = new DataColumn[] { };
 
             foreach (DataGridViewColumn c in dgvCred.Columns)
@@ -165,6 +196,7 @@ namespace ProyectoProgra04.Presentacion
                 }
 
                 dt.Rows.Add(drow);
+            }
                 #endregion
                 try
                 {
@@ -185,7 +217,7 @@ namespace ProyectoProgra04.Presentacion
 
 
             }
-        }
+        
 
 
         public void toText()
