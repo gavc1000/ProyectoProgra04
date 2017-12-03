@@ -16,7 +16,7 @@ namespace ProyectoProgra04
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Presentacion.LogIn());
+          
             Application.Run(new Presentacion.LogIn());
         }
     }
