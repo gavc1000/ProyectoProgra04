@@ -138,6 +138,19 @@ namespace ProyectoProgra04.Presentacion
            
 
         }
+        public void limpiar()
+        {
+            txtAmortizacion.Text = "";
+            txtIntereses.Text = "";
+            txtMontoAprobado.Text = "";
+            txtpago.Text = "";
+            txtperiodo.Text = "";
+            txtSaldo.Text = "";
+            txtTasa.Text = "";
+            txtUltimaProyeccion.Text = "";
+            txt_insertamort.Text = "";
+
+        }
         public void llenarcomboidcredito()
         {
             try
@@ -306,6 +319,16 @@ namespace ProyectoProgra04.Presentacion
         private void tabPage4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnconsultarefrescar_Click(object sender, EventArgs e)
+        {
+            consultartablacontrolcredito();
+        }
+
+        private void btnlimpiar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
