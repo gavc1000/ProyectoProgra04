@@ -11,6 +11,7 @@ using System.Xml;
 using System.IO;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Data.Odbc;
 
 namespace ProyectoProgra04.Presentacion
 {
@@ -29,7 +30,7 @@ namespace ProyectoProgra04.Presentacion
             {
                 if (fExcel.Checked)
                 {
-                    new CreditoCliente().fromExcel();
+                  
                     fromExcel();
                 }
                 else
@@ -63,7 +64,7 @@ namespace ProyectoProgra04.Presentacion
             OleDbDataAdapter MySataAdapter;  //almacena la info y se la manda al datatable y este llena el datagridview 
             DataTable dt;//se llena con la info del oledbdataadapter
 
-
+       
             String ruta = "";
             try
             {
@@ -77,7 +78,8 @@ namespace ProyectoProgra04.Presentacion
                         ruta = openfile1.FileName;
                     }
                 }
-                conn = new OleDbConnection("data source=" + ruta );
+                conn = new OleDbConnection("Provider=Microsoft.Jet.OLEBD.4.0;Data Source" + ruta + ";Extended Properties='Excel 8.0; HDR=Yes'");
+                //conn =new OleDbConnection("Provider=Microsoft.ACE.OLEBD.12.0;Data Source" + ruta + ";Extended Properties='Excel 12.0 Xml; HDR=Yes'");
                 MySataAdapter = new OleDbDataAdapter("Select * from [Sheet1$]", conn);
                 dt = new DataTable();
                 MySataAdapter.Fill(dt);
@@ -87,7 +89,8 @@ namespace ProyectoProgra04.Presentacion
             {
                 MessageBox.Show(ex.ToString());
             }
-        }
+        
+    }
         public void fromXML()
         {
 
