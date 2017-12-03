@@ -32,8 +32,13 @@
             this.btnCred = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.btnlogout = new System.Windows.Forms.Button();
-            this.btnExpo = new System.Windows.Forms.Button();
-            this.btnimp = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCred
@@ -49,7 +54,7 @@
             this.btnCred.Name = "btnCred";
             this.btnCred.Size = new System.Drawing.Size(229, 194);
             this.btnCred.TabIndex = 0;
-            this.btnCred.Text = "Gestion de Creditos";
+            this.btnCred.Text = "Gestion de Deducciones";
             this.btnCred.UseVisualStyleBackColor = false;
             this.btnCred.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -61,7 +66,7 @@
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClientes.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClientes.ForeColor = System.Drawing.Color.White;
-            this.btnClientes.Location = new System.Drawing.Point(309, 36);
+            this.btnClientes.Location = new System.Drawing.Point(376, 36);
             this.btnClientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(227, 194);
@@ -85,37 +90,103 @@
             this.btnlogout.UseVisualStyleBackColor = false;
             this.btnlogout.Click += new System.EventHandler(this.btnlogout_Click);
             // 
-            // btnExpo
+            // label1
             // 
-            this.btnExpo.BackColor = System.Drawing.Color.Transparent;
-            this.btnExpo.BackgroundImage = global::ProyectoProgra04.Properties.Resources.blue_button_md;
-            this.btnExpo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExpo.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExpo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExpo.Location = new System.Drawing.Point(309, 308);
-            this.btnExpo.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btnExpo.Name = "btnExpo";
-            this.btnExpo.Size = new System.Drawing.Size(227, 194);
-            this.btnExpo.TabIndex = 5;
-            this.btnExpo.Text = "Exportar Datos";
-            this.btnExpo.UseVisualStyleBackColor = false;
-            this.btnExpo.Click += new System.EventHandler(this.btnExpo_Click);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label1.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(75, 357);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 27);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Dolar";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // btnimp
+            // label2
             // 
-            this.btnimp.BackColor = System.Drawing.Color.Transparent;
-            this.btnimp.BackgroundImage = global::ProyectoProgra04.Properties.Resources.blue_button_md;
-            this.btnimp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnimp.Font = new System.Drawing.Font("Californian FB", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnimp.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnimp.Location = new System.Drawing.Point(56, 308);
-            this.btnimp.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.btnimp.Name = "btnimp";
-            this.btnimp.Size = new System.Drawing.Size(229, 194);
-            this.btnimp.TabIndex = 6;
-            this.btnimp.Text = "Importar Datos";
-            this.btnimp.UseVisualStyleBackColor = false;
-            this.btnimp.Click += new System.EventHandler(this.btnimp_Click);
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label2.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(130, 384);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 27);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Compra: 561.21";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label3.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(133, 423);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(140, 27);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Venta: 573.47";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label4.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(0, 310);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(168, 27);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Tipo de Cambio";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label5.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(130, 538);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(146, 27);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "Venta : 687.30";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label6.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(127, 499);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(162, 27);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Compra: 655.29";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label7.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(82, 450);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 27);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Euro";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // Cliente
             // 
@@ -123,8 +194,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(808, 574);
-            this.Controls.Add(this.btnimp);
-            this.Controls.Add(this.btnExpo);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnlogout);
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.btnCred);
@@ -133,6 +209,7 @@
             this.Name = "Cliente";
             this.Text = "Banco los Cositos";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -141,7 +218,12 @@
         private System.Windows.Forms.Button btnCred;
         private System.Windows.Forms.Button btnClientes;
         private System.Windows.Forms.Button btnlogout;
-        private System.Windows.Forms.Button btnExpo;
-        private System.Windows.Forms.Button btnimp;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
