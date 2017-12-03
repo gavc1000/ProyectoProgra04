@@ -100,6 +100,7 @@
             this.Excel.TabStop = true;
             this.Excel.Text = "Exportar a Excel";
             this.Excel.UseVisualStyleBackColor = false;
+            this.Excel.CheckedChanged += new System.EventHandler(this.Excel_CheckedChanged);
             // 
             // CreditoCliente
             // 
