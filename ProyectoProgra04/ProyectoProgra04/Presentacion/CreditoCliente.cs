@@ -47,6 +47,17 @@ namespace ProyectoProgra04.Presentacion
 
         }
 
+        public void fromtxt()
+        {
+            try
+            {
+
+            }
+            catch
+            {
+
+            }
+        }
         private void Excel_CheckedChanged(object sender, EventArgs e)
         {
 
