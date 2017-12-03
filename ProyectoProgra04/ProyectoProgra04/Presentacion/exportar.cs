@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,7 +40,7 @@ namespace ProyectoProgra04.Presentacion
                 DataTable dt;
                 dt = ex.cargardatos(cbolote.Text);
                 dgvlote.DataSource = dt;
-               
+
             }
             catch
             {
@@ -71,6 +72,7 @@ namespace ProyectoProgra04.Presentacion
                 {
                     if (txt.Checked)
                     {
+                        toText();
                     }
                     else
                     {
@@ -119,16 +121,46 @@ namespace ProyectoProgra04.Presentacion
 
         private void toXML()
         {
+            if (!Directory.Exists(@"C:\BancoLosCositos"))
+            {
+                Directory.CreateDirectory(@"C:\BancoLosCositos");
+            }
             DataTable dt = new DataTable();
             DataSet ds = new DataSet();
             dt = ex.cargardatos(cbolote.Text);
             ds.Tables.Add(dt);
             dt.WriteXml(@"C:\BancoLosCositos\Deducciones.xml");
-            
+
 
         }
         private void toText()
         {
+            try
+            {
+                if (!Directory.Exists(@"C:\BancoLosCositos"))
+                {
+                    Directory.CreateDirectory(@"C:\BancoLosCositos");
+                }
+
+                TextWriter sw = new StreamWriter(@"C:\BancoLosCositos\Deducciones.txt");
+                int rowcount = dgvlote.Rows.Count;
+                Console.WriteLine(rowcount.ToString());
+                sw.WriteLine(dgvlote.Columns[0].Name.ToString() + "/"
+                             + dgvlote.Columns[1].Name.ToString() + "/"
+                             + dgvlote.Columns[2].Name.ToString());
+                for (int i = 0; i <= rowcount - 1; i = i + 1)
+                {
+                    sw.WriteLine(dgvlote.Rows[i].Cells[0].Value.ToString() + "/"
+                                 + dgvlote.Rows[i].Cells[1].Value.ToString() + "/"
+                                  + dgvlote.Rows[i].Cells[2].Value.ToString());
+                }
+                sw.Close();
+                MessageBox.Show("Datos Exportados correctamente");
+            }
+            catch
+            {
+                MessageBox.Show("Error al exportar datos");
+            }
 
         }
 
