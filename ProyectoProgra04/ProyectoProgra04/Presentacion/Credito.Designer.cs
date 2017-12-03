@@ -39,13 +39,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.btnproyeccion = new System.Windows.Forms.Button();
             this.txtcuota = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lbcuota = new System.Windows.Forms.Label();
-            this.dgv_insertar = new System.Windows.Forms.DataGridView();
-            this.btn_refrescar = new System.Windows.Forms.Button();
-            this.btn_Insertar = new System.Windows.Forms.Button();
             this.txt_insertsaldo = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txt_insertamort = new System.Windows.Forms.TextBox();
@@ -78,13 +73,17 @@
             this.rb_cancelado = new System.Windows.Forms.RadioButton();
             this.lbcancelado = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnproyeccion = new System.Windows.Forms.Button();
+            this.btn_insertar = new System.Windows.Forms.Button();
+            this.dgv_insertar = new System.Windows.Forms.DataGridView();
+            this.btn_refrescar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCredito)).BeginInit();
             this.tabControl2.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_insertar)).BeginInit();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvconsulta)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_insertar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblIdCliente
@@ -199,13 +198,12 @@
             // 
             this.tabPage4.BackgroundImage = global::ProyectoProgra04.Properties.Resources.Untitled;
             this.tabPage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage4.Controls.Add(this.btn_refrescar);
+            this.tabPage4.Controls.Add(this.dgv_insertar);
+            this.tabPage4.Controls.Add(this.btn_insertar);
             this.tabPage4.Controls.Add(this.btnproyeccion);
             this.tabPage4.Controls.Add(this.txtcuota);
-            this.tabPage4.Controls.Add(this.textBox1);
             this.tabPage4.Controls.Add(this.lbcuota);
-            this.tabPage4.Controls.Add(this.dgv_insertar);
-            this.tabPage4.Controls.Add(this.btn_refrescar);
-            this.tabPage4.Controls.Add(this.btn_Insertar);
             this.tabPage4.Controls.Add(this.txt_insertsaldo);
             this.tabPage4.Controls.Add(this.label11);
             this.tabPage4.Controls.Add(this.txt_insertamort);
@@ -231,75 +229,26 @@
             this.tabPage4.UseVisualStyleBackColor = true;
             this.tabPage4.Click += new System.EventHandler(this.tabPage4_Click);
             // 
-            // btnproyeccion
-            // 
-            this.btnproyeccion.Location = new System.Drawing.Point(233, 414);
-            this.btnproyeccion.Name = "btnproyeccion";
-            this.btnproyeccion.Size = new System.Drawing.Size(75, 23);
-            this.btnproyeccion.TabIndex = 20;
-            this.btnproyeccion.Text = "btnproyeccion";
-            this.btnproyeccion.UseVisualStyleBackColor = true;
-            this.btnproyeccion.Click += new System.EventHandler(this.btnproyeccion_Click);
-            // 
             // txtcuota
             // 
-            this.txtcuota.Location = new System.Drawing.Point(116, 260);
+            this.txtcuota.Location = new System.Drawing.Point(118, 136);
             this.txtcuota.Name = "txtcuota";
             this.txtcuota.Size = new System.Drawing.Size(100, 20);
             this.txtcuota.TabIndex = 19;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(0, 0);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 18;
             // 
             // lbcuota
             // 
             this.lbcuota.AutoSize = true;
             this.lbcuota.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.lbcuota.Location = new System.Drawing.Point(8, 237);
+            this.lbcuota.Location = new System.Drawing.Point(17, 139);
             this.lbcuota.Name = "lbcuota";
             this.lbcuota.Size = new System.Drawing.Size(35, 13);
             this.lbcuota.TabIndex = 17;
             this.lbcuota.Text = "Cuota";
             // 
-            // dgv_insertar
-            // 
-            this.dgv_insertar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_insertar.Location = new System.Drawing.Point(252, 25);
-            this.dgv_insertar.Name = "dgv_insertar";
-            this.dgv_insertar.Size = new System.Drawing.Size(556, 225);
-            this.dgv_insertar.TabIndex = 16;
-            // 
-            // btn_refrescar
-            // 
-            this.btn_refrescar.BackgroundImage = global::ProyectoProgra04.Properties.Resources.button;
-            this.btn_refrescar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_refrescar.Location = new System.Drawing.Point(141, 414);
-            this.btn_refrescar.Name = "btn_refrescar";
-            this.btn_refrescar.Size = new System.Drawing.Size(75, 23);
-            this.btn_refrescar.TabIndex = 15;
-            this.btn_refrescar.Text = "Refrescar";
-            this.btn_refrescar.UseVisualStyleBackColor = true;
-            this.btn_refrescar.Click += new System.EventHandler(this.btn_refrescar_Click);
-            // 
-            // btn_Insertar
-            // 
-            this.btn_Insertar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Insertar.Image = global::ProyectoProgra04.Properties.Resources.button;
-            this.btn_Insertar.Location = new System.Drawing.Point(60, 414);
-            this.btn_Insertar.Name = "btn_Insertar";
-            this.btn_Insertar.Size = new System.Drawing.Size(75, 23);
-            this.btn_Insertar.TabIndex = 14;
-            this.btn_Insertar.Text = "Insertar";
-            this.btn_Insertar.UseVisualStyleBackColor = true;
-            this.btn_Insertar.Click += new System.EventHandler(this.btn_Insertar_Click);
-            // 
             // txt_insertsaldo
             // 
-            this.txt_insertsaldo.Location = new System.Drawing.Point(118, 370);
+            this.txt_insertsaldo.Location = new System.Drawing.Point(118, 214);
             this.txt_insertsaldo.Name = "txt_insertsaldo";
             this.txt_insertsaldo.ReadOnly = true;
             this.txt_insertsaldo.Size = new System.Drawing.Size(100, 20);
@@ -309,7 +258,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label11.Location = new System.Drawing.Point(19, 370);
+            this.label11.Location = new System.Drawing.Point(17, 217);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(34, 13);
             this.label11.TabIndex = 12;
@@ -317,7 +266,7 @@
             // 
             // txt_insertamort
             // 
-            this.txt_insertamort.Location = new System.Drawing.Point(118, 328);
+            this.txt_insertamort.Location = new System.Drawing.Point(118, 188);
             this.txt_insertamort.Name = "txt_insertamort";
             this.txt_insertamort.ReadOnly = true;
             this.txt_insertamort.Size = new System.Drawing.Size(100, 20);
@@ -327,7 +276,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label10.Location = new System.Drawing.Point(19, 331);
+            this.label10.Location = new System.Drawing.Point(17, 191);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(67, 13);
             this.label10.TabIndex = 10;
@@ -337,7 +286,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label3.Location = new System.Drawing.Point(20, 297);
+            this.label3.Location = new System.Drawing.Point(17, 165);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 9;
@@ -345,7 +294,7 @@
             // 
             // txt_insertintere
             // 
-            this.txt_insertintere.Location = new System.Drawing.Point(118, 297);
+            this.txt_insertintere.Location = new System.Drawing.Point(118, 162);
             this.txt_insertintere.Name = "txt_insertintere";
             this.txt_insertintere.ReadOnly = true;
             this.txt_insertintere.Size = new System.Drawing.Size(100, 20);
@@ -353,35 +302,35 @@
             // 
             // txt_insertperi
             // 
-            this.txt_insertperi.Location = new System.Drawing.Point(118, 160);
+            this.txt_insertperi.Location = new System.Drawing.Point(118, 110);
             this.txt_insertperi.Name = "txt_insertperi";
             this.txt_insertperi.Size = new System.Drawing.Size(100, 20);
             this.txt_insertperi.TabIndex = 5;
             // 
             // txt_inserttasa
             // 
-            this.txt_inserttasa.Location = new System.Drawing.Point(118, 118);
+            this.txt_inserttasa.Location = new System.Drawing.Point(118, 84);
             this.txt_inserttasa.Name = "txt_inserttasa";
             this.txt_inserttasa.Size = new System.Drawing.Size(100, 20);
             this.txt_inserttasa.TabIndex = 4;
             // 
             // txt_insertmontoapr
             // 
-            this.txt_insertmontoapr.Location = new System.Drawing.Point(118, 196);
+            this.txt_insertmontoapr.Location = new System.Drawing.Point(118, 58);
             this.txt_insertmontoapr.Name = "txt_insertmontoapr";
             this.txt_insertmontoapr.Size = new System.Drawing.Size(100, 20);
             this.txt_insertmontoapr.TabIndex = 3;
             // 
             // txt_insertidcred
             // 
-            this.txt_insertidcred.Location = new System.Drawing.Point(118, 81);
+            this.txt_insertidcred.Location = new System.Drawing.Point(118, 32);
             this.txt_insertidcred.Name = "txt_insertidcred";
             this.txt_insertidcred.Size = new System.Drawing.Size(100, 20);
             this.txt_insertidcred.TabIndex = 2;
             // 
             // txt_insertidcliente
             // 
-            this.txt_insertidcliente.Location = new System.Drawing.Point(118, 52);
+            this.txt_insertidcliente.Location = new System.Drawing.Point(118, 6);
             this.txt_insertidcliente.Name = "txt_insertidcliente";
             this.txt_insertidcliente.Size = new System.Drawing.Size(100, 20);
             this.txt_insertidcliente.TabIndex = 1;
@@ -390,7 +339,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label9.Location = new System.Drawing.Point(19, 163);
+            this.label9.Location = new System.Drawing.Point(17, 113);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 13);
             this.label9.TabIndex = 0;
@@ -400,7 +349,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label6.Location = new System.Drawing.Point(8, 199);
+            this.label6.Location = new System.Drawing.Point(17, 61);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 13);
             this.label6.TabIndex = 0;
@@ -410,7 +359,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label5.Location = new System.Drawing.Point(19, 121);
+            this.label5.Location = new System.Drawing.Point(17, 87);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(31, 13);
             this.label5.TabIndex = 0;
@@ -420,17 +369,18 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label4.Location = new System.Drawing.Point(18, 88);
+            this.label4.Location = new System.Drawing.Point(17, 35);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 13);
             this.label4.TabIndex = 0;
             this.label4.Text = "Id Credito";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.label2.Location = new System.Drawing.Point(18, 59);
+            this.label2.Location = new System.Drawing.Point(17, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 0;
@@ -621,6 +571,41 @@
             this.tabPage2.Text = "Eliminar";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // btnproyeccion
+            // 
+            this.btnproyeccion.Location = new System.Drawing.Point(8, 249);
+            this.btnproyeccion.Name = "btnproyeccion";
+            this.btnproyeccion.Size = new System.Drawing.Size(111, 23);
+            this.btnproyeccion.TabIndex = 20;
+            this.btnproyeccion.Text = "Generar Proyección";
+            this.btnproyeccion.UseVisualStyleBackColor = true;
+            // 
+            // btn_insertar
+            // 
+            this.btn_insertar.Location = new System.Drawing.Point(143, 249);
+            this.btn_insertar.Name = "btn_insertar";
+            this.btn_insertar.Size = new System.Drawing.Size(75, 23);
+            this.btn_insertar.TabIndex = 21;
+            this.btn_insertar.Text = "Insertar";
+            this.btn_insertar.UseVisualStyleBackColor = true;
+            // 
+            // dgv_insertar
+            // 
+            this.dgv_insertar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_insertar.Location = new System.Drawing.Point(224, 6);
+            this.dgv_insertar.Name = "dgv_insertar";
+            this.dgv_insertar.Size = new System.Drawing.Size(749, 266);
+            this.dgv_insertar.TabIndex = 22;
+            // 
+            // btn_refrescar
+            // 
+            this.btn_refrescar.Location = new System.Drawing.Point(898, 278);
+            this.btn_refrescar.Name = "btn_refrescar";
+            this.btn_refrescar.Size = new System.Drawing.Size(75, 23);
+            this.btn_refrescar.TabIndex = 23;
+            this.btn_refrescar.Text = "Refrescar";
+            this.btn_refrescar.UseVisualStyleBackColor = true;
+            // 
             // Credito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -637,12 +622,12 @@
             this.tabControl2.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_insertar)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvconsulta)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_insertar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -661,7 +646,6 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button btn_Insertar;
         private System.Windows.Forms.TextBox txt_insertsaldo;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txt_insertamort;
@@ -678,8 +662,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_refrescar;
-        private System.Windows.Forms.DataGridView dgv_insertar;
         private System.Windows.Forms.Label lbidcredito;
         private System.Windows.Forms.Label lbidcred;
         private System.Windows.Forms.DataGridView dgvconsulta;
@@ -694,8 +676,10 @@
         private System.Windows.Forms.ComboBox cmbperiodo;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtcuota;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lbcuota;
+        private System.Windows.Forms.Button btn_refrescar;
+        private System.Windows.Forms.DataGridView dgv_insertar;
+        private System.Windows.Forms.Button btn_insertar;
         private System.Windows.Forms.Button btnproyeccion;
     }
 }
