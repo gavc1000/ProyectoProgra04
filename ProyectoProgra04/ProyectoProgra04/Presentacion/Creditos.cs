@@ -14,10 +14,10 @@ namespace ProyectoProgra04.Presentacion
         public decimal tasa { get; set; }
         public int Periodo { get; set; }
         public decimal LastProy { get; set; }
-        public decimal Pago { get; set; }
-        public decimal Intereses { get; set; }
-        public decimal Amort { get; set; }
-        public decimal Saldo { get; set; }
+        public double Pago { get; set; }
+        public double Intereses { get; set; }
+        public double Amort { get; set; }
+        public double Saldo { get; set; }
         public int Cancelado { get; set; }
 
     }
