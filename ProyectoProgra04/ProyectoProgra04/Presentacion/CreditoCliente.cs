@@ -29,14 +29,14 @@ namespace ProyectoProgra04.Presentacion
         }
         public void fromXML()
         {
-            
+
             try
             {
-                XmlReader xmlFile = XmlReader.Create(@"C:\BancoLosCositos\Deducciones.xml", new XmlReaderSettings());
-                DataTable dt = new DataTable();             
-                dt.ReadXml(xmlFile);             
-               dgvDeducciones.DataSource = dt;              
-                xmlFile.Close();
+
+                DataSet dt = new DataSet();
+                dt.ReadXml(@"C:\BancoLosCositos\Deducciones.xml");
+                dgvCred.DataSource = dt;
+
             }
             catch { MessageBox.Show("Se despicho tere"); }
         }
@@ -45,5 +45,14 @@ namespace ProyectoProgra04.Presentacion
 
         }
 
+        private void Excel_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CreditoCliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
