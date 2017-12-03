@@ -46,9 +46,10 @@
             this.Excel.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
             this.Excel.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Excel.ForeColor = System.Drawing.Color.White;
-            this.Excel.Location = new System.Drawing.Point(81, 59);
+            this.Excel.Location = new System.Drawing.Point(61, 48);
+            this.Excel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Excel.Name = "Excel";
-            this.Excel.Size = new System.Drawing.Size(193, 31);
+            this.Excel.Size = new System.Drawing.Size(158, 26);
             this.Excel.TabIndex = 0;
             this.Excel.TabStop = true;
             this.Excel.Text = "Exportar a Excel";
@@ -60,9 +61,10 @@
             this.aXml.BackColor = System.Drawing.Color.Transparent;
             this.aXml.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.aXml.ForeColor = System.Drawing.Color.White;
-            this.aXml.Location = new System.Drawing.Point(81, 135);
+            this.aXml.Location = new System.Drawing.Point(61, 110);
+            this.aXml.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.aXml.Name = "aXml";
-            this.aXml.Size = new System.Drawing.Size(189, 32);
+            this.aXml.Size = new System.Drawing.Size(151, 26);
             this.aXml.TabIndex = 1;
             this.aXml.Text = "Exportar a XML";
             this.aXml.UseVisualStyleBackColor = false;
@@ -73,9 +75,10 @@
             this.txt.BackColor = System.Drawing.Color.Transparent;
             this.txt.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt.ForeColor = System.Drawing.Color.White;
-            this.txt.Location = new System.Drawing.Point(81, 201);
+            this.txt.Location = new System.Drawing.Point(61, 163);
+            this.txt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txt.Name = "txt";
-            this.txt.Size = new System.Drawing.Size(258, 31);
+            this.txt.Size = new System.Drawing.Size(208, 26);
             this.txt.TabIndex = 2;
             this.txt.Text = "Exportar a Texto Plano";
             this.txt.UseVisualStyleBackColor = false;
@@ -85,9 +88,10 @@
             this.btnexport.BackColor = System.Drawing.Color.Transparent;
             this.btnexport.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.btnexport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnexport.Location = new System.Drawing.Point(338, 391);
+            this.btnexport.Location = new System.Drawing.Point(254, 318);
+            this.btnexport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnexport.Name = "btnexport";
-            this.btnexport.Size = new System.Drawing.Size(110, 46);
+            this.btnexport.Size = new System.Drawing.Size(82, 37);
             this.btnexport.TabIndex = 3;
             this.btnexport.Text = "Exportar";
             this.btnexport.UseVisualStyleBackColor = false;
@@ -95,9 +99,10 @@
             // cbolote
             // 
             this.cbolote.FormattingEnabled = true;
-            this.cbolote.Location = new System.Drawing.Point(119, 297);
+            this.cbolote.Location = new System.Drawing.Point(116, 238);
+            this.cbolote.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbolote.Name = "cbolote";
-            this.cbolote.Size = new System.Drawing.Size(220, 24);
+            this.cbolote.Size = new System.Drawing.Size(166, 21);
             this.cbolote.TabIndex = 4;
             // 
             // label1
@@ -107,18 +112,19 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(42, 292);
+            this.label1.Location = new System.Drawing.Point(68, 237);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 27);
+            this.label1.Size = new System.Drawing.Size(44, 22);
             this.label1.TabIndex = 5;
             this.label1.Text = "Lote";
             // 
             // exportar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.Untitled;
-            this.ClientSize = new System.Drawing.Size(505, 471);
+            this.ClientSize = new System.Drawing.Size(379, 383);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbolote);
             this.Controls.Add(this.btnexport);
@@ -126,6 +132,7 @@
             this.Controls.Add(this.aXml);
             this.Controls.Add(this.Excel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "exportar";
             this.Text = "Exportar Datos";
             this.ResumeLayout(false);
