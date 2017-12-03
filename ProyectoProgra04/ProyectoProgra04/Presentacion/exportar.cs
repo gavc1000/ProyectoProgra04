@@ -40,7 +40,7 @@ namespace ProyectoProgra04.Presentacion
                 DataTable dt;
                 dt = ex.cargardatos(cbolote.Text);
                 dgvlote.DataSource = dt;
-               
+
             }
             catch
             {
@@ -130,7 +130,7 @@ namespace ProyectoProgra04.Presentacion
             dt = ex.cargardatos(cbolote.Text);
             ds.Tables.Add(dt);
             dt.WriteXml(@"C:\BancoLosCositos\Deducciones.xml");
-            
+
 
         }
         private void toText()
@@ -144,7 +144,11 @@ namespace ProyectoProgra04.Presentacion
 
                 TextWriter sw = new StreamWriter(@"C:\BancoLosCositos\Deducciones.txt");
                 int rowcount = dgvlote.Rows.Count;
-                for (int i = 0; i < rowcount - 1; i = i + 1)
+                Console.WriteLine(rowcount.ToString());
+                sw.WriteLine(dgvlote.Columns[0].Name.ToString() + "\t"
+                             + dgvlote.Columns[1].Name.ToString() + "\t"
+                             + dgvlote.Columns[2].Name.ToString() + "\t");
+                for (int i = 0; i <= rowcount - 1; i = i + 1)
                 {
                     sw.WriteLine(dgvlote.Rows[i].Cells[0].Value.ToString() + "\t"
                                  + dgvlote.Rows[i].Cells[1].Value.ToString() + "\t"
