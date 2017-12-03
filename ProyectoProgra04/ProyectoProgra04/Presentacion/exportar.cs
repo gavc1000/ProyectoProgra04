@@ -16,5 +16,10 @@ namespace ProyectoProgra04.Presentacion
         {
             InitializeComponent();
         }
+
+        private void exportar_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
