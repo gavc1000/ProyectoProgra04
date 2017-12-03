@@ -16,6 +16,8 @@ namespace ProyectoProgra04.Presentacion
 {
     public partial class CreditoCliente : Form
     {
+        OpenFileDialog openfiledialog1 = new OpenFileDialog();
+        public string archivo = "";
         public CreditoCliente()
         {
             InitializeComponent();
