@@ -12,6 +12,10 @@ namespace ProyectoProgra04.Presentacion
 {
     public partial class Credito : Form
     {
+        double intereses2;
+        double tasa2;
+        double saldo2;
+        double periodo2;
         bool banderaid=false;
         bool banderacred=false;
         string cancelado;
@@ -343,6 +347,24 @@ namespace ProyectoProgra04.Presentacion
             banderaid = true;
             banderacred = false;
             consultartablacontrolcredito();
+
+            try
+            {
+                if (banderaid == true)
+                {
+                    consultarcreditoid(cmbid.Text);
+
+                }
+
+                if (banderacred == true)
+                {
+                    consultarporcredito(cmbconsultacreditos.Text);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error al cargar datos");
+            }
         }
 
         private void cmbid_Click(object sender, EventArgs e)
@@ -353,18 +375,24 @@ namespace ProyectoProgra04.Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            if (banderaid==true)
+            try
             {
-                MessageBox.Show("hi");
-                consultarcreditoid(cmbid.Text);
+                if (banderaid == true)
+                {
+                    MessageBox.Show("hi");
+                    consultarcreditoid(cmbid.Text);
 
+                }
+
+                if (banderacred == true)
+                {
+                    MessageBox.Show("adios");
+                    consultarporcredito(cmbconsultacreditos.Text);
+                }
             }
-
-            if (banderacred==true)
+            catch
             {
-                MessageBox.Show("adios");
-                consultarporcredito(cmbconsultacreditos.Text);
+                MessageBox.Show("Error al cargar datos");
             }
             
             
@@ -379,6 +407,26 @@ namespace ProyectoProgra04.Presentacion
         {
             banderacred = true;
             banderaid = false;
+
+            try
+            {
+                if (banderaid == true)
+                {
+                    
+                    consultarcreditoid(cmbid.Text);
+
+                }
+
+                if (banderacred == true)
+                {
+                    
+                    consultarporcredito(cmbconsultacreditos.Text);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error al cargar datos");
+            }
         }
 
         private void tabPage4_Click(object sender, EventArgs e)
@@ -436,8 +484,6 @@ namespace ProyectoProgra04.Presentacion
             return nuevocapital;
         }
 
-
-
         private void rb_cancelado_CheckedChanged(object sender, EventArgs e)
         {
              cancelado = "1";
@@ -460,31 +506,61 @@ namespace ProyectoProgra04.Presentacion
 
         {
 
-            try
-            {
-                double pmt = PMT(Convert.ToDouble(txt_insertmontoapr.Text), Convert.ToDouble(txt_inserttasa.Text), Convert.ToDouble(txt_insertperi.Text));
-                txtcuota.Text = Convert.ToString(pmt);
-
-                double Intereses = calculointereses(Convert.ToDouble(txt_insertmontoapr.Text), Convert.ToDouble(txt_inserttasa.Text));
-                txt_insertintere.Text = Convert.ToString(Intereses);
-                double Amort = calculoamortizacion(Convert.ToDouble(txtcuota.Text), Convert.ToDouble(txt_insertintere.Text));
-                txt_insertamort.Text = Convert.ToString(Amort);
-                double Saldo = calculonuevocapital(Convert.ToDouble(txt_insertmontoapr.Text), Convert.ToDouble(Amort));
-                txt_insertsaldo.Text = Convert.ToString(Saldo);
-               
-               
-
-            }
-            catch (Exception ea)
-            {
-
-                MessageBox.Show("Error de Proyeccion" + "" + ea); 
-            }
+            
            
 
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnproyeccion_Click_1(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                if (chklp.Checked)
+                {
+                    tasa2 = ((Convert.ToDouble(txt_inserttasa.Text))/100) / 12;
+                    periodo2 = (Convert.ToDouble(txt_insertperi.Text)) * 12; 
+                    double pmt = PMT(Convert.ToDouble(txt_insertmontoapr.Text), Convert.ToDouble(tasa2), Convert.ToDouble(periodo2));
+                    txtcuota.Text = Convert.ToString(pmt);
+                    double Intereses = calculointereses(Convert.ToDouble(txt_insertmontoapr.Text), Convert.ToDouble(tasa2));
+                    txt_insertintere.Text = Convert.ToString(Intereses);
+                    double Amort = calculoamortizacion(Convert.ToDouble(txtcuota.Text), Convert.ToDouble(txt_insertintere.Text));
+                    txt_insertamort.Text = Convert.ToString(Amort);
+                    double Saldo = calculonuevocapital(Convert.ToDouble(txt_insertmontoapr.Text), Convert.ToDouble(Amort));
+                    txt_insertsaldo.Text = Convert.ToString(Saldo);
+                }else
+                {
+                    tasa2 = ((Convert.ToDouble(txt_inserttasa.Text)) / 100);
+                    double pmt = PMT(Convert.ToDouble(txt_insertmontoapr.Text), Convert.ToDouble(tasa2), Convert.ToDouble(txt_insertperi.Text));
+                    txtcuota.Text = Convert.ToString(pmt);
+                    double Intereses = calculointereses(Convert.ToDouble(txt_insertmontoapr.Text), Convert.ToDouble(tasa2));
+                    txt_insertintere.Text = Convert.ToString(Intereses);
+                    double Amort = calculoamortizacion(Convert.ToDouble(txtcuota.Text), Convert.ToDouble(txt_insertintere.Text));
+                    txt_insertamort.Text = Convert.ToString(Amort);
+                    double Saldo = calculonuevocapital(Convert.ToDouble(txt_insertmontoapr.Text), Convert.ToDouble(Amort));
+                    txt_insertsaldo.Text = Convert.ToString(Saldo);
+                }
+                
+
+            }
+            catch (Exception ea)
+            {
+
+                MessageBox.Show("Error de Proyeccion" + "" + ea);
+            }
+        }
+
+        private void chklp_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_insertar_Click_1(object sender, EventArgs e)
         {
 
         }
