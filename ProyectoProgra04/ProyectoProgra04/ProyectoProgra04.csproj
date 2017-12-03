@@ -64,6 +64,7 @@
     <Compile Include="Datos\CRUD.cs" />
     <Compile Include="Datos\datatable.cs" />
     <Compile Include="Datos\empleados.cs" />
+    <Compile Include="Datos\export.cs" />
     <Compile Include="Datos\Login.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -72,6 +73,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Logica\Credito.cs" />
+    <Compile Include="Logica\export.cs" />
     <Compile Include="Presentacion\AgregarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
