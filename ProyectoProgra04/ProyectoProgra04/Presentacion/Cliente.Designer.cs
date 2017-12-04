@@ -66,7 +66,7 @@
             this.btnlogout.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.btnlogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnlogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnlogout.Location = new System.Drawing.Point(656, 502);
+            this.btnlogout.Location = new System.Drawing.Point(751, 501);
             this.btnlogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnlogout.Name = "btnlogout";
             this.btnlogout.Size = new System.Drawing.Size(104, 39);
@@ -216,7 +216,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(816, 608);
+            this.ClientSize = new System.Drawing.Size(880, 608);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
