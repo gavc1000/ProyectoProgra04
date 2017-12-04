@@ -543,6 +543,7 @@ namespace ProyectoProgra04.Presentacion
                 Datos.credito cred = new Datos.credito();
                 list = new List<Creditos>();
                 Creditos obj = new Creditos();
+                DataTable dt = new DataTable();
                 double periodo = Convert.ToDouble( txt_insertperi.Text);
                 double tasa = (Convert.ToDouble(txt_inserttasa.Text)) / 100;
                 double capital = Convert.ToDouble(txt_insertmontoapr.Text);
@@ -557,22 +558,17 @@ namespace ProyectoProgra04.Presentacion
                     periodo2 = periodo * 12;
                     
                     pago= PMT(capital, tasa2, periodo2);
-                    //obj.Pago = pago;
                     intereses = calculointereses(capital, tasa2);
-                    //obj.Intereses = intereses;
                     amortizacion = calculoamortizacion(pago,intereses);
-                    //obj.Amort = amortizacion;
-                    //obj.Saldo = calculonuevocapital(Convert.ToDouble(txt_insertmontoapr.Text), Convert.ToDouble(obj.Amort));
-                    // INSERTAR.generarproyeccion(0, 0, 0, capital);
-                    obj.Periodo = Convert.ToInt32( periodo2);
-                    obj.Pago = pago;
-                    
+                  INSERTAR.generarproyeccion(0, 0, 0, capital);
+                 
                     for (saldo2 = capital; saldo2 >= 0; saldo2 = capital)
                     {
+                        list = new List<Creditos>();
                         intereses = calculointereses(saldo2, tasa2);
                         amortizacion = calculoamortizacion(pago, intereses);
                         capital = calculonuevocapital(capital, amortizacion);
-                        //INSERTAR.generarproyeccion(pago, intereses, amortizacion, capital);
+                        INSERTAR.generarproyeccion(pago, intereses, amortizacion, capital);
                     }
                     MessageBox.Show("Proyección creada satisfactoriamente ");
                 }
@@ -588,7 +584,7 @@ namespace ProyectoProgra04.Presentacion
                         intereses = calculointereses(saldo2, tasa);
                         amortizacion = calculoamortizacion(pago, intereses);
                         capital = calculonuevocapital(capital, amortizacion);
-                        //INSERTAR.generarproyeccion(pago, intereses, amortizacion, capital);
+                        INSERTAR.generarproyeccion(pago, intereses, amortizacion, capital);
                     }
                     MessageBox.Show("Proyección creada satisfactoriamente ");
                 }
