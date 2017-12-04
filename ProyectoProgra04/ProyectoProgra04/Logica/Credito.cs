@@ -46,6 +46,7 @@ namespace ProyectoProgra04.Logica
         {
             Datos.credito cred = new Datos.credito();
             cred.gencred(obj);
+            
 
         }
 

@@ -58,8 +58,8 @@ namespace ProyectoProgra04.Datos
         }
         public void gencred(Presentacion.Creditos c)
         {
-            string query = "insert into Credito (idcliente,montoaprovado,tasa,periodo,ultimaproyeccion,pago,intereses,amortizacion,saldo,cancelado) "+
-               " values("+c.IdCliente+","+c.Monto+","+c.tasa+","+c.Periodo+","+c.LastProy+","+c.Pago+","+c.Intereses+","+c.Amort+","+c.Saldo+",0)";
+            string query = "insert into Credito"+
+               " values("+c.IdCredito+","+c.IdCliente+","+c.IdLote + "," + c.Monto+","+c.tasa+","+c.Periodo+","+c.Pago+","+c.Intereses+","+c.Amort+","+c.Saldo+","+c.Cancelado+")";
             conect.ejecutarInsert(query);
         }
 
@@ -85,7 +85,7 @@ namespace ProyectoProgra04.Datos
         {
            
 
-            conect.ejecutarInsert("insert into proyeccion (Cuota,Intereses,Amortizacion,Saldo) values ('"+c.Pago+"','"+c.Intereses+"','"+c.Amort+"','"+c.Monto+"')");
+            conect.ejecutarInsert("insert into proyeccion (Cuota,Intereses,Amortizacion,Saldo) idcliente, idcliente, montoaprovado, tasa,periodo,ultimaproyeccion,pago,intereses,amortizacion,saldo,canceladovalues ('" + c.Pago+"','"+c.Intereses+"','"+c.Amort+"','"+c.Monto+"')");
             
         }
         public DataTable consultarproyeccion()
