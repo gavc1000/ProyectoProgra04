@@ -82,5 +82,10 @@ namespace ProyectoProgra04.Presentacion
         {
 
         }
+
+        private void Cliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
