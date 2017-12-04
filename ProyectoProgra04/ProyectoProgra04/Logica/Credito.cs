@@ -49,12 +49,12 @@ namespace ProyectoProgra04.Logica
 
         }
 
-       
+
 
         public void genpago(Presentacion.Creditos obj)
         {
             Datos.credito cred = new Datos.credito();
-            cred.genpago( obj);
+            cred.genpago(obj);
 
         }
         public DataTable consultarclientes()
@@ -68,8 +68,16 @@ namespace ProyectoProgra04.Logica
         {
             return new Datos.Agregarclientes().agregarclientes(idcliente, Nombre, Apellido1, Apellido2, idinstitucion, pass);
         }
+        public bool generarproyeccion(double couta, double interese, double amortizacion, double capital)
+        {
+            return new Datos.credito().generarproyeccion(couta,interese,amortizacion,capital);
+        }
+        public DataTable consultarproyeccion()
+        {
+            Datos.credito datos = new Datos.credito();
+            return datos.consultarproyeccion();
+        }
 
-      
     }
 }
 

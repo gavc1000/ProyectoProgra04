@@ -276,9 +276,11 @@
             this.btn_refrescar.TabIndex = 23;
             this.btn_refrescar.Text = "Refrescar";
             this.btn_refrescar.UseVisualStyleBackColor = false;
+            this.btn_refrescar.Click += new System.EventHandler(this.btn_refrescar_Click_1);
             // 
             // dgv_insertar
             // 
+            this.dgv_insertar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_insertar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_insertar.Location = new System.Drawing.Point(224, 6);
             this.dgv_insertar.Name = "dgv_insertar";
