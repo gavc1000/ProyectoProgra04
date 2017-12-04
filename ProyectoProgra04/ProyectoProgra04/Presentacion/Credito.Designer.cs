@@ -141,7 +141,7 @@
             this.btngenerarpago.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btngenerarpago.ForeColor = System.Drawing.Color.Transparent;
             this.btngenerarpago.Location = new System.Drawing.Point(592, 353);
-            this.btngenerarpago.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btngenerarpago.Margin = new System.Windows.Forms.Padding(4);
             this.btngenerarpago.Name = "btngenerarpago";
             this.btngenerarpago.Size = new System.Drawing.Size(112, 33);
             this.btngenerarpago.TabIndex = 20;
@@ -156,7 +156,7 @@
             this.btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnlimpiar.ForeColor = System.Drawing.Color.Transparent;
             this.btnlimpiar.Location = new System.Drawing.Point(917, 353);
-            this.btnlimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnlimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnlimpiar.Name = "btnlimpiar";
             this.btnlimpiar.Size = new System.Drawing.Size(100, 33);
             this.btnlimpiar.TabIndex = 21;
@@ -171,7 +171,7 @@
             this.btnrefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnrefrescar.ForeColor = System.Drawing.Color.Transparent;
             this.btnrefrescar.Location = new System.Drawing.Point(747, 353);
-            this.btnrefrescar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnrefrescar.Margin = new System.Windows.Forms.Padding(4);
             this.btnrefrescar.Name = "btnrefrescar";
             this.btnrefrescar.Size = new System.Drawing.Size(100, 33);
             this.btnrefrescar.TabIndex = 22;
@@ -200,7 +200,7 @@
             this.tabControl2.Controls.Add(this.tabPage2);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tabControl2.Location = new System.Drawing.Point(0, 0);
-            this.tabControl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl2.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
             this.tabControl2.Size = new System.Drawing.Size(1319, 705);
@@ -208,7 +208,7 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.BackgroundImage = global::ProyectoProgra04.Properties.Resources.Untitled;
+            this.tabPage4.BackgroundImage = global::ProyectoProgra04.Properties.Resources.fullimage;
             this.tabPage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage4.Controls.Add(this.chklp);
             this.tabPage4.Controls.Add(this.btnlimp);
@@ -235,9 +235,9 @@
             this.tabPage4.Controls.Add(this.label4);
             this.tabPage4.Controls.Add(this.label2);
             this.tabPage4.Location = new System.Drawing.Point(4, 28);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage4.Size = new System.Drawing.Size(1311, 673);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Insertar";
@@ -250,7 +250,7 @@
             this.chklp.BackColor = System.Drawing.Color.DodgerBlue;
             this.chklp.ForeColor = System.Drawing.Color.Transparent;
             this.chklp.Location = new System.Drawing.Point(11, 350);
-            this.chklp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chklp.Margin = new System.Windows.Forms.Padding(4);
             this.chklp.Name = "chklp";
             this.chklp.Size = new System.Drawing.Size(106, 21);
             this.chklp.TabIndex = 25;
@@ -265,7 +265,7 @@
             this.btnlimp.ForeColor = System.Drawing.Color.Transparent;
             this.btnlimp.Image = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.btnlimp.Location = new System.Drawing.Point(1197, 342);
-            this.btnlimp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnlimp.Margin = new System.Windows.Forms.Padding(4);
             this.btnlimp.Name = "btnlimp";
             this.btnlimp.Size = new System.Drawing.Size(100, 28);
             this.btnlimp.TabIndex = 24;
@@ -279,7 +279,7 @@
             this.btn_refrescar.ForeColor = System.Drawing.Color.Transparent;
             this.btn_refrescar.Image = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.btn_refrescar.Location = new System.Drawing.Point(299, 342);
-            this.btn_refrescar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_refrescar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_refrescar.Name = "btn_refrescar";
             this.btn_refrescar.Size = new System.Drawing.Size(100, 28);
             this.btn_refrescar.TabIndex = 23;
@@ -292,7 +292,7 @@
             this.dgv_insertar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_insertar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_insertar.Location = new System.Drawing.Point(299, 7);
-            this.dgv_insertar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_insertar.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_insertar.Name = "dgv_insertar";
             this.dgv_insertar.Size = new System.Drawing.Size(999, 327);
             this.dgv_insertar.TabIndex = 22;
@@ -304,7 +304,7 @@
             this.btn_insertar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_insertar.ForeColor = System.Drawing.Color.Transparent;
             this.btn_insertar.Location = new System.Drawing.Point(191, 306);
-            this.btn_insertar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_insertar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_insertar.Name = "btn_insertar";
             this.btn_insertar.Size = new System.Drawing.Size(100, 28);
             this.btn_insertar.TabIndex = 21;
@@ -319,7 +319,7 @@
             this.btnproyeccion.ForeColor = System.Drawing.Color.Transparent;
             this.btnproyeccion.Image = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.btnproyeccion.Location = new System.Drawing.Point(11, 306);
-            this.btnproyeccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnproyeccion.Margin = new System.Windows.Forms.Padding(4);
             this.btnproyeccion.Name = "btnproyeccion";
             this.btnproyeccion.Size = new System.Drawing.Size(148, 28);
             this.btnproyeccion.TabIndex = 20;
@@ -330,7 +330,7 @@
             // txtcuota
             // 
             this.txtcuota.Location = new System.Drawing.Point(157, 167);
-            this.txtcuota.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtcuota.Margin = new System.Windows.Forms.Padding(4);
             this.txtcuota.Name = "txtcuota";
             this.txtcuota.Size = new System.Drawing.Size(132, 22);
             this.txtcuota.TabIndex = 19;
@@ -350,7 +350,7 @@
             // txt_insertsaldo
             // 
             this.txt_insertsaldo.Location = new System.Drawing.Point(157, 263);
-            this.txt_insertsaldo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_insertsaldo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_insertsaldo.Name = "txt_insertsaldo";
             this.txt_insertsaldo.ReadOnly = true;
             this.txt_insertsaldo.Size = new System.Drawing.Size(132, 22);
@@ -371,7 +371,7 @@
             // txt_insertamort
             // 
             this.txt_insertamort.Location = new System.Drawing.Point(157, 231);
-            this.txt_insertamort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_insertamort.Margin = new System.Windows.Forms.Padding(4);
             this.txt_insertamort.Name = "txt_insertamort";
             this.txt_insertamort.ReadOnly = true;
             this.txt_insertamort.Size = new System.Drawing.Size(132, 22);
@@ -404,7 +404,7 @@
             // txt_insertintere
             // 
             this.txt_insertintere.Location = new System.Drawing.Point(157, 199);
-            this.txt_insertintere.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_insertintere.Margin = new System.Windows.Forms.Padding(4);
             this.txt_insertintere.Name = "txt_insertintere";
             this.txt_insertintere.ReadOnly = true;
             this.txt_insertintere.Size = new System.Drawing.Size(132, 22);
@@ -413,7 +413,7 @@
             // txt_insertperi
             // 
             this.txt_insertperi.Location = new System.Drawing.Point(157, 135);
-            this.txt_insertperi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_insertperi.Margin = new System.Windows.Forms.Padding(4);
             this.txt_insertperi.Name = "txt_insertperi";
             this.txt_insertperi.Size = new System.Drawing.Size(132, 22);
             this.txt_insertperi.TabIndex = 5;
@@ -421,7 +421,7 @@
             // txt_inserttasa
             // 
             this.txt_inserttasa.Location = new System.Drawing.Point(157, 103);
-            this.txt_inserttasa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_inserttasa.Margin = new System.Windows.Forms.Padding(4);
             this.txt_inserttasa.Name = "txt_inserttasa";
             this.txt_inserttasa.Size = new System.Drawing.Size(132, 22);
             this.txt_inserttasa.TabIndex = 4;
@@ -429,7 +429,7 @@
             // txt_insertmontoapr
             // 
             this.txt_insertmontoapr.Location = new System.Drawing.Point(157, 71);
-            this.txt_insertmontoapr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_insertmontoapr.Margin = new System.Windows.Forms.Padding(4);
             this.txt_insertmontoapr.Name = "txt_insertmontoapr";
             this.txt_insertmontoapr.Size = new System.Drawing.Size(132, 22);
             this.txt_insertmontoapr.TabIndex = 3;
@@ -437,7 +437,7 @@
             // txt_insertidcred
             // 
             this.txt_insertidcred.Location = new System.Drawing.Point(157, 39);
-            this.txt_insertidcred.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_insertidcred.Margin = new System.Windows.Forms.Padding(4);
             this.txt_insertidcred.Name = "txt_insertidcred";
             this.txt_insertidcred.Size = new System.Drawing.Size(132, 22);
             this.txt_insertidcred.TabIndex = 2;
@@ -445,7 +445,7 @@
             // txt_insertidcliente
             // 
             this.txt_insertidcliente.Location = new System.Drawing.Point(157, 7);
-            this.txt_insertidcliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_insertidcliente.Margin = new System.Windows.Forms.Padding(4);
             this.txt_insertidcliente.Name = "txt_insertidcliente";
             this.txt_insertidcliente.Size = new System.Drawing.Size(132, 22);
             this.txt_insertidcliente.TabIndex = 1;
@@ -513,7 +513,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackgroundImage = global::ProyectoProgra04.Properties.Resources.Untitled;
+            this.tabPage1.BackgroundImage = global::ProyectoProgra04.Properties.Resources.fullimage;
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage1.Controls.Add(this.cmbconsultacreditos);
             this.tabPage1.Controls.Add(this.cmbid);
@@ -523,7 +523,7 @@
             this.tabPage1.Controls.Add(this.Limpiar);
             this.tabPage1.Controls.Add(this.btnconsultarefrescar);
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Size = new System.Drawing.Size(1311, 673);
             this.tabPage1.TabIndex = 2;
@@ -534,7 +534,7 @@
             // 
             this.cmbconsultacreditos.FormattingEnabled = true;
             this.cmbconsultacreditos.Location = new System.Drawing.Point(35, 180);
-            this.cmbconsultacreditos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbconsultacreditos.Margin = new System.Windows.Forms.Padding(4);
             this.cmbconsultacreditos.Name = "cmbconsultacreditos";
             this.cmbconsultacreditos.Size = new System.Drawing.Size(160, 24);
             this.cmbconsultacreditos.TabIndex = 9;
@@ -545,7 +545,7 @@
             // 
             this.cmbid.FormattingEnabled = true;
             this.cmbid.Location = new System.Drawing.Point(35, 79);
-            this.cmbid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbid.Margin = new System.Windows.Forms.Padding(4);
             this.cmbid.Name = "cmbid";
             this.cmbid.Size = new System.Drawing.Size(160, 24);
             this.cmbid.TabIndex = 8;
@@ -582,7 +582,7 @@
             this.dgvconsulta.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvconsulta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvconsulta.Location = new System.Drawing.Point(11, 245);
-            this.dgvconsulta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvconsulta.Margin = new System.Windows.Forms.Padding(4);
             this.dgvconsulta.Name = "dgvconsulta";
             this.dgvconsulta.Size = new System.Drawing.Size(1297, 262);
             this.dgvconsulta.TabIndex = 3;
@@ -594,7 +594,7 @@
             this.Limpiar.ForeColor = System.Drawing.Color.Transparent;
             this.Limpiar.Image = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.Limpiar.Location = new System.Drawing.Point(133, 514);
-            this.Limpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Limpiar.Margin = new System.Windows.Forms.Padding(4);
             this.Limpiar.Name = "Limpiar";
             this.Limpiar.Size = new System.Drawing.Size(100, 28);
             this.Limpiar.TabIndex = 2;
@@ -609,7 +609,7 @@
             this.btnconsultarefrescar.ForeColor = System.Drawing.Color.Transparent;
             this.btnconsultarefrescar.Image = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.btnconsultarefrescar.Location = new System.Drawing.Point(11, 514);
-            this.btnconsultarefrescar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnconsultarefrescar.Margin = new System.Windows.Forms.Padding(4);
             this.btnconsultarefrescar.Name = "btnconsultarefrescar";
             this.btnconsultarefrescar.Size = new System.Drawing.Size(100, 28);
             this.btnconsultarefrescar.TabIndex = 1;
@@ -619,7 +619,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.BackgroundImage = global::ProyectoProgra04.Properties.Resources.Untitled;
+            this.tabPage3.BackgroundImage = global::ProyectoProgra04.Properties.Resources.fullimage;
             this.tabPage3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage3.Controls.Add(this.label12);
             this.tabPage3.Controls.Add(this.cmbperiodo);
@@ -635,9 +635,9 @@
             this.tabPage3.Controls.Add(this.cmbIdCliente);
             this.tabPage3.Controls.Add(this.Pago);
             this.tabPage3.Location = new System.Drawing.Point(4, 28);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage3.Size = new System.Drawing.Size(1311, 673);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Actualizar";
@@ -660,7 +660,7 @@
             // 
             this.cmbperiodo.FormattingEnabled = true;
             this.cmbperiodo.Location = new System.Drawing.Point(107, 80);
-            this.cmbperiodo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbperiodo.Margin = new System.Windows.Forms.Padding(4);
             this.cmbperiodo.Name = "cmbperiodo";
             this.cmbperiodo.Size = new System.Drawing.Size(100, 24);
             this.cmbperiodo.TabIndex = 31;
@@ -672,7 +672,7 @@
             this.rbnocancelado.BackColor = System.Drawing.SystemColors.HotTrack;
             this.rbnocancelado.ForeColor = System.Drawing.Color.Transparent;
             this.rbnocancelado.Location = new System.Drawing.Point(128, 197);
-            this.rbnocancelado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbnocancelado.Margin = new System.Windows.Forms.Padding(4);
             this.rbnocancelado.Name = "rbnocancelado";
             this.rbnocancelado.Size = new System.Drawing.Size(118, 21);
             this.rbnocancelado.TabIndex = 28;
@@ -687,7 +687,7 @@
             this.rb_cancelado.BackColor = System.Drawing.SystemColors.HotTrack;
             this.rb_cancelado.ForeColor = System.Drawing.Color.Transparent;
             this.rb_cancelado.Location = new System.Drawing.Point(7, 197);
-            this.rb_cancelado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rb_cancelado.Margin = new System.Windows.Forms.Padding(4);
             this.rb_cancelado.Name = "rb_cancelado";
             this.rb_cancelado.Size = new System.Drawing.Size(96, 21);
             this.rb_cancelado.TabIndex = 27;
@@ -708,10 +708,10 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackgroundImage = global::ProyectoProgra04.Properties.Resources.Untitled;
+            this.tabPage2.BackgroundImage = global::ProyectoProgra04.Properties.Resources.fullimage;
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Size = new System.Drawing.Size(1311, 673);
             this.tabPage2.TabIndex = 3;
@@ -722,8 +722,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.thumb_1920_750482;
-            this.ClientSize = new System.Drawing.Size(1319, 721);
+            this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.fullimage;
+            this.ClientSize = new System.Drawing.Size(1319, 667);
             this.Controls.Add(this.tabControl2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

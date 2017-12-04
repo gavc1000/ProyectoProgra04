@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ProyectoProgra04.Presentacion
 {
-    public partial class Empleados : Form
+    public partial class Import : Form
     {
-        public Empleados()
+        public Import()
         {
             InitializeComponent();
-        }
-
-        private void Empleados_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -34,8 +34,7 @@ namespace ProyectoProgra04.Presentacion
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            Empleados emp = new Empleados();
-            emp.Show();
+      
         }
 
         private void btnExpo_Click(object sender, EventArgs e)
