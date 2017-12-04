@@ -81,6 +81,25 @@ namespace ProyectoProgra04.Datos
 
         }
 
+        public bool generarproyeccion(double couta, double interese, double amortizacion, double capital)
+        {
+            bool generarproyeccion;
+
+            generarproyeccion = conect.ejecutarInsert("insert into proyeccion (Cuota,Intereses,Amortizacion,Saldo) values ('"+couta+"','"+interese+"','"+amortizacion+"','"+capital+"')");
+            if (generarproyeccion)
+            {
+                return true;
+            }
+            return false;
+        }
+        public DataTable consultarproyeccion()
+        {
+            Datos.CRUD conectar = new Datos.CRUD();
+            DataTable dtproyeccion;
+            dtproyeccion = conectar.ejecutar("select * from proyeccion");
+            return dtproyeccion;
+        }
+
        
 
 

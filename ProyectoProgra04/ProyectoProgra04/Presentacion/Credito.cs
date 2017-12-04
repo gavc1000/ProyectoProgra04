@@ -12,8 +12,12 @@ namespace ProyectoProgra04.Presentacion
 {
     public partial class Credito : Form
     {
-        bool banderaid=false;
-        bool banderacred=false;
+        double intereses2;
+        double tasa2;
+        double saldo2;
+        double periodo2;
+        bool banderaid = false;
+        bool banderacred = false;
         string cancelado;
         string nocancelado;
         public Credito()
@@ -24,7 +28,7 @@ namespace ProyectoProgra04.Presentacion
         private void Credito_Load(object sender, EventArgs e)
         {
             consultartablacontrolcredito();
-            
+
         }
 
         private void lblIdCliente_Click(object sender, EventArgs e)
@@ -50,7 +54,7 @@ namespace ProyectoProgra04.Presentacion
         private void cmbIdCliente_Click(object sender, EventArgs e)
         {
             llenarcomboid();
-            
+
         }
 
         public void llenarcomboid()
@@ -76,7 +80,7 @@ namespace ProyectoProgra04.Presentacion
         {
             try
             {
-                
+
 
                 Logica.Credito datos = new Logica.Credito();
                 DataTable dtdatos = new DataTable();
@@ -84,7 +88,7 @@ namespace ProyectoProgra04.Presentacion
                 dtdatos = datos.llenarcomboperiodo(cmbIdCliente.Text);
                 cmbperiodo.DisplayMember = "Periodo";
                 cmbperiodo.DataSource = dtdatos;
-                
+
             }
             catch
             {
@@ -98,30 +102,30 @@ namespace ProyectoProgra04.Presentacion
             {
                 Logica.Credito datos = new Logica.Credito();
                 Datos.credito cred = new Datos.credito();
-             
+
 
                 list = new List<Creditos>();
 
                 Creditos obj = new Creditos();
                 obj.IdCliente = Convert.ToInt32(cmbIdCliente.Text);
                 obj.Periodo = Convert.ToInt32(cmbperiodo.Text);
-                
-               obj.Cancelado = Convert.ToInt32(cancelado);
 
-              
-                
+                obj.Cancelado = Convert.ToInt32(cancelado);
+
+
+
 
                 list.Add(obj);
                 datos.genpago(obj);
 
-                
+
 
 
             }
             catch (Exception e)
             {
 
-                MessageBox.Show("Error al actualizar datos" +e);
+                MessageBox.Show("Error al actualizar datos" + e);
             }
 
         }
@@ -131,72 +135,38 @@ namespace ProyectoProgra04.Presentacion
             try
             {
                 MessageBox.Show("He aqui");
-               cmbIdCliente.Text=dgvCredito.CurrentRow.Cells[0].Value.ToString();
-                cmbperiodo.Text= dgvCredito.CurrentRow.Cells[5].Value.ToString();
-                
-                string rb= dgvCredito.CurrentRow.Cells[10].Value.ToString();
+                cmbIdCliente.Text = dgvCredito.CurrentRow.Cells[0].Value.ToString();
+                cmbperiodo.Text = dgvCredito.CurrentRow.Cells[5].Value.ToString();
 
-                if (rb=="True")
+                string rb = dgvCredito.CurrentRow.Cells[10].Value.ToString();
+
+                if (rb == "True")
                 {
                     rbnocancelado.Checked = true;
 
                 }
-                if (rb=="False")
+                if (rb == "False")
                 {
                     rbnocancelado.Checked = false;
                 }
 
-                
-              
-
-                
 
 
-            }
-            catch (Exception e)
-            {
 
-                MessageBox.Show("Error al cargar los campos"+""+ e);
-            }
 
-            
-        }
 
-        public void generarcredito()
-        {
-
-            try
-            {
-                 Logica.Credito datos = new Logica.Credito();
-                Datos.credito cred = new Datos.credito();
-                list = new List<Creditos>();
-
-                Creditos obj = new Creditos();
-                obj.IdCliente = Convert.ToInt32(txt_insertidcliente.Text);
-                obj.IdCredito = Convert.ToInt32(txt_insertidcred.Text);
-                obj.Monto = Convert.ToDecimal(txt_insertmontoapr.Text);
-                obj.tasa = Convert.ToDecimal(txt_inserttasa.Text);
-                obj.Periodo = Convert.ToInt32(txt_insertperi.Text);
-                
-                obj.Pago = PMT(Convert.ToDouble(txt_insertmontoapr.Text),Convert.ToDouble(txt_inserttasa.Text),Convert.ToDouble(txt_insertperi.Text));
-                obj.Intereses = calculointereses(Convert.ToDouble(txt_insertmontoapr.Text),Convert.ToDouble(txt_inserttasa.Text));
-                obj.Amort = calculoamortizacion(Convert.ToDouble(txtcuota.Text),Convert.ToDouble(txt_insertintere.Text));
-                obj.Saldo = calculonuevocapital(Convert.ToDouble(txt_insertmontoapr.Text),Convert.ToDouble(obj.Amort));
-               
-
-                list.Add(obj);
-                datos.gencredit(obj);
-               
 
             }
             catch (Exception e)
             {
 
-                MessageBox.Show("Error al Insertar datos" + e);
+                MessageBox.Show("Error al cargar los campos" + "" + e);
             }
-           
+
 
         }
+
+
         public void limpiar()
         {
             cmbperiodo.Text = "";
@@ -205,14 +175,14 @@ namespace ProyectoProgra04.Presentacion
             txt_insertidcred.Text = "";
             txt_insertintere.Text = "";
             txt_insertmontoapr.Text = "";
-            
+
             txt_insertperi.Text = "";
             txt_insertsaldo.Text = "";
             txt_inserttasa.Text = "";
-            
+
             cmbconsultacreditos.Text = "";
             cmbid.Text = "";
-        
+
             cmbconsultacreditos.Text = "";
 
 
@@ -225,7 +195,7 @@ namespace ProyectoProgra04.Presentacion
                 DataTable dtdatos = new DataTable();
 
                 dtdatos = datos.llenarcomboidcredito();
-                
+
 
                 cmbconsultacreditos.DisplayMember = "IdCredito";
                 cmbconsultacreditos.DataSource = dtdatos;
@@ -239,7 +209,7 @@ namespace ProyectoProgra04.Presentacion
         private void cmbidcredito_Click(object sender, EventArgs e)
         {
             llenarcomboidcredito();
-            
+
         }
         private void consultartablacontrolcredito()
         {
@@ -250,7 +220,7 @@ namespace ProyectoProgra04.Presentacion
 
                 dtcontrol = datos.ConsultarTablaControl();
                 dgvCredito.DataSource = dtcontrol;
-                dgv_insertar.DataSource = dtcontrol;
+                llenardgvinsert();
                 dgvconsulta.DataSource = dtcontrol;
             }
             catch
@@ -260,7 +230,7 @@ namespace ProyectoProgra04.Presentacion
 
         }
 
-       
+
 
         private void btnrefrescar_Click(object sender, EventArgs e)
         {
@@ -269,10 +239,10 @@ namespace ProyectoProgra04.Presentacion
 
         private void cmbidcredito_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
+
             consultartablacontrolcredito();
         }
-        private void consultarcreditoid( string id)
+        private void consultarcreditoid(string id)
         {
             try
             {
@@ -281,9 +251,9 @@ namespace ProyectoProgra04.Presentacion
                 dtcredito = datos.consultarcreditoidcliente(id);
                 dgvconsulta.DataSource = dtcredito;
             }
-            catch( Exception e)
+            catch (Exception e)
             {
-                MessageBox.Show("Error al consultar datos"+" " +e);
+                MessageBox.Show("Error al consultar datos" + " " + e);
             }
         }
 
@@ -310,7 +280,7 @@ namespace ProyectoProgra04.Presentacion
         List<Creditos> list;
         private void btnGenerarCredito_Click(object sender, EventArgs e)
         {
-           
+
 
 
         }
@@ -343,6 +313,24 @@ namespace ProyectoProgra04.Presentacion
             banderaid = true;
             banderacred = false;
             consultartablacontrolcredito();
+
+            try
+            {
+                if (banderaid == true)
+                {
+                    consultarcreditoid(cmbid.Text);
+
+                }
+
+                if (banderacred == true)
+                {
+                    consultarporcredito(cmbconsultacreditos.Text);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error al cargar datos");
+            }
         }
 
         private void cmbid_Click(object sender, EventArgs e)
@@ -353,21 +341,27 @@ namespace ProyectoProgra04.Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            if (banderaid==true)
+            try
             {
-                MessageBox.Show("hi");
-                consultarcreditoid(cmbid.Text);
+                if (banderaid == true)
+                {
+                    MessageBox.Show("hi");
+                    consultarcreditoid(cmbid.Text);
 
+                }
+
+                if (banderacred == true)
+                {
+                    MessageBox.Show("adios");
+                    consultarporcredito(cmbconsultacreditos.Text);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error al cargar datos");
             }
 
-            if (banderacred==true)
-            {
-                MessageBox.Show("adios");
-                consultarporcredito(cmbconsultacreditos.Text);
-            }
-            
-            
+
         }
 
         private void cmbconsultacreditos_Click(object sender, EventArgs e)
@@ -379,6 +373,26 @@ namespace ProyectoProgra04.Presentacion
         {
             banderacred = true;
             banderaid = false;
+
+            try
+            {
+                if (banderaid == true)
+                {
+
+                    consultarcreditoid(cmbid.Text);
+
+                }
+
+                if (banderacred == true)
+                {
+
+                    consultarporcredito(cmbconsultacreditos.Text);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error al cargar datos");
+            }
         }
 
         private void tabPage4_Click(object sender, EventArgs e)
@@ -403,7 +417,7 @@ namespace ProyectoProgra04.Presentacion
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dgvCredito_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -436,18 +450,16 @@ namespace ProyectoProgra04.Presentacion
             return nuevocapital;
         }
 
-
-
         private void rb_cancelado_CheckedChanged(object sender, EventArgs e)
         {
-             cancelado = "1";
-            
+            cancelado = "1";
+
         }
 
         private void rbnocancelado_CheckedChanged(object sender, EventArgs e)
         {
-             cancelado = "0";
-            
+            cancelado = "0";
+
         }
 
         private void cmbperiodo_MouseClick(object sender, MouseEventArgs e)
@@ -460,33 +472,143 @@ namespace ProyectoProgra04.Presentacion
 
         {
 
-            try
-            {
-                double pmt = PMT(Convert.ToDouble(txt_insertmontoapr.Text), Convert.ToDouble(txt_inserttasa.Text), Convert.ToDouble(txt_insertperi.Text));
-                txtcuota.Text = Convert.ToString(pmt);
 
-                double Intereses = calculointereses(Convert.ToDouble(txt_insertmontoapr.Text), Convert.ToDouble(txt_inserttasa.Text));
-                txt_insertintere.Text = Convert.ToString(Intereses);
-                double Amort = calculoamortizacion(Convert.ToDouble(txtcuota.Text), Convert.ToDouble(txt_insertintere.Text));
-                txt_insertamort.Text = Convert.ToString(Amort);
-                double Saldo = calculonuevocapital(Convert.ToDouble(txt_insertmontoapr.Text), Convert.ToDouble(Amort));
-                txt_insertsaldo.Text = Convert.ToString(Saldo);
-               
-               
 
-            }
-            catch (Exception ea)
-            {
-
-                MessageBox.Show("Error de Proyeccion" + "" + ea); 
-            }
-           
 
         }
 
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnproyeccion_Click_1(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if (chklp.Checked)
+                {
+                    tasa2 = ((Convert.ToDouble(txt_inserttasa.Text)) / 100) / 12;
+                    periodo2 = (Convert.ToDouble(txt_insertperi.Text)) * 12;
+                    double pmt = PMT(Convert.ToDouble(txt_insertmontoapr.Text), Convert.ToDouble(tasa2), Convert.ToDouble(periodo2));
+                    txtcuota.Text = Convert.ToString(pmt);
+                    double Intereses = calculointereses(Convert.ToDouble(txt_insertmontoapr.Text), Convert.ToDouble(tasa2));
+                    txt_insertintere.Text = Convert.ToString(Intereses);
+                    double Amort = calculoamortizacion(Convert.ToDouble(txtcuota.Text), Convert.ToDouble(txt_insertintere.Text));
+                    txt_insertamort.Text = Convert.ToString(Amort);
+                    double Saldo = calculonuevocapital(Convert.ToDouble(txt_insertmontoapr.Text), Convert.ToDouble(Amort));
+                    txt_insertsaldo.Text = Convert.ToString(Saldo);
+                }
+                else
+                {
+                    tasa2 = ((Convert.ToDouble(txt_inserttasa.Text)) / 100);
+                    double pmt = PMT(Convert.ToDouble(txt_insertmontoapr.Text), Convert.ToDouble(tasa2), Convert.ToDouble(txt_insertperi.Text));
+                    txtcuota.Text = Convert.ToString(pmt);
+                    double Intereses = calculointereses(Convert.ToDouble(txt_insertmontoapr.Text), Convert.ToDouble(tasa2));
+                    txt_insertintere.Text = Convert.ToString(Intereses);
+                    double Amort = calculoamortizacion(Convert.ToDouble(txtcuota.Text), Convert.ToDouble(txt_insertintere.Text));
+                    txt_insertamort.Text = Convert.ToString(Amort);
+                    double Saldo = calculonuevocapital(Convert.ToDouble(txt_insertmontoapr.Text), Convert.ToDouble(Amort));
+                    txt_insertsaldo.Text = Convert.ToString(Saldo);
+                }
+
+                generarcredito();
+                llenardgvinsert();
+
+
+            }
+            catch (Exception ea)
+            {
+
+                MessageBox.Show("Error de Proyeccion" + "" + ea);
+            }
+        }
+
+        private void chklp_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_insertar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+        public void generarcredito()
+        {
+            Logica.Credito INSERTAR = new Logica.Credito();
+            try
+            {
+                Logica.Credito datos = new Logica.Credito();
+                Datos.credito cred = new Datos.credito();
+                list = new List<Creditos>();
+                Creditos obj = new Creditos();
+                DataTable dt = new DataTable();
+                double periodo = Convert.ToDouble( txt_insertperi.Text);
+                double tasa = (Convert.ToDouble(txt_inserttasa.Text)) / 100;
+                double capital = Convert.ToDouble(txt_insertmontoapr.Text);
+                double pago;
+                double intereses;
+                double amortizacion;
+                saldo2 = capital;
+                
+                if (chklp.Checked)
+                {
+                    tasa2 = tasa / 12;
+                    periodo2 = periodo * 12;
+                    
+                    pago= PMT(capital, tasa2, periodo2);
+                    intereses = calculointereses(capital, tasa2);
+                    amortizacion = calculoamortizacion(pago,intereses);
+                  INSERTAR.generarproyeccion(0, 0, 0, capital);
+                 
+                    for (saldo2 = capital; saldo2 >= 0; saldo2 = capital)
+                    {
+                        list = new List<Creditos>();
+                        intereses = calculointereses(saldo2, tasa2);
+                        amortizacion = calculoamortizacion(pago, intereses);
+                        capital = calculonuevocapital(capital, amortizacion);
+                        INSERTAR.generarproyeccion(pago, intereses, amortizacion, capital);
+                    }
+                    MessageBox.Show("Proyección creada satisfactoriamente ");
+                }
+                else
+                {
+                    pago = PMT(capital, tasa, periodo);
+                    intereses = calculointereses(capital, tasa);
+                    amortizacion = calculoamortizacion(pago, intereses);
+                    INSERTAR.generarproyeccion(0, 0, 0, capital);
+
+                    for (saldo2 = capital; saldo2 >= 0; saldo2 = capital)
+                    {
+                        intereses = calculointereses(saldo2, tasa);
+                        amortizacion = calculoamortizacion(pago, intereses);
+                        capital = calculonuevocapital(capital, amortizacion);
+                        INSERTAR.generarproyeccion(pago, intereses, amortizacion, capital);
+                    }
+                    MessageBox.Show("Proyección creada satisfactoriamente ");
+                }
+
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Error al Insertar datos: " + e);
+            }
+
+
+        }
+
+        private void btn_refrescar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+        public void llenardgvinsert()
+        {
+            Logica.Credito consulta = new Logica.Credito();
+            DataTable dtconsulta = new DataTable();
+            dtconsulta = consulta.consultarproyeccion();
+            dgv_insertar.DataSource = dtconsulta;
         }
     }
 }
