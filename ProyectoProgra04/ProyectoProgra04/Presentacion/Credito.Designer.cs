@@ -722,7 +722,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.fullimage;
             this.ClientSize = new System.Drawing.Size(1319, 667);
             this.Controls.Add(this.tabControl2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
