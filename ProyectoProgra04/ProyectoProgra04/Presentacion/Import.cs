@@ -122,7 +122,14 @@ namespace ProyectoProgra04.Presentacion
             while (!(sLine == null));
             objreader.Close();
         }
+        public static void nombrarTitulo(DataGridView tabla, string[] titulos)
+        {
 
+            for (int x = 0; x <= tabla.ColumnCount - 1; x++)
+            {
+                tabla.Columns[x].HeaderText = titulos[x];
+            }
+        }
         private void btnImp_Click(object sender, EventArgs e)
         {
             {
@@ -156,6 +163,11 @@ namespace ProyectoProgra04.Presentacion
                 }
                 catch { }
             }
+        }
+        public static void agregarFilaDatagridview(DataGridView tabla, string linea, char caracter)
+        {
+            string[] arreglo = linea.Split(caracter);
+            tabla.Rows.Add(arreglo);
         }
     }
 }
