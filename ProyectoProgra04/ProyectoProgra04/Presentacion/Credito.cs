@@ -636,6 +636,134 @@ namespace ProyectoProgra04.Presentacion
 
         }
 
+        public void insertarcredito()
+
+        {
+
+            Logica.Credito INSERTAR = new Logica.Credito();
+            try
+            {
+                list = new List<Creditos>();
+                Logica.Credito datos = new Logica.Credito();
+                Datos.credito cred = new Datos.credito();
+                list = new List<Creditos>();
+                Creditos obj = new Creditos();
+                DataTable dt = new DataTable();
+
+
+                double capital = Convert.ToDouble(txt_insertmontoapr.Text);
+                double pago;
+                double intereses;
+                double amortizacion;
+                double tasa = Convert.ToDouble(txt_inserttasa.Text) / 100;
+                saldo2 = capital;
+                int periodo1 = 0;
+                double periodo = Convert.ToDouble(txt_insertperi.Text);
+
+
+                if (chklp.Checked)
+                {
+                    tasa2 = tasa / 12;
+                    periodo2 = periodo * 12;
+                    obj = new Creditos();
+                    pago = PMT(capital, tasa2, periodo2);
+                    intereses = calculointereses(obj.Monto, tasa2);
+                    amortizacion = calculoamortizacion(pago, intereses);
+                    obj.Saldo = capital;
+                    obj.Periodo = 0;
+                    obj.Intereses = 0;
+                    obj.Amort = 0;
+                    obj.IdCredito = Convert.ToInt32(txt_insertidcred.Text);
+                    obj.IdCliente = Convert.ToInt32(txt_insertidcliente.Text);
+                    obj.Monto = capital;
+                    obj.tasa = tasa;
+                    obj.Pago = 0;
+                    obj.Cancelado = 1;
+                    obj.IdLote = Convert.ToInt32(txtidlote.Text);
+                    list.Add(obj);
+                    INSERTAR.generarproyeccion(obj);
+
+                    while (saldo2 > 0)
+                    {
+                        pago = PMT(capital, tasa2, periodo2);
+                        periodo1 = periodo1 + 1;
+                        obj = new Creditos();
+                        intereses = calculointereses(saldo2, tasa2);
+                        amortizacion = calculoamortizacion(pago, intereses);
+                        saldo2 = calculonuevocapital(saldo2, amortizacion);
+                        obj.Saldo = saldo2;
+                        obj.Intereses = intereses;
+                        obj.Amort = amortizacion;
+                        obj.Periodo = periodo1;
+                        obj.IdCredito = Convert.ToInt32(txt_insertidcred.Text);
+                        obj.IdCliente = Convert.ToInt32(txt_insertidcliente.Text);
+                        obj.Monto = capital;
+                        obj.tasa = tasa;
+                        obj.Pago = pago;
+                        obj.Cancelado = 0;
+                        obj.IdLote = Convert.ToInt32(txtidlote.Text);
+                        list.Add(obj);
+                        INSERTAR.generarproyeccion(obj);
+                    }
+                    MessageBox.Show("Proyección creada satisfactoriamente ");
+                }
+                else
+                {
+                    obj = new Creditos();
+                    pago = PMT(capital, tasa, periodo);
+                    intereses = calculointereses(obj.Monto, obj.tasa);
+                    amortizacion = calculoamortizacion(pago, intereses);
+                    obj.Saldo = capital;
+                    obj.Periodo = 0;
+                    obj.Intereses = 0;
+                    obj.Amort = 0;
+                    obj.IdCredito = Convert.ToInt32(txt_insertidcred.Text);
+                    obj.IdCliente = Convert.ToInt32(txt_insertidcliente.Text);
+                    obj.Monto = capital;
+                    obj.tasa = tasa;
+                    obj.Pago = 0;
+                    obj.Cancelado = 1;
+                    
+                    obj.IdLote = Convert.ToInt32(txtidlote.Text);
+                    list.Add(obj);
+                    INSERTAR.generarproyeccion(obj);
+
+                    while (saldo2 > 0)
+                    {
+                        pago = PMT(capital, tasa, periodo);
+                        periodo1 = periodo1 + 1;
+                        obj = new Creditos();
+                        intereses = calculointereses(saldo2, tasa);
+                        amortizacion = calculoamortizacion(pago, intereses);
+                        saldo2 = calculonuevocapital(saldo2, amortizacion);
+                        obj.Saldo = saldo2;
+                        obj.Intereses = intereses;
+                        obj.Amort = amortizacion;
+                        obj.Periodo = periodo1;
+                        obj.IdCredito = Convert.ToInt32(txt_insertidcred.Text);
+                        obj.IdCliente = Convert.ToInt32(txt_insertidcliente.Text);
+                        obj.Monto = capital;
+                        obj.tasa = tasa;
+                        obj.Pago = pago;
+                        obj.Cancelado = 0;
+                        obj.IdLote = Convert.ToInt32(txtidlote.Text);
+                        list.Add(obj);
+
+                        INSERTAR.generarproyeccion(obj);
+                    }
+                    MessageBox.Show("Proyección creada satisfactoriamente ");
+                }
+
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show("Error al Insertar datos: " + e);
+            }
+
+
+        }
+
         private void btn_refrescar_Click_1(object sender, EventArgs e)
         {
 

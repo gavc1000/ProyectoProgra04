@@ -76,6 +76,8 @@
             this.rb_cancelado = new System.Windows.Forms.RadioButton();
             this.lbcancelado = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtidlote = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCredito)).BeginInit();
             this.tabControl2.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -203,6 +205,8 @@
             // 
             this.tabPage4.BackgroundImage = global::ProyectoProgra04.Properties.Resources.fullimage;
             this.tabPage4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage4.Controls.Add(this.txtidlote);
+            this.tabPage4.Controls.Add(this.label7);
             this.tabPage4.Controls.Add(this.chklp);
             this.tabPage4.Controls.Add(this.dgv_insertar);
             this.tabPage4.Controls.Add(this.btn_insertar);
@@ -239,7 +243,7 @@
             this.chklp.AutoSize = true;
             this.chklp.BackColor = System.Drawing.Color.DodgerBlue;
             this.chklp.ForeColor = System.Drawing.Color.Transparent;
-            this.chklp.Location = new System.Drawing.Point(8, 284);
+            this.chklp.Location = new System.Drawing.Point(8, 307);
             this.chklp.Name = "chklp";
             this.chklp.Size = new System.Drawing.Size(82, 17);
             this.chklp.TabIndex = 25;
@@ -262,7 +266,7 @@
             this.btn_insertar.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.btn_insertar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_insertar.ForeColor = System.Drawing.Color.Transparent;
-            this.btn_insertar.Location = new System.Drawing.Point(143, 249);
+            this.btn_insertar.Location = new System.Drawing.Point(143, 269);
             this.btn_insertar.Name = "btn_insertar";
             this.btn_insertar.Size = new System.Drawing.Size(75, 23);
             this.btn_insertar.TabIndex = 21;
@@ -276,7 +280,7 @@
             this.btnproyeccion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnproyeccion.ForeColor = System.Drawing.Color.Transparent;
             this.btnproyeccion.Image = global::ProyectoProgra04.Properties.Resources.quote_bg;
-            this.btnproyeccion.Location = new System.Drawing.Point(8, 249);
+            this.btnproyeccion.Location = new System.Drawing.Point(8, 269);
             this.btnproyeccion.Name = "btnproyeccion";
             this.btnproyeccion.Size = new System.Drawing.Size(111, 23);
             this.btnproyeccion.TabIndex = 20;
@@ -643,6 +647,24 @@
             this.tabPage2.Text = "Eliminar";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label7.ForeColor = System.Drawing.Color.Transparent;
+            this.label7.Location = new System.Drawing.Point(17, 243);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "Id Lote";
+            // 
+            // txtidlote
+            // 
+            this.txtidlote.Location = new System.Drawing.Point(118, 240);
+            this.txtidlote.Name = "txtidlote";
+            this.txtidlote.Size = new System.Drawing.Size(100, 20);
+            this.txtidlote.TabIndex = 27;
+            // 
             // Credito
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -716,5 +738,7 @@
         private System.Windows.Forms.Button btn_insertar;
         private System.Windows.Forms.Button btnproyeccion;
         private System.Windows.Forms.CheckBox chklp;
+        private System.Windows.Forms.TextBox txtidlote;
+        private System.Windows.Forms.Label label7;
     }
 }

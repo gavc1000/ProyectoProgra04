@@ -19,6 +19,7 @@ namespace ProyectoProgra04.Presentacion
         public double Amort { get; set; }
         public double Saldo { get; set; }
         public int Cancelado { get; set; }
+        public int IdLote { get; set; }
 
     }
 }
