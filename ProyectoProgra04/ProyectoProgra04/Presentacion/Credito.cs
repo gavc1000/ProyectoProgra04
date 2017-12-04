@@ -533,7 +533,7 @@ namespace ProyectoProgra04.Presentacion
 
         private void btn_insertar_Click_1(object sender, EventArgs e)
         {
-
+            insertarcredito();
         }
         public void generarcredito()
 
@@ -681,7 +681,7 @@ namespace ProyectoProgra04.Presentacion
                     obj.Cancelado = 1;
                     obj.IdLote = Convert.ToInt32(txtidlote.Text);
                     list.Add(obj);
-                    INSERTAR.generarproyeccion(obj);
+                    INSERTAR.gencredit(obj);
 
                     while (saldo2 > 0)
                     {
@@ -703,7 +703,7 @@ namespace ProyectoProgra04.Presentacion
                         obj.Cancelado = 0;
                         obj.IdLote = Convert.ToInt32(txtidlote.Text);
                         list.Add(obj);
-                        INSERTAR.generarproyeccion(obj);
+                        INSERTAR.gencredit(obj);
                     }
                     MessageBox.Show("Proyección creada satisfactoriamente ");
                 }
@@ -726,7 +726,7 @@ namespace ProyectoProgra04.Presentacion
                     
                     obj.IdLote = Convert.ToInt32(txtidlote.Text);
                     list.Add(obj);
-                    INSERTAR.generarproyeccion(obj);
+                    INSERTAR.gencredit(obj);
 
                     while (saldo2 > 0)
                     {
@@ -749,7 +749,7 @@ namespace ProyectoProgra04.Presentacion
                         obj.IdLote = Convert.ToInt32(txtidlote.Text);
                         list.Add(obj);
 
-                        INSERTAR.generarproyeccion(obj);
+                        INSERTAR.gencredit(obj);
                     }
                     MessageBox.Show("Proyección creada satisfactoriamente ");
                 }
