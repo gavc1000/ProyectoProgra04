@@ -550,48 +550,44 @@ namespace ProyectoProgra04.Presentacion
                 DataTable dt = new DataTable();
 
 
-                
-                obj.Periodo=Convert.ToInt32(txt_insertperi.Text);
-                 obj.tasa=(Convert.ToDouble(txt_inserttasa.Text)) / 100;
-                obj.Monto = Convert.ToDouble(txt_insertmontoapr.Text);
+                double capital = Convert.ToDouble(txt_insertmontoapr.Text);
                 double pago;
                 double intereses;
                 double amortizacion;
-                saldo2 = obj.Monto;
-                int periodo1 = 1;
+                double tasa = Convert.ToDouble(txt_inserttasa.Text)/100;
+                saldo2 = capital;
+                int periodo1 = 0;
+                double periodo = Convert.ToDouble(txt_insertperi.Text);
                 
 
                 if (chklp.Checked)
                 {
+                    tasa2 = tasa / 12;
+                    periodo2 = periodo * 12;
                     obj = new Creditos();
-                    tasa2 = obj.tasa / 12;
-                    periodo2 = obj.Periodo * 12;
-                    
-                    pago= PMT(obj.Monto, tasa2, periodo2);
+                    pago = PMT(capital, tasa2, periodo2);
                     intereses = calculointereses(obj.Monto, tasa2);
-                    amortizacion = calculoamortizacion(pago,intereses);
-                    obj.Monto = saldo2;
+                    amortizacion = calculoamortizacion(pago, intereses);
+                    obj.Monto = capital;
                     obj.Periodo = 0;
                     obj.Intereses = 0;
                     obj.Amort = 0;
                     list.Add(obj);
-                 // INSERTAR.generarproyeccion(obj);
+                    //INSERTAR.generarproyeccion(obj);
 
-                    
-
-                    for (saldo2 = obj.Monto; saldo2 >= 0; saldo2 = obj.Monto)
+                    while (saldo2 > 0)
                     {
-                        
+                        pago = PMT(capital, tasa2, periodo2);
+                        periodo1 = periodo1 + 1;
                         obj = new Creditos();
-                        
                         intereses = calculointereses(saldo2, tasa2);
-                        
                         amortizacion = calculoamortizacion(pago, intereses);
-                        obj.Monto = calculonuevocapital(obj.Monto, amortizacion);
+                        saldo2 = calculonuevocapital(saldo2, amortizacion);
+                        obj.Monto = saldo2;
                         obj.Intereses = intereses;
                         obj.Amort = amortizacion;
                         obj.Periodo = periodo1;
-                        periodo1 = periodo1 + 1;
+
                         list.Add(obj);
                         //INSERTAR.generarproyeccion(obj);
                     }
@@ -600,26 +596,29 @@ namespace ProyectoProgra04.Presentacion
                 else
                 {
                     obj = new Creditos();
-                    pago = PMT(obj.Monto, obj.tasa, obj.Periodo);
+                    pago = PMT(capital, tasa, periodo);
                     intereses = calculointereses(obj.Monto, obj.tasa);
                     amortizacion = calculoamortizacion(pago, intereses);
-                    obj.Monto = saldo2;
+                    obj.Monto = capital;
                     obj.Periodo = 0;
                     obj.Intereses = 0;
                     obj.Amort = 0;
                     list.Add(obj);
                     //INSERTAR.generarproyeccion(obj);
 
-                    for (saldo2 = obj.Monto; saldo2 >= 0; saldo2 = obj.Monto)
+                    while (saldo2 > 0)
                     {
+                        pago = PMT(capital, tasa, periodo);
+                        periodo1 = periodo1 + 1;
                         obj = new Creditos();
-                        intereses = calculointereses(saldo2, obj.tasa);
+                        intereses = calculointereses(saldo2, tasa);
                         amortizacion = calculoamortizacion(pago, intereses);
-                        obj.Monto = calculonuevocapital(obj.Monto, amortizacion);
+                        saldo2 = calculonuevocapital(saldo2, amortizacion);
+                        obj.Monto = saldo2;
                         obj.Intereses = intereses;
                         obj.Amort = amortizacion;
                         obj.Periodo = periodo1;
-                        periodo1 = periodo1 + 1;
+
                         list.Add(obj);
 
                         //INSERTAR.generarproyeccion(obj);
