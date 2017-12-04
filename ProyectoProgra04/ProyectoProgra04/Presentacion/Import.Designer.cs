@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cbolote = new System.Windows.Forms.ComboBox();
-            this.btnexport = new System.Windows.Forms.Button();
+            this.btnImp = new System.Windows.Forms.Button();
             this.txt = new System.Windows.Forms.RadioButton();
             this.aXml = new System.Windows.Forms.RadioButton();
             this.Excel = new System.Windows.Forms.RadioButton();
@@ -37,28 +36,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvlote)).BeginInit();
             this.SuspendLayout();
             // 
-            // cbolote
+            // btnImp
             // 
-            this.cbolote.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbolote.FormattingEnabled = true;
-            this.cbolote.Items.AddRange(new object[] {
-            "0"});
-            this.cbolote.Location = new System.Drawing.Point(46, 270);
-            this.cbolote.Name = "cbolote";
-            this.cbolote.Size = new System.Drawing.Size(224, 24);
-            this.cbolote.TabIndex = 12;
-            // 
-            // btnexport
-            // 
-            this.btnexport.BackColor = System.Drawing.Color.Transparent;
-            this.btnexport.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
-            this.btnexport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnexport.Location = new System.Drawing.Point(110, 422);
-            this.btnexport.Name = "btnexport";
-            this.btnexport.Size = new System.Drawing.Size(110, 46);
-            this.btnexport.TabIndex = 11;
-            this.btnexport.Text = "Exportar";
-            this.btnexport.UseVisualStyleBackColor = false;
+            this.btnImp.BackColor = System.Drawing.Color.Transparent;
+            this.btnImp.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
+            this.btnImp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnImp.Location = new System.Drawing.Point(213, 371);
+            this.btnImp.Name = "btnImp";
+            this.btnImp.Size = new System.Drawing.Size(110, 46);
+            this.btnImp.TabIndex = 11;
+            this.btnImp.Text = "Importar";
+            this.btnImp.UseVisualStyleBackColor = false;
+            this.btnImp.Click += new System.EventHandler(this.btnImp_Click);
             // 
             // txt
             // 
@@ -119,13 +108,13 @@
             this.BackgroundImage = global::ProyectoProgra04.Properties.Resources.thumb_1920_750482;
             this.ClientSize = new System.Drawing.Size(748, 476);
             this.Controls.Add(this.dgvlote);
-            this.Controls.Add(this.cbolote);
-            this.Controls.Add(this.btnexport);
+            this.Controls.Add(this.btnImp);
             this.Controls.Add(this.txt);
             this.Controls.Add(this.aXml);
             this.Controls.Add(this.Excel);
             this.Name = "Import";
             this.Text = "Import";
+            this.Load += new System.EventHandler(this.Import_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvlote)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -133,9 +122,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cbolote;
-        private System.Windows.Forms.Button btnexport;
+        private System.Windows.Forms.Button btnImp;
         private System.Windows.Forms.RadioButton txt;
         private System.Windows.Forms.RadioButton aXml;
         private System.Windows.Forms.RadioButton Excel;
