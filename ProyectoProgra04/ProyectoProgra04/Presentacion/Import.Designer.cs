@@ -41,7 +41,7 @@
             this.btnImp.BackColor = System.Drawing.Color.Transparent;
             this.btnImp.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.btnImp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnImp.Location = new System.Drawing.Point(174, 245);
+            this.btnImp.Location = new System.Drawing.Point(213, 371);
             this.btnImp.Name = "btnImp";
             this.btnImp.Size = new System.Drawing.Size(110, 46);
             this.btnImp.TabIndex = 11;
