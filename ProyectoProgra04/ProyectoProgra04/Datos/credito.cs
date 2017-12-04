@@ -81,16 +81,12 @@ namespace ProyectoProgra04.Datos
 
         }
 
-        public bool generarproyeccion(double couta, double interese, double amortizacion, double capital)
+        public void generarproyeccion(Presentacion.Creditos c)
         {
-            bool generarproyeccion;
+           
 
-            generarproyeccion = conect.ejecutarInsert("insert into proyeccion (Cuota,Intereses,Amortizacion,Saldo) values ('"+couta+"','"+interese+"','"+amortizacion+"','"+capital+"')");
-            if (generarproyeccion)
-            {
-                return true;
-            }
-            return false;
+            conect.ejecutarInsert("insert into proyeccion (Cuota,Intereses,Amortizacion,Saldo) values ('"+c.Pago+"','"+c.Intereses+"','"+c.Amort+"','"+c.Monto+"')");
+            
         }
         public DataTable consultarproyeccion()
         {

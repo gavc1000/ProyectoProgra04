@@ -484,6 +484,7 @@ namespace ProyectoProgra04.Presentacion
 
         private void btnproyeccion_Click_1(object sender, EventArgs e)
         {
+            list = new List<Creditos>();
 
             try
             {
@@ -514,9 +515,9 @@ namespace ProyectoProgra04.Presentacion
                 }
 
                 generarcredito();
-                llenardgvinsert();
+                // llenardgvinsert();
 
-
+                dgv_insertar.DataSource = list;
             }
             catch (Exception ea)
             {
@@ -535,56 +536,93 @@ namespace ProyectoProgra04.Presentacion
 
         }
         public void generarcredito()
+
         {
+
             Logica.Credito INSERTAR = new Logica.Credito();
             try
             {
+                list = new List<Creditos>();
                 Logica.Credito datos = new Logica.Credito();
                 Datos.credito cred = new Datos.credito();
                 list = new List<Creditos>();
                 Creditos obj = new Creditos();
                 DataTable dt = new DataTable();
-                double periodo = Convert.ToDouble( txt_insertperi.Text);
-                double tasa = (Convert.ToDouble(txt_inserttasa.Text)) / 100;
-                double capital = Convert.ToDouble(txt_insertmontoapr.Text);
+
+
+                
+                obj.Periodo=Convert.ToInt32(txt_insertperi.Text);
+                 obj.tasa=(Convert.ToDouble(txt_inserttasa.Text)) / 100;
+                obj.Monto = Convert.ToDouble(txt_insertmontoapr.Text);
                 double pago;
                 double intereses;
                 double amortizacion;
-                saldo2 = capital;
+                saldo2 = obj.Monto;
+                int periodo1 = 1;
                 
+
                 if (chklp.Checked)
                 {
-                    tasa2 = tasa / 12;
-                    periodo2 = periodo * 12;
+                    obj = new Creditos();
+                    tasa2 = obj.tasa / 12;
+                    periodo2 = obj.Periodo * 12;
                     
-                    pago= PMT(capital, tasa2, periodo2);
-                    intereses = calculointereses(capital, tasa2);
+                    pago= PMT(obj.Monto, tasa2, periodo2);
+                    intereses = calculointereses(obj.Monto, tasa2);
                     amortizacion = calculoamortizacion(pago,intereses);
-                  INSERTAR.generarproyeccion(0, 0, 0, capital);
-                 
-                    for (saldo2 = capital; saldo2 >= 0; saldo2 = capital)
+                    obj.Monto = saldo2;
+                    obj.Periodo = 0;
+                    obj.Intereses = 0;
+                    obj.Amort = 0;
+                    list.Add(obj);
+                 // INSERTAR.generarproyeccion(obj);
+
+                    
+
+                    for (saldo2 = obj.Monto; saldo2 >= 0; saldo2 = obj.Monto)
                     {
-                        list = new List<Creditos>();
+                        
+                        obj = new Creditos();
+                        
                         intereses = calculointereses(saldo2, tasa2);
+                        
                         amortizacion = calculoamortizacion(pago, intereses);
-                        capital = calculonuevocapital(capital, amortizacion);
-                        INSERTAR.generarproyeccion(pago, intereses, amortizacion, capital);
+                        obj.Monto = calculonuevocapital(obj.Monto, amortizacion);
+                        obj.Intereses = intereses;
+                        obj.Amort = amortizacion;
+                        obj.Periodo = periodo1;
+                        periodo1 = periodo1 + 1;
+                        list.Add(obj);
+                        //INSERTAR.generarproyeccion(obj);
                     }
                     MessageBox.Show("Proyección creada satisfactoriamente ");
                 }
                 else
                 {
-                    pago = PMT(capital, tasa, periodo);
-                    intereses = calculointereses(capital, tasa);
+                    obj = new Creditos();
+                    pago = PMT(obj.Monto, obj.tasa, obj.Periodo);
+                    intereses = calculointereses(obj.Monto, obj.tasa);
                     amortizacion = calculoamortizacion(pago, intereses);
-                    INSERTAR.generarproyeccion(0, 0, 0, capital);
+                    obj.Monto = saldo2;
+                    obj.Periodo = 0;
+                    obj.Intereses = 0;
+                    obj.Amort = 0;
+                    list.Add(obj);
+                    //INSERTAR.generarproyeccion(obj);
 
-                    for (saldo2 = capital; saldo2 >= 0; saldo2 = capital)
+                    for (saldo2 = obj.Monto; saldo2 >= 0; saldo2 = obj.Monto)
                     {
-                        intereses = calculointereses(saldo2, tasa);
+                        obj = new Creditos();
+                        intereses = calculointereses(saldo2, obj.tasa);
                         amortizacion = calculoamortizacion(pago, intereses);
-                        capital = calculonuevocapital(capital, amortizacion);
-                        INSERTAR.generarproyeccion(pago, intereses, amortizacion, capital);
+                        obj.Monto = calculonuevocapital(obj.Monto, amortizacion);
+                        obj.Intereses = intereses;
+                        obj.Amort = amortizacion;
+                        obj.Periodo = periodo1;
+                        periodo1 = periodo1 + 1;
+                        list.Add(obj);
+
+                        //INSERTAR.generarproyeccion(obj);
                     }
                     MessageBox.Show("Proyección creada satisfactoriamente ");
                 }

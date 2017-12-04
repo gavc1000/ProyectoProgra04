@@ -10,8 +10,8 @@ namespace ProyectoProgra04.Presentacion
     {
         public int IdCredito { get; set; }
         public int IdCliente { get; set; }
-        public decimal Monto { get; set; }
-        public decimal tasa { get; set; }
+        public double Monto { get; set; }
+        public double tasa { get; set; }
         public int Periodo { get; set; }
         public decimal LastProy { get; set; }
         public double Pago { get; set; }

@@ -68,9 +68,9 @@ namespace ProyectoProgra04.Logica
         {
             return new Datos.Agregarclientes().agregarclientes(idcliente, Nombre, Apellido1, Apellido2, idinstitucion, pass);
         }
-        public bool generarproyeccion(double couta, double interese, double amortizacion, double capital)
+        public void generarproyeccion(Presentacion.Creditos c)
         {
-            return new Datos.credito().generarproyeccion(couta,interese,amortizacion,capital);
+            new Datos.credito().generarproyeccion(c);
         }
         public DataTable consultarproyeccion()
         {
