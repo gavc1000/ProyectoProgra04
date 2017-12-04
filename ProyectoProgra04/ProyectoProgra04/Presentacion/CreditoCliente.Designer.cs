@@ -54,6 +54,8 @@
             // 
             // btnCargar
             // 
+            this.btnCargar.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
+            this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCargar.Location = new System.Drawing.Point(12, 162);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(97, 35);
@@ -151,6 +153,8 @@
             // 
             // btnExp
             // 
+            this.btnExp.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
+            this.btnExp.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExp.Location = new System.Drawing.Point(9, 350);
             this.btnExp.Name = "btnExp";
             this.btnExp.Size = new System.Drawing.Size(97, 35);

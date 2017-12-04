@@ -85,6 +85,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.DodgerBlue;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label4.Image = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.label4.Location = new System.Drawing.Point(16, 114);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -118,7 +120,7 @@
             // txtidcliente
             // 
             this.txtidcliente.Location = new System.Drawing.Point(147, 15);
-            this.txtidcliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtidcliente.Margin = new System.Windows.Forms.Padding(4);
             this.txtidcliente.Name = "txtidcliente";
             this.txtidcliente.Size = new System.Drawing.Size(132, 22);
             this.txtidcliente.TabIndex = 6;
@@ -126,7 +128,7 @@
             // txtnombre
             // 
             this.txtnombre.Location = new System.Drawing.Point(147, 47);
-            this.txtnombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtnombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(132, 22);
             this.txtnombre.TabIndex = 7;
@@ -134,7 +136,7 @@
             // txtapellido1
             // 
             this.txtapellido1.Location = new System.Drawing.Point(147, 79);
-            this.txtapellido1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtapellido1.Margin = new System.Windows.Forms.Padding(4);
             this.txtapellido1.Name = "txtapellido1";
             this.txtapellido1.Size = new System.Drawing.Size(132, 22);
             this.txtapellido1.TabIndex = 8;
@@ -142,7 +144,7 @@
             // txtapellido2
             // 
             this.txtapellido2.Location = new System.Drawing.Point(147, 111);
-            this.txtapellido2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtapellido2.Margin = new System.Windows.Forms.Padding(4);
             this.txtapellido2.Name = "txtapellido2";
             this.txtapellido2.Size = new System.Drawing.Size(132, 22);
             this.txtapellido2.TabIndex = 9;
@@ -150,7 +152,7 @@
             // txtidinstitucion
             // 
             this.txtidinstitucion.Location = new System.Drawing.Point(147, 143);
-            this.txtidinstitucion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtidinstitucion.Margin = new System.Windows.Forms.Padding(4);
             this.txtidinstitucion.Name = "txtidinstitucion";
             this.txtidinstitucion.Size = new System.Drawing.Size(132, 22);
             this.txtidinstitucion.TabIndex = 10;
@@ -158,7 +160,7 @@
             // txtpass
             // 
             this.txtpass.Location = new System.Drawing.Point(147, 175);
-            this.txtpass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtpass.Margin = new System.Windows.Forms.Padding(4);
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(132, 22);
             this.txtpass.TabIndex = 11;
@@ -169,7 +171,7 @@
             this.btnagregarcliente.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.btnagregarcliente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnagregarcliente.Location = new System.Drawing.Point(147, 207);
-            this.btnagregarcliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnagregarcliente.Margin = new System.Windows.Forms.Padding(4);
             this.btnagregarcliente.Name = "btnagregarcliente";
             this.btnagregarcliente.Size = new System.Drawing.Size(133, 28);
             this.btnagregarcliente.TabIndex = 12;
@@ -183,7 +185,7 @@
             this.dtgclientes.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dtgclientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgclientes.Location = new System.Drawing.Point(288, 15);
-            this.dtgclientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtgclientes.Margin = new System.Windows.Forms.Padding(4);
             this.dtgclientes.Name = "dtgclientes";
             this.dtgclientes.Size = new System.Drawing.Size(763, 220);
             this.dtgclientes.TabIndex = 13;
@@ -195,7 +197,7 @@
             this.btnlimpiar.BackgroundImage = global::ProyectoProgra04.Properties.Resources.quote_bg;
             this.btnlimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnlimpiar.Location = new System.Drawing.Point(951, 242);
-            this.btnlimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnlimpiar.Margin = new System.Windows.Forms.Padding(4);
             this.btnlimpiar.Name = "btnlimpiar";
             this.btnlimpiar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnlimpiar.Size = new System.Drawing.Size(100, 28);
@@ -226,7 +228,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AgregarClientes";
             this.Text = "Agregar Clientes";
             this.Load += new System.EventHandler(this.AgregarClientes_Load);

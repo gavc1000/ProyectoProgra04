@@ -134,7 +134,7 @@ namespace ProyectoProgra04.Presentacion
         {
             try
             {
-                MessageBox.Show("He aqui");
+               
                 cmbIdCliente.Text = dgvCredito.CurrentRow.Cells[0].Value.ToString();
                 cmbperiodo.Text = dgvCredito.CurrentRow.Cells[5].Value.ToString();
 
@@ -345,14 +345,14 @@ namespace ProyectoProgra04.Presentacion
             {
                 if (banderaid == true)
                 {
-                    MessageBox.Show("hi");
+                   
                     consultarcreditoid(cmbid.Text);
 
                 }
 
                 if (banderacred == true)
                 {
-                    MessageBox.Show("adios");
+                 
                     consultarporcredito(cmbconsultacreditos.Text);
                 }
             }
