@@ -45,7 +45,8 @@ namespace ProyectoProgra04.Presentacion
 
         private void btnimp_Click(object sender, EventArgs e)
         {
-
+            Import ex = new Import();
+            ex.Show();
         }
     }
 }
