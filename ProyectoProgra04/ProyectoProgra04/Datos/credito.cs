@@ -16,7 +16,7 @@ namespace ProyectoProgra04.Datos
         {
             CRUD conectar = new CRUD();
             DataTable dtidclientes;
-            dtidclientes = conect.ejecutar("select IdCliente from Credito");
+            dtidclientes = conect.ejecutar("select distinct IdCliente from Credito");
             return dtidclientes;
         }
 
@@ -31,7 +31,7 @@ namespace ProyectoProgra04.Datos
         {
             CRUD conectar = new CRUD();
             DataTable dtidcredito;
-            dtidcredito = conect.ejecutar("select * from Credito");
+            dtidcredito = conect.ejecutar("select distinct IdCredito from Credito");
             return dtidcredito;
         }
         public DataTable ConsultarTablaControl()

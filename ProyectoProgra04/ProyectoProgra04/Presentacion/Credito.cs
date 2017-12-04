@@ -50,7 +50,7 @@ namespace ProyectoProgra04.Presentacion
         {
 
         }
-
+        
         private void cmbIdCliente_Click(object sender, EventArgs e)
         {
             llenarcomboid();
@@ -197,7 +197,7 @@ namespace ProyectoProgra04.Presentacion
                 dtdatos = datos.llenarcomboidcredito();
 
 
-                cmbconsultacreditos.DisplayMember = "IdCredito";
+                cmbconsultacreditos.ValueMember = "IdCredito";
                 cmbconsultacreditos.DataSource = dtdatos;
             }
             catch
@@ -220,7 +220,7 @@ namespace ProyectoProgra04.Presentacion
 
                 dtcontrol = datos.ConsultarTablaControl();
                 dgvCredito.DataSource = dtcontrol;
-                llenardgvinsert();
+                //llenardgvinsert();
                 dgvconsulta.DataSource = dtcontrol;
             }
             catch
@@ -646,6 +646,11 @@ namespace ProyectoProgra04.Presentacion
             DataTable dtconsulta = new DataTable();
             dtconsulta = consulta.consultarproyeccion();
             dgv_insertar.DataSource = dtconsulta;
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
